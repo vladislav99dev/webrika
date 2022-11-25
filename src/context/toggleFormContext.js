@@ -1,4 +1,4 @@
-import * as React from "react";
+import React,{useContext} from "react";
 
 const FormToggleContext = React.createContext();
 
