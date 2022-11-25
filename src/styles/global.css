@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Rubik:ital,wght@0,500;0,600;0,700;1,400&display=swap");
+@layer base {
+  * {
+    @apply p-0 m-0 box-border;
+  }
+  html {
+    @apply text-[62.5%]
+    overflow-x-hidden
+    scroll-smooth
+    ;
+  }
+  body {
+    font-family: "Montserrat";
+    color: #3b485e;
+    position: relative;
+  }
+
+  /* 1440px */
+  @media (max-width: 90em) {
+    html {
+      @apply text-[57.5%];
+    }
+  }
+
+  /* 1150px */
+  @media (max-width: 72em) {
+    html {
+      @apply text-[50%];
+    }
+    button{
+        @apply px-4
+    }
+  }
+
+  /* 994px */
+  @media (max-width: 62em) {
+    html {
+      @apply text-[42.5%];
+    }
+  }
+}

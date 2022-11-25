@@ -1,0 +1,48 @@
+.container {
+  @apply grid
+    grid-cols-2
+    justify-items-center
+    gap-y-[20rem]
+    pb-[10rem];
+}
+
+.cardContainer {
+  @apply max-w-[40rem]
+    flex
+    flex-col
+    items-center;
+}
+.name {
+  @apply text-center
+    text-[1.8rem]
+    font-medium
+    leading-[2rem]
+    bg-[#FFDC60]
+    rounded-[2.85rem]
+    py-4
+    px-16
+    -mt-10;
+}
+.position {
+  @apply text-center
+    text-[2rem]
+    font-semibold
+    py-2;
+}
+.image {
+  @apply rounded-[50%]
+    -z-20;
+}
+
+.description {
+  @apply font-normal
+    text-[1.6rem]
+    leading-[2.4rem]
+    text-center;
+}
+
+@media (max-width: 50em) {
+  .container {
+    @apply grid-cols-1;
+  }
+}

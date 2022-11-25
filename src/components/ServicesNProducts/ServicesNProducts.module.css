@@ -1,0 +1,78 @@
+.container {
+  @apply p-20
+    flex
+    flex-col
+    items-center
+    w-screen;
+}
+.heading {
+  @apply text-[2.3rem]
+    font-semibold
+    text-center
+    mb-[2.5rem];
+}
+.description {
+  @apply text-[2rem]
+    font-normal
+    text-center
+    leading-[2.4rem]
+    max-w-[60rem]
+    mb-[6.5rem];
+}
+.servicesContainer {
+  @apply grid
+  grid-cols-4
+  gap-[2rem]
+  w-full
+  px-[5rem]
+}
+.logoContainer {
+  @apply bg-white
+    inline-block
+    py-[0.25rem]
+    px-[1rem]
+    rounded-[50%]
+    self-center
+    ml-[2rem]
+    mt-[4.5rem]
+}
+.designLogoContainer{
+  @apply 
+  px-[1.5rem]
+  mt-[3rem]
+}
+
+.serviceContainer {
+  @apply text-[2.2rem]
+    text-[#000000]
+    leading-[2.6rem]
+    font-semibold
+    max-w-[33rem];
+}
+.primaryContainer {
+  @apply h-[44rem]
+    bg-[#42E2B8];
+}
+
+.secondaryContainer {
+  @apply self-start
+    pb-20
+    bg-gradient-to-b from-gray-100 to-white;
+}
+.serviceHeading {
+  @apply ml-[2rem];
+}
+
+@media(max-width:50em){
+  .servicesContainer{
+    @apply grid-cols-2
+  }
+
+  .serviceHeading{
+    @apply text-[2rem]
+
+  }
+  .designLogoContainer{
+    @apply mt-[2rem]
+  }
+}

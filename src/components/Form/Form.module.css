@@ -1,0 +1,119 @@
+.container {
+  @apply w-screen
+  z-20
+  h-screen
+  fixed
+}
+.overlay {
+  @apply h-screen
+  bg-black
+  opacity-50;
+}
+
+.form {
+  @apply absolute
+    top-0
+    w-[42rem]
+    h-screen
+    bg-white
+    p-[4rem]
+    transition-all duration-300 ease-in-out;
+}
+
+.showContainer {
+  @apply right-0;
+}
+
+.hideContainer {
+  @apply hidden;
+}
+
+.showForm {
+  @apply opacity-100
+  right-0;
+}
+.hideForm {
+  @apply opacity-0
+  -right-1/4;
+}
+
+.header {
+  @apply flex
+    justify-between
+    items-center
+    mb-[8rem];
+}
+.closeIcon {
+  @apply cursor-pointer;
+}
+.heading {
+  @apply text-[2rem]
+    font-medium
+    leading-[2.4rem];
+}
+.inputsContainer {
+  @apply flex
+    flex-col
+    gap-[4rem];
+}
+.inputContainer {
+  @apply flex
+    flex-col;
+}
+.inputContainer input,
+textarea {
+  @apply border-[1px]
+    border-navy
+    rounded-[28.5px]
+    h-[50px];
+}
+.inputContainer label {
+  @apply font-light
+    text-[16px]
+    leading-[2rem]
+    ml-[5rem]
+    bg-white
+    mb-[-1rem]
+    z-10;
+}
+.inputContainer label[id="name"] {
+  @apply w-[10rem];
+}
+.inputContainer label[id="email"] {
+  @apply w-[16rem];
+}
+
+.inputContainer label[id="phoneNumber"] {
+  @apply w-[18rem];
+}
+
+.inputContainer label[id="request"] {
+  @apply w-[8rem];
+}
+
+.inputContainer textarea[id="request"] {
+  @apply h-[25rem]
+    mb-[2.5rem];
+}
+.btn {
+  @apply w-[34rem]
+    h-[5rem]
+    rounded-[28.5px]
+    bg-[#FFDC60]
+    text-[1.8rem]
+    font-medium
+    leading-[2.2rem];
+}
+
+.btnContainer{
+  @apply
+  flex
+  justify-center
+}
+
+@media(max-width:50em) {
+  .form{
+    @apply
+    w-[70em]
+  }
+}

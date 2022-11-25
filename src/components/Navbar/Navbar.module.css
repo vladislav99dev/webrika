@@ -1,0 +1,100 @@
+.navigation {
+  @apply px-10
+   py-10
+   flex
+   justify-between
+   items-center
+   absolute
+   z-10
+   right-0
+   w-full
+  }
+
+.list {
+  @apply flex
+   gap-24
+   text-[1.5rem]
+   leading-[1.8rem]
+   font-light
+   text-[#FFFFFF]
+   items-center;
+}
+
+.mobileList{
+  @apply flex
+  flex-col
+  absolute
+  top-[70px]
+  right-[50%]
+  translate-x-[50%]
+  w-screen
+  items-center
+  bg-white
+  text-[3rem]
+  pb-10
+  gap-y-4
+}
+
+
+.list li {
+  @apply cursor-pointer;
+}
+
+.mobileMenu {
+  @apply hidden;
+}
+
+.mobileLogo {
+  @apply hidden;
+}
+
+.hide {
+  @apply hidden;
+}
+.show {
+  @apply block;
+}
+
+/* 1440*/
+@media (max-width: 90em) {
+  .list {
+    @apply gap-16;
+  }
+}
+
+/* 1150px */
+@media (max-width: 72em) {
+  .list {
+    @apply gap-10;
+  }
+}
+
+/* 994px */
+@media (max-width: 62em) {
+  .list {
+    @apply gap-8;
+  }
+}
+
+/* 800 */
+@media (max-width: 50em) {
+  .list {
+    @apply hidden;
+  }
+  .desktopLogo {
+    @apply hidden;
+  }
+
+  .navigation {
+    @apply bg-white
+    flex-row-reverse;
+  }
+
+  .mobileMenu {
+    @apply block;
+  }
+
+  .mobileLogo {
+    @apply block;
+  }
+}

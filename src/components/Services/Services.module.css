@@ -1,0 +1,66 @@
+.services{
+    @apply 
+    pt-20
+    px-20
+    bg-[#F6F6F6]
+}
+.serviceContainer{
+    @apply
+    mb-24
+}
+.heading{
+    @apply
+    text-[2.6rem]
+    font-semibold
+    leading-[3.1rem]
+    mb-12
+    text-[#3B485E]
+}
+.secondaryHeading{
+    @apply
+    text-[2.2rem]
+    font-semibold
+    leading-[2.6rem]
+    text-[#3B485E]
+}
+.description{
+    @apply
+    text-[1.8rem]
+    font-normal
+    leading-[2.2rem]
+    text-[#707070]
+    mb-2
+}
+.btn{
+    @apply
+    text-[1.2rem]
+    font-medium
+    w-[12rem]
+    h-[3rem]
+    flex
+    flex-row-reverse
+    leading-[1rem]
+    items-center
+    justify-evenly
+    tracking-tighter
+    bg-[#FFDC60]
+    rounded-[28.5px]
+}
+
+  /* 994px */
+@media (max-width:72em){
+    .btn{
+        @apply
+        text-[1.1rem]
+    }
+    .description{
+        @apply
+        text-[1.6rem]
+    }
+}
+@media (max-width:50em){
+    .services{
+        @apply
+        hidden
+    }
+}
