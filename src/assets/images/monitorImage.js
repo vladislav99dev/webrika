@@ -15,7 +15,7 @@ export const MonitorImage = () => (
         height="227"
         transform="matrix(-1 0 0 1 267 10)"
         fill="url(#pattern0)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <defs>
@@ -26,9 +26,9 @@ export const MonitorImage = () => (
         width="287"
         height="257"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

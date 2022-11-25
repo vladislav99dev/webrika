@@ -12,25 +12,23 @@ const Hero = ({ toggleForm }) => {
   return (
     <section className={styles.container}>
       <div className={styles.hero}>
-        <div className={styles.gradient}>
-          <Navbar toggleForm={toggleForm} />
+        <Navbar toggleForm={toggleForm} />
 
-          <div className={styles.textContainer}>
-            <WebrikaTextBig className={styles.textLogo} />
-            <h3 className={styles.textHeading}>Digital agency</h3>
-            <p className={styles.textDescription}>
-              Let's work together to make your <br /> business idea a reality
-            </p>
-            <Button
-              width={"24rem"}
-              height={"4.5rem"}
-              fontSize={"1.8rem"}
-              toggleForm={toggleForm}
-            />
-          </div>
+        <div className={styles.textContainer}>
+          <WebrikaTextBig className={styles.textLogo} />
+          <h3 className={styles.textHeading}>Digital agency</h3>
+          <p className={styles.textDescription}>
+            Let's work together to make your <br /> business idea a reality
+          </p>
+          <Button
+            width={"24rem"}
+            height={"4.5rem"}
+            fontSize={"1.8rem"}
+            toggleForm={toggleForm}
+          />
         </div>
       </div>
-      <Services className={styles.services} />
+      <Services />
     </section>
   );
 };

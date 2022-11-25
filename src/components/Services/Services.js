@@ -17,7 +17,7 @@ const Services = () => {
 
       {servicesData.services.map((service) => {
         return (
-          <div className={styles.serviceContainer}>
+          <div key={service.id} className={styles.serviceContainer}>
             <h2 className={styles.secondaryHeading}>{service.title}</h2>
             <p className={styles.description}>{service.description}</p>
             <button className={styles.btn}>

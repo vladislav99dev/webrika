@@ -1,18 +1,22 @@
 {
     "services":[
         {
+            "id":1,
            "title":"Design",
            "description":"UX/UI Design,Brand identity and Motion Graphics"
         },
         {
+         "id":2,
             "title":"Development",
             "description":"Custom development for web applications"
          },
          {
+            "id":3,
             "title":"E-commerce",
             "description":"Custom development for E-commerce Stores"
          },
          {
+            "id":4,
             "title":"Social media",
             "description":"Designing social media feeds,videos,banners and more"
          }

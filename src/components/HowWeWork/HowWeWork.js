@@ -12,7 +12,7 @@ const HowWeWork = ({toggleForm}) => {
       <div className={styles.stepsContainer}>
         {howWeWorkData.howWeWork.map((item, index) => {
           return (
-            <div className={styles.stepContainer}>
+            <div key={item.id} className={styles.stepContainer}>
               <h3 className={styles.stepHeading}>{item.title}</h3>
                 <p className={styles.stepNumber}>{index + 1}</p>
               <p className={styles.stepDescription}>

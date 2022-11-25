@@ -36,8 +36,8 @@ const OurTeam = () => {
       {teamMembers.map((member) => {
         const pathToImage = getImage(member.image);
         return (
-          <div className={styles.cardContainer}>
-            <GatsbyImage image={pathToImage}  className={styles.image}/>
+          <div key={member.id} className={styles.cardContainer}>
+            <GatsbyImage image={pathToImage}  className={styles.image} alt="team member Image"/>
             <p className={styles.name}>{member.name}</p>
             <p className={styles.position}>{member.position}</p>
             <p className={styles.description}>{member.description.description}</p>

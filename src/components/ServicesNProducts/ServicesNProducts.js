@@ -22,7 +22,7 @@ const ServicesNProducts = () => {
       <div className={styles.servicesContainer}>
         {serviceData.services.map((service) => {
           return (
-            <div
+            <div key={service.id}
               className={
                 service.title === "Design"
                   ? `${styles.serviceContainer} 
