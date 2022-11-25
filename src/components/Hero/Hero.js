@@ -1,11 +1,10 @@
 import React from "react";
 
+import { WebrikaTextBig } from "../../assets/images/logos/logos";
 
-import Logo from "../../assets/images/webrikaBig.svg";
 import Navbar from "../Navbar/Navbar";
 import Services from "../Services/Services";
 import Button from "../Button/Button";
-
 
 import * as styles from "./Hero.module.css";
 
@@ -17,7 +16,7 @@ const Hero = ({ toggleForm }) => {
           <Navbar toggleForm={toggleForm} />
 
           <div className={styles.textContainer}>
-            <Logo className={styles.textLogo} />
+            <WebrikaTextBig className={styles.textLogo} />
             <h3 className={styles.textHeading}>Digital agency</h3>
             <p className={styles.textDescription}>
               Let's work together to make your <br /> business idea a reality

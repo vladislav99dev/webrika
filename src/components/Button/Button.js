@@ -1,16 +1,23 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
 
-import * as styles from "./Button.module.css"
-import ArrowIcon from "../../assets/images/btnsIcons/arrowIcon.svg"
+import { ArrowIcon } from "../../assets/images/btnsIcons/btnsIcons";
 
-const Button = ({width,height,fontSize,toggleForm}) => {
+import * as styles from "./Button.module.css";
+
+
+const Button = ({ width, height, fontSize, toggleForm }) => {
   return (
-    <button style={{width,height,fontSize}} className={`${styles.btn}`} onClick={toggleForm}>
-        Work with us
-        <ArrowIcon className={styles.icon}/>
+    <button
+      style={{ width, height, fontSize }}
+      className={`${styles.btn}`}
+      onClick={toggleForm}
+    >
+      Work with us
+      <div className={styles.icon}>
+        <ArrowIcon  />
+      </div>
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

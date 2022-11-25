@@ -1,13 +1,15 @@
 import React from "react";
 
-import Logo from "../../assets/images/footerLogo.svg";
-import LinkedInBig from "../../assets/images/linkedInBig.svg"
-import UpWorkBig from "../../assets/images/upWorkBig.svg"
-import ClutchBig from "../../assets/images/clutchBig.svg"
 
-import LinkedInSmall from "../../assets/images/linkedInSmall.svg"
-import UpWorkSmall from "../../assets/images/upWorkSmall.svg"
-import ClutchSmall from "../../assets/images/clutchSmall.svg"
+import { FooterWebrikaLogo } from "../../assets/images/logos/logos";
+import { LinkedInBig } from "../../assets/images/logos/logos";
+import { UpWorkBig } from "../../assets/images/logos/logos";
+import { ClutchBig } from "../../assets/images/logos/logos";
+
+import { LinkedInSmall } from "../../assets/images/logos/logos";
+import { UpWorkSmall } from "../../assets/images/logos/logos";
+import { ClutchSmall } from "../../assets/images/logos/logos";
+
 
 import * as styles from "./Footer.module.css";
 
@@ -15,17 +17,16 @@ const Footer = () => {
   return (
     <footer className={styles.container}>
       <div className={styles.aboutUs}>
-        <Logo />
+        <FooterWebrikaLogo />
         <p className={styles.aboutUsDesc}>
           We would love to help you biuld and grow your business online.Contact
           us to learn more about our solutions and how we can work together.
         </p>
         <div className={styles.smallLogosContainer}>
-          <LinkedInSmall/>
-          <UpWorkSmall/>
-          <ClutchSmall/>
+          <LinkedInSmall />
+          <UpWorkSmall />
+          <ClutchSmall />
         </div>
-
       </div>
 
       <div className={styles.departments}>
@@ -46,9 +47,9 @@ const Footer = () => {
       <div>
         <h2 className={styles.columnHeaders}>Officially in</h2>
         <div className={styles.officiallyInLogos}>
-        <LinkedInBig/>
-        <UpWorkBig/>
-        <ClutchBig/>
+          <LinkedInBig />
+          <UpWorkBig />
+          <ClutchBig />
         </div>
       </div>
 

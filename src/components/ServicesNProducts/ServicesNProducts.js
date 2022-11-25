@@ -4,11 +4,10 @@ import serviceData from "../../assets/data/services.json";
 
 import * as styles from "./ServicesNProducts.module.css";
 
-import DesignLogo from "../../assets/images/servicesicons/designLogo.svg";
-
-import DevelopmentLogo from "../../assets/images/servicesicons/developmentLogo.svg";
-import ECommerceLogo from "../../assets/images/servicesicons/e-commerceLogo.svg";
-import SocialLogo from "../../assets/images/servicesicons/socialMediaLogo.svg";
+import {DesignLogo} from "../../assets/images/servicesIcons/servicesIcons"
+import {DevelopmentLogo} from "../../assets/images/servicesIcons/servicesIcons"
+import {ECommerceLogo} from "../../assets/images/servicesIcons/servicesIcons"
+import {SocialLogo} from "../../assets/images/servicesIcons/servicesIcons"
 
 const ServicesNProducts = () => {
   return (

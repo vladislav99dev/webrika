@@ -1,7 +1,8 @@
 import React from 'react'
-import * as styles from "./ContactUs.module.css"
 
 import Button from "../Button/Button"
+
+import * as styles from "./ContactUs.module.css"
 
 const ContactUs = ({toggleForm}) => {
   return (

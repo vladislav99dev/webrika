@@ -4,10 +4,11 @@ import servicesData from "../../assets/data/services.json";
 
 import * as styles from "./Services.module.css";
 
-import DesignIcon from "../../assets/images/servicesicons/designBtnIcon.svg";
-import DevelopmentIcon from "../../assets/images/servicesicons/developmentBtnIcon.svg";
-import ECommerceIcon from "../../assets/images/servicesicons/e-commerceBtnIcon.svg";
-import SocialIcon from "../../assets/images/servicesicons/socialMediaBtnIcon.svg";
+
+import { DesignBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
+import { DevelopmentBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
+import { ECommerceBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
+import { SocialMediaBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
 
 const Services = () => {
   return (
@@ -22,13 +23,13 @@ const Services = () => {
             <button className={styles.btn}>
               View more
               {service.title === "Design" ? (
-                <DesignIcon />
+                <DesignBtnIcon />
               ) : service.title === "Development" ? (
-                <DevelopmentIcon />
+                <DevelopmentBtnIcon />
               ) : service.title === "E-commerce" ? (
-                <ECommerceIcon />
+                <ECommerceBtnIcon />
               ) : (
-                <SocialIcon />
+                <SocialMediaBtnIcon />
               )}
             </button>
           </div>

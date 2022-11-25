@@ -1,6 +1,6 @@
 import React from "react";
 
-import CloseIcon from "../../assets/images/btnsIcons/CloseIcon.svg";
+import { CloseIcon } from "../../assets/images/btnsIcons/btnsIcons";
 
 import * as styles from "./Form.module.css";
 
@@ -18,7 +18,9 @@ const Form = ({ toggleForm, isFormOpen }) => {
         }
       >
         <div className={styles.header}>
-          <CloseIcon onClick={toggleForm} className={styles.closeIcon} />
+          <div className={styles.closeIcon} onClick={toggleForm}>
+          <CloseIcon   />
+          </div>
           <h2 className={styles.heading}>Submission</h2>
         </div>
         <div className={styles.inputsContainer}>

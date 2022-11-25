@@ -1,12 +1,11 @@
 import React from "react";
-
-import HamburgerIcon from "../../assets/images/btnsIcons/hamburgerIcon.svg";
-
 import { Link } from "gatsby";
 
-import Logo from "../../assets/images/webrika.svg";
-import MobileLogo from "../../assets/images/mobileNavLogo.svg";
 import Button from "../Button/Button";
+
+import { HamburgerIcon } from "../../assets/images/btnsIcons/btnsIcons";
+import { WebrikaMobileLogo } from "../../assets/images/logos/logos";
+import { WebrikaDesktopLogo } from "../../assets/images/logos/logos";
 
 import * as styles from "./Navbar.module.css";
 
@@ -23,8 +22,14 @@ const Navbar = ({ toggleForm }) => {
 
   return (
     <nav className={styles.navigation}>
-      <Logo className={styles.desktopLogo} />
-      <MobileLogo className={styles.mobileLogo} />
+      <div className={styles.desktopLogo}>
+        <WebrikaDesktopLogo />
+      </div>
+
+      <div className={styles.mobileLogo}>
+        <WebrikaMobileLogo />
+      </div>
+
       <ul
         className={isMobileNavOpen ? `${styles.mobileList}` : `${styles.list}`}
       >
@@ -44,7 +49,9 @@ const Navbar = ({ toggleForm }) => {
           <Button toggleForm={toggleForm} />
         </li>
       </ul>
-      <HamburgerIcon className={styles.mobileMenu} onClick={toggleNav} />
+      <div className={styles.mobileMenu} onClick={toggleNav}>
+        <HamburgerIcon  />
+      </div>
     </nav>
   );
 };

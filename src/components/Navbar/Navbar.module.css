@@ -41,7 +41,8 @@
 }
 
 .mobileMenu {
-  @apply hidden;
+  @apply hidden
+  cursor-pointer;
 }
 
 .mobileLogo {

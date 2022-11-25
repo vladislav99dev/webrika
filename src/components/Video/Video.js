@@ -1,6 +1,8 @@
 import React from "react";
+
+import {MonitorImage} from "../../assets/images/monitorImage"
+
 import * as styles from "./Video.module.css";
-import MonitorImage from "../../assets/images/monitorImage.svg"
 
 const Video = () => {
   return (

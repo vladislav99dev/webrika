@@ -15,14 +15,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /assets/,
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `hm9gh07rmhay`,
