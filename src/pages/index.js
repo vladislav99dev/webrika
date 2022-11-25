@@ -10,7 +10,7 @@ import ContactUs from "../components/ContactUs/ContactUs";
 import "../styles/global.css";
 
 const IndexPage = () => {
-  const {isFormOpen,toggleForm} = useFormToggleContext();
+  const {toggleForm} = useFormToggleContext();
   return (
     <>
       <HowWeWork toggleForm={toggleForm} />
