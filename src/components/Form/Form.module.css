@@ -89,7 +89,7 @@ textarea {
 }
 
 .inputContainer label[id="request"] {
-  @apply w-[8rem];
+  @apply w-[10rem];
 }
 
 .inputContainer textarea[id="request"] {
@@ -113,6 +113,6 @@ textarea {
 
 @media (max-width: 50em) {
   .form {
-    @apply w-[70em];
+    @apply max-w-[60em];
   }
 }
