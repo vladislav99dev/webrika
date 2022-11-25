@@ -110,9 +110,3 @@ textarea {
   @apply flex
   justify-center;
 }
-
-@media (max-width: 50em) {
-  .form {
-    @apply max-w-[60em];
-  }
-}
