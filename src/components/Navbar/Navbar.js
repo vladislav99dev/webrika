@@ -10,15 +10,19 @@ import { WebrikaDesktopLogo } from "../../assets/images/logos/logos";
 import * as styles from "./Navbar.module.css";
 
 const Navbar = ({ toggleForm }) => {
+  const isBrowser = typeof window !== "undefined";
+
   const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
 
   const toggleNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 800) setIsMobileNavOpen(false);
-  });
+  if (isBrowser) {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 800) setIsMobileNavOpen(false);
+    });
+  }
 
   return (
     <nav className={styles.navigation}>
@@ -50,7 +54,7 @@ const Navbar = ({ toggleForm }) => {
         </li>
       </ul>
       <div className={styles.mobileMenu} onClick={toggleNav}>
-        <HamburgerIcon  />
+        <HamburgerIcon />
       </div>
     </nav>
   );
