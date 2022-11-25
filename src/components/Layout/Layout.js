@@ -12,7 +12,6 @@ const Layout = ({children}) => {
 
   return (
     <>
-    {/* {isFormOpen ? <Form/> :} */}
     <Form isFormOpen={isFormOpen} toggleForm={toggleForm}/>
     <Hero isFormOpen={isFormOpen} toggleForm={toggleForm}/>
     {children}

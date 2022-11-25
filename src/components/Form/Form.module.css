@@ -2,7 +2,7 @@
   @apply w-screen
   z-20
   h-screen
-  fixed
+  fixed;
 }
 .overlay {
   @apply h-screen
@@ -17,7 +17,7 @@
     h-screen
     bg-white
     p-[4rem]
-    transition-all duration-300 ease-in-out;
+    transition-all duration-500 ease-in-out;
 }
 
 .showContainer {
@@ -25,13 +25,14 @@
 }
 
 .hideContainer {
-  @apply hidden;
+  @apply -right-[100%];
 }
 
 .showForm {
   @apply opacity-100
   right-0;
 }
+
 .hideForm {
   @apply opacity-0
   -right-1/4;
@@ -105,15 +106,13 @@ textarea {
     leading-[2.2rem];
 }
 
-.btnContainer{
-  @apply
-  flex
-  justify-center
+.btnContainer {
+  @apply flex
+  justify-center;
 }
 
-@media(max-width:50em) {
-  .form{
-    @apply
-    w-[70em]
+@media (max-width: 50em) {
+  .form {
+    @apply w-[70em];
   }
 }
