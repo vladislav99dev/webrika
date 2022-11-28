@@ -70,7 +70,7 @@ textarea {
 }
 .inputContainer label {
   @apply font-light
-    text-[16px]
+    text-[1.6rem]
     leading-[2rem]
     ml-[5rem]
     bg-white
