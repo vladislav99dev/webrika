@@ -38,13 +38,13 @@ const Navbar = ({ toggleForm }) => {
         className={isMobileNavOpen ? `${styles.mobileList}` : `${styles.list}`}
       >
         <li>
-          <Link to="#">Articles</Link>
+          <Link to="#">Home</Link>
+        </li>
+        <li >
+          <Link to="#">About us </Link>
         </li>
         <li onClick={toggleForm}>
-          <Link to="#">Contact us</Link>
-        </li>
-        <li>
-          <Link to="/about">About us</Link>
+          <Link to="/about">Contact us</Link>
         </li>
         <li>
           <Link to="#">Academy</Link>
