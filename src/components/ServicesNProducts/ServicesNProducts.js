@@ -20,51 +20,52 @@ const ServicesNProducts = () => {
 
       <div className={styles.servicesContainer}>
         <div className={`${styles.serviceCotainer} ${styles.designContainer}`}>
-          <div className={styles.logoContainer}>
+          <div className={styles.contentContainer}>
             <DesignLogo />
+
+            <h3 className={styles.serviceHeading}>Design</h3>
+            <p className={styles.serviceDescription}>
+              Design puts your foot in the door and is the first step acquiring
+              a customer.Treat it with the utmost importance.
+            </p>
           </div>
-          <h3 className={styles.serviceHeading}>Design</h3>
-          <p className={styles.serviceDescription}>
-            Design puts your foot in the door and is the first step acquiring a
-            customer.Treat it with the utmost importance.
-          </p>
         </div>
 
         <div
           className={`${styles.serviceCotainer} ${styles.developmentContainer}`}
         >
-          <div className={styles.logoContainer}>
+          <div className={styles.contentContainer}>
             <DevelopmentLogo />
+            <h3 className={styles.serviceHeading}>Development</h3>
+            <p className={styles.serviceDescription}>
+              Businesses grow by scaling.Empower your business with the right
+              tailor fitted software solutions.
+            </p>
           </div>
-          <h3 className={styles.serviceHeading}>Development</h3>
-          <p className={styles.serviceDescription}>
-            Businesses grow by scaling.Empower your business with the right
-            tailor fitted software solutions.
-          </p>
         </div>
 
         <div
           className={`${styles.serviceCotainer} ${styles.eCommerceContainer}`}
         >
-          <div className={styles.logoContainer}>
+          <div className={styles.contentContainer}>
             <ECommerceLogo />
+            <h3 className={styles.serviceHeading}>E-commerce</h3>
+            <p className={styles.serviceDescription}>
+              Be everywhere your customer is by having complete eCommerce
+              solutions.
+            </p>
           </div>
-          <h3 className={styles.serviceHeading}>E-commerce</h3>
-          <p className={styles.serviceDescription}>
-            Be everywhere your customer is by having complete eCommerce
-            solutions.
-          </p>
         </div>
 
         <div className={`${styles.serviceCotainer} ${styles.socialContainer}`}>
-          <div className={styles.logoContainer}>
+          <div className={styles.contentContainer}>
             <SocialLogo />
+            <h3 className={styles.serviceHeading}>Social</h3>
+            <p className={styles.serviceDescription}>
+              Communicating through engaging content is key to attract and keep
+              loyal customer base.
+            </p>
           </div>
-          <h3 className={styles.serviceHeading}>Social</h3>
-          <p className={styles.serviceDescription}>
-            Communicating through engaging content is key to attract and keep
-            loyal customer base.
-          </p>
         </div>
 
         {/* {serviceData.services.map((service) => {
