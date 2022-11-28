@@ -3,22 +3,22 @@
         {
             "id":1,
            "title":"Design",
-           "description":"UX/UI Design,Brand identity and Motion Graphics"
+           "description":"Turn your vision to life with amazing UI and UX"
         },
         {
          "id":2,
             "title":"Development",
-            "description":"Custom development for web applications"
+            "description":"Automate your business and biuld new services"
          },
          {
             "id":3,
             "title":"E-commerce",
-            "description":"Custom development for E-commerce Stores"
+            "description":"Bring your Commerce on-line"
          },
          {
             "id":4,
             "title":"Social media",
-            "description":"Designing social media feeds,videos,banners and more"
+            "description":"Grow and engage your audience bu compelling content"
          }
     ]
 }
