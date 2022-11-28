@@ -46,7 +46,8 @@
 }
 
 .mobileLogo {
-  @apply hidden;
+  @apply hidden
+  mr-10;
 }
 
 .hide {
