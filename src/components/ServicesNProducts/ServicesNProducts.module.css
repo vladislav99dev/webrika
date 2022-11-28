@@ -5,27 +5,59 @@
     items-center
     w-screen;
 }
+
 .heading {
-  @apply text-[2.3rem]
+  @apply text-[4rem]
     font-semibold
     text-center
     mb-[2.5rem];
 }
+
 .description {
   @apply text-[2rem]
     font-normal
     text-center
     leading-[2.4rem]
-    max-w-[60rem]
+    w-[50%]
     mb-[6.5rem];
 }
+
 .servicesContainer {
   @apply grid
   grid-cols-4
-  gap-[2rem]
   w-full
-  px-[5rem]
+  min-h-[46rem]
+  gap-[6rem]
+  px-[12rem]
+  text-[#ffffff];
 }
+
+.serviceContainer {
+  @apply text-[#000000]
+    leading-[2.6rem]
+    font-semibold;
+}
+.designContainer {
+  @apply bg-[url("./design.png")]
+  bg-center
+  bg-cover; 
+}
+.developmentContainer {
+  @apply bg-[url("./development.png")]
+  bg-center
+  bg-cover;
+}
+.eCommerceContainer {
+  @apply bg-[url("./eCommerce.png")]
+  bg-center
+  bg-cover;
+}
+.socialContainer {
+  @apply bg-[url("./social.png")]
+  bg-center
+  bg-cover;
+}
+
 .logoContainer {
   @apply bg-white
     inline-block
@@ -34,45 +66,34 @@
     rounded-[50%]
     self-center
     ml-[2rem]
-    mt-[4.5rem]
-}
-.designLogoContainer{
-  @apply 
-  px-[1.5rem]
-  mt-[3rem]
+    mt-[4.5rem];
 }
 
-.serviceContainer {
-  @apply text-[2.2rem]
-    text-[#000000]
-    leading-[2.6rem]
-    font-semibold
-    max-w-[33rem];
-}
-.primaryContainer {
-  @apply h-[44rem]
-    bg-[#42E2B8];
-}
 
-.secondaryContainer {
-  @apply self-start
-    pb-20
-    bg-gradient-to-b from-gray-100 to-white;
-}
 .serviceHeading {
-  @apply ml-[2rem];
+  @apply ml-[2rem] text-[2.2rem]
+    font-semibold
+    mt-[2rem];
 }
 
-@media(max-width:50em){
-  .servicesContainer{
-    @apply grid-cols-2
+.serviceDescription{
+  @apply 
+  mx-[2rem]
+  mt-[2rem]
+  text-[1.8rem]
+  font-semibold
+  leading-8
+}
+
+@media (max-width: 50em) {
+  .servicesContainer {
+    @apply grid-cols-2;
   }
 
-  .serviceHeading{
-    @apply text-[2rem]
-
+  .serviceHeading {
+    @apply text-[2rem];
   }
-  .designLogoContainer{
-    @apply mt-[2rem]
+  .designLogoContainer {
+    @apply mt-[2rem];
   }
 }
