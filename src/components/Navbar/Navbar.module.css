@@ -34,10 +34,17 @@
   pb-10
   gap-y-4
 }
-
-
 .list li {
-  @apply cursor-pointer;
+  @apply
+  border-b-2
+  border-transparent
+  transition ease-in duration-200
+}
+
+.list li:hover {
+  @apply cursor-pointer
+  border-[#FFDC60]
+  ;
 }
 
 .mobileMenu {
