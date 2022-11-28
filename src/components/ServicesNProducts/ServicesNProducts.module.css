@@ -58,32 +58,27 @@
   bg-cover;
 }
 
-.logoContainer {
-  @apply bg-white
-    inline-block
-    py-[0.25rem]
-    px-[1rem]
-    rounded-[50%]
-    self-center
-    ml-[2rem]
-    mt-[4.5rem];
+.contentContainer{
+  @apply
+  mx-12
+  mt-16
+  font-semibold
+
 }
 
 
-.serviceHeading {
-  @apply ml-[2rem] text-[2.2rem]
-    font-semibold
+ .serviceHeading {
+  @apply 
+  text-[2.2rem]
     mt-[2rem];
 }
 
-.serviceDescription{
+ .serviceDescription{
   @apply 
-  mx-[2rem]
   mt-[2rem]
   text-[1.8rem]
-  font-semibold
   leading-8
-}
+} 
 
 @media (max-width: 50em) {
   .servicesContainer {
