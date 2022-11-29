@@ -1,6 +1,5 @@
 import React from "react";
 
-import serviceData from "../../assets/data/services.json";
 
 import * as styles from "./ServicesNProducts.module.css";
 
