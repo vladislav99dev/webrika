@@ -6,6 +6,7 @@
     flex-col
     items-center
     w-screen
+    /* mt-44 */
 }
 
 .stepsContainer {
@@ -85,7 +86,7 @@
     bottom-[2rem];
 }
 
-@media (max-width:50em) {
+/* @media (max-width:50em) {
   .container{
     @apply
     mt-[-25rem]
@@ -99,11 +100,12 @@
     max-w-[50rem]
     mb-[1.4rem]
   }
-  /* .btn{
+
+  .btn{
     @apply
     font-bold
     w-[32rem]
     h-[6rem]
     text-[2.2rem]
-  } */
-}
+  }
+} */
