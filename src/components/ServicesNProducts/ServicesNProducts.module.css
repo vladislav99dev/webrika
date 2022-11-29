@@ -35,8 +35,17 @@
 .serviceCotainer {
   @apply
     leading-8
-    font-semibold;
+    font-semibold
+    transition-all ease-in-out duration-300
+    ;
 }
+
+.serviceCotainer:hover {
+  @apply 
+  scale-110
+  cursor-pointer
+}
+
 .designContainer {
   @apply bg-[url("./design.png")]
   bg-center
