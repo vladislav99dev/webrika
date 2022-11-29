@@ -13,7 +13,7 @@
 
 .list {
   @apply flex
-   gap-20
+   gap-[4rem]
    text-[1.5rem]
    leading-[1.8rem]
    font-light
@@ -68,29 +68,37 @@
   @apply block;
 }
 
-/* 1440*/
-@media (max-width: 90em) {
+@media(max-width:82em){
   .list {
-    @apply gap-16;
+    @apply
+    text-[1.2rem]
+    gap-[2rem]
   }
 }
 
+/* 1440
+@media (max-width: 90em) {
+  .list {
+    @apply gap-12;
+  }
+} */
+
 /* 1150px */
-@media (max-width: 72em) {
+/* @media (max-width: 72em) {
   .list {
     @apply gap-10;
   }
-}
+} */
 
 /* 994px */
-@media (max-width: 62em) {
+/* @media (max-width: 62em) {
   .list {
-    @apply gap-8;
+    @apply gap-6;
   }
-}
+} */
 
 /* 800 */
-@media (max-width: 50em) {
+/* @media (max-width: 50em) {
   .list {
     @apply hidden;
   }
@@ -110,4 +118,4 @@
   .mobileLogo {
     @apply block;
   }
-}
+} */
