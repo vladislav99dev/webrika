@@ -1,10 +1,17 @@
 .container {
+  @apply grid
+  grid-cols-[2fr,1fr]
+  relative
+  h-screen;
+}
+
+/* .container {
   @apply grid 
     grid-cols-3-1
     w-screen
     min-h-[80rem]
-}
-.hero {
+} */
+/* .hero {
   background-image: linear-gradient(
       to bottom,
       rgba(59, 72, 94, 0.8),
@@ -15,31 +22,40 @@
   @apply grid
     relative
     bg-cover
-}
+} */
 
-.gridContainer {
+/* .gridContainer {
   @apply grid
     grid-cols-2;
-}
+} */
 
 .textContainer {
   @apply absolute
-    top-[25rem]
-    left-[16rem]
+    top-[50%]
+    translate-y-[-50%]
+    left-[15rem]
     text-[#FFFFFF]
-    text-[3.6rem]
+    text-[4.2rem]
+    font-semibold
     leading-[4.4rem];
 }
+
 .textHeading {
-  @apply font-semibold
-    mb-[2rem];
+  @apply mt-6
+    mb-14;
 }
+.textDescription {
+  @apply mb-10
+  leading-[5rem];
+}
+
+/*
 .textDescription {
   @apply font-bold
     max-w-[66rem];
-}
+} */
 
-@media (max-width: 62em) {
+/* @media (max-width: 62em) {
   .textContainer {
     @apply left-[10rem];
   }
@@ -71,10 +87,9 @@
         leading-[3.5rem]
         text-center
         mb-[5rem];
-  }
+  } */
 
-
-@media(max-width:50em){
+/* @media(max-width:50em){
   .hero{
     background-image: linear-gradient(
       to bottom,
@@ -83,6 +98,6 @@
     ),
     url("./hero-image.svg");
   }
-}
+} */
 
-}
+/* } */
