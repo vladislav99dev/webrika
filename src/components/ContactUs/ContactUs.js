@@ -6,7 +6,7 @@ import * as styles from "./ContactUs.module.css"
 
 const ContactUs = ({toggleForm}) => {
   return (
-    <section className={styles.section}>
+    <section id='contact' className={styles.section}>
         <h2 className={styles.heading}>Contact us</h2>
         <p className={styles.pInformation}>Contact information</p>
         <div className={styles.contactsContainer}>

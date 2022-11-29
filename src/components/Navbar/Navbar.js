@@ -38,16 +38,16 @@ const Navbar = ({ toggleForm,bgColor,width,NavLogo }) => {
         className={isMobileNavOpen ? `${styles.mobileList}` : `${styles.list}`}
       >
         <li>
-          <Link to="/">Home</Link>
+          <Link  to="/">Home</Link>
         </li>
         <li >
-          <Link to="/about">About us </Link>
+          <Link  to="/about">About us </Link>
         </li>
         <li onClick={toggleForm}>
-          <Link to="#">Contact us</Link>
+          <Link  to="#contact">Contact us</Link>
         </li>
         <li>
-          <Link to="#">Academy</Link>
+          <Link  to="#">Academy</Link>
         </li>
         <li>
           <Button toggleForm={toggleForm} />
