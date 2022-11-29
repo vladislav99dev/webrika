@@ -1,42 +1,47 @@
 .services{
     @apply 
-    pt-20
-    px-20
+    py-20
+    px-28
     bg-[#F6F6F6]
+    text-[#3B485E]
+
+}
+
+.heading{
+    @apply
+    text-[3.2rem]
+    font-semibold
+    leading-[3.1rem]
+    mt-10
+    mb-40
 }
 .serviceContainer{
     @apply
-    mb-24
+    mb-16
 }
-.heading{
-    @apply
-    text-[2.6rem]
-    font-semibold
-    leading-[3.1rem]
-    mb-12
-    text-[#3B485E]
-}
+
 .secondaryHeading{
     @apply
-    text-[2.2rem]
+    text-[2.4rem]
     font-semibold
     leading-[2.6rem]
-    text-[#3B485E]
+    mb-4
 }
 .description{
     @apply
-    text-[1.8rem]
+    text-[2.1rem]
     font-normal
     leading-[2.2rem]
     text-[#707070]
-    mb-2
+    mb-8
 }
 .btn{
     @apply
     text-[1.6rem]
-    font-medium
-    w-[12rem]
+    font-semibold
     h-[3rem]
+    /* px-4 */
+    pr-6
     flex
     flex-row-reverse
     leading-[1rem]
@@ -45,6 +50,11 @@
     tracking-tighter
     bg-[#FFDC60]
     rounded-[28.5px]
+}
+
+.btnLogoContainer{
+    @apply
+    mx-6
 }
 
   /* 994px */

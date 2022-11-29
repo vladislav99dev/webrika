@@ -4,7 +4,6 @@ import servicesData from "../../assets/data/services.json";
 
 import * as styles from "./Services.module.css";
 
-
 import { DesignBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
 import { DevelopmentBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
 import { ECommerceBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
@@ -22,15 +21,17 @@ const Services = () => {
             <p className={styles.description}>{service.description}</p>
             <button className={styles.btn}>
               View more
-              {service.title === "Design" ? (
-                <DesignBtnIcon />
-              ) : service.title === "Development" ? (
-                <DevelopmentBtnIcon />
-              ) : service.title === "E-commerce" ? (
-                <ECommerceBtnIcon />
-              ) : (
-                <SocialMediaBtnIcon />
-              )}
+              <div className={styles.btnLogoContainer}>
+                {service.title === "Design" ? (
+                  <DesignBtnIcon />
+                ) : service.title === "Development" ? (
+                  <DevelopmentBtnIcon />
+                ) : service.title === "E-commerce" ? (
+                  <ECommerceBtnIcon />
+                ) : (
+                  <SocialMediaBtnIcon />
+                )}
+              </div>
             </button>
           </div>
         );
