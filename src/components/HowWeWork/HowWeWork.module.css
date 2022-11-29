@@ -1,7 +1,6 @@
 .container {
-  @apply pt-20
-    pb-32
-    px-20
+  @apply 
+    p-20
     text-center
     flex
     flex-col
@@ -15,25 +14,25 @@
     grid-cols-3
     justify-items-center
     gap-12
-    mb-20
     w-full
 
 }
 
 .heading {
-  @apply text-[3rem]
+  @apply text-[4rem]
     font-semibold
     leading-[3.6rem]
     mb-[5rem];
 }
 .stepContainer {
   @apply bg-gradient-to-b from-gray-100 to-white
-    max-w-[40rem]
+    max-w-[50rem]
     flex
     flex-col
     items-center
     relative
-    z-[-20];
+    z-[-20]
+    pb-[10rem]
 }
 .stepNumber {
   @apply text-[3.8rem]
@@ -62,24 +61,27 @@
 }
 
 .stepHeading {
-  @apply text-[3.4rem]
+  @apply text-[2.4rem]
     font-semibold
     leading-[4.2rem]
-    mt-[9rem];
+    mt-[8rem]
+    mb-[1rem]
+    ;
 }
 .stepDescription {
   @apply text-center
-    text-[2.6rem]
+    text-[2.3rem]
     leading-[2.5rem]
     font-normal
     text-[#767676]
-    p-20;
+    mx-20
+    my-10
 }
 .underline {
   @apply w-[25rem]
     h-[1px]
     bg-[#ACACAC]
-    absolute
+    /* absolute */
     bottom-[2rem];
 }
 
