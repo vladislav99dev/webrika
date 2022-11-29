@@ -1,43 +1,43 @@
-.services{
-    @apply 
-    py-20
-    px-28
-    bg-[#F6F6F6]
+.aside {
+  @apply bg-[#F6F6F6]
     text-[#3B485E]
-
+    h-screen
+    grid;
 }
 
-.heading{
-    @apply
-    text-[3.2rem]
+.container {
+  @apply self-center
+    justify-self-center
+    px-20;
+}
+
+.heading {
+  @apply text-[3.2rem]
     font-semibold
     leading-[3.1rem]
     mt-10
-    mb-40
+    min-h-[8rem]
+    max-h-40;
 }
-.serviceContainer{
-    @apply
-    mb-16
+.serviceContainer {
+  @apply mb-16;
 }
 
-.secondaryHeading{
-    @apply
-    text-[2.4rem]
+.serviceHeading {
+  @apply text-[2.4rem]
     font-semibold
     leading-[2.6rem]
-    mb-4
+    mb-4;
 }
-.description{
-    @apply
-    text-[2.1rem]
+.serviceDescription {
+  @apply text-[2.1rem]
     font-normal
     leading-[2.2rem]
     text-[#707070]
-    mb-8
+    mb-8;
 }
-.btn{
-    @apply
-    text-[1.6rem]
+.btn {
+  @apply text-[1.6rem]
     font-semibold
     h-[3rem]
     pr-6
@@ -48,28 +48,34 @@
     justify-evenly
     tracking-tighter
     bg-[#FFDC60]
-    rounded-[28.5px]
+    rounded-[28.5px];
 }
 
-.btnLogoContainer{
-    @apply
-    mx-6
+.btnLogoContainer {
+  @apply mr-6;
 }
 
-  /* 994px */
-@media (max-width:72em){
-    .btn{
-        @apply
-        text-[1.1rem]
-    }
-    .description{
-        @apply
-        text-[1.6rem]
-    }
+/* 1300px */
+
+@media (max-width: 82em) {
+  .heading {
+    @apply text-[2.6rem];
+  }
+  .serviceHeading {
+    @apply text-[2.2rem];
+  }
+  .serviceDescription {
+    @apply text-[1.8rem];
+  }
+  .btn{
+    @apply text-[1.4rem]
+    py-[0.4rem]
+    px-[1.5rem]
+  }
 }
-@media (max-width:50em){
-    .services{
-        @apply
-        hidden
-    }
-}
+
+/* @media (max-width: 50em) {
+  .services {
+    @apply hidden;
+  }
+} */
