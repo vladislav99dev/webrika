@@ -42,10 +42,13 @@
   transition ease-in duration-200
 }
 
-.list li:hover {
+.list li:hover  {
   @apply cursor-pointer
-  border-[#FFDC60]
-  ;
+  border-[#FFDC60];
+}
+.list li:last-child:hover {
+  @apply
+  border-transparent
 }
 
 .mobileMenu {
