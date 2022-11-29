@@ -82,8 +82,26 @@
   @apply w-[25rem]
     h-[1px]
     bg-[#ACACAC]
-    /* absolute */
     bottom-[2rem];
+}
+
+@media(max-width:67em){
+  .heading{
+    @apply
+    text-[2.4rem]
+  }
+  .stepsContainer{
+    @apply
+    grid-cols-1
+  }
+  .stepHeading, .stepDescription{
+    @apply
+    text-[2rem]
+  }
+  .container{
+    @apply
+    bg-[url("./background-image.svg")]
+  }
 }
 
 /* @media (max-width:50em) {

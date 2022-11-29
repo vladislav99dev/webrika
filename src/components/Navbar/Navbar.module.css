@@ -71,8 +71,8 @@
 @media(max-width:82em){
   .list {
     @apply
-    text-[1.2rem]
-    gap-[2rem]
+    text-[1.1rem]
+    gap-[1.5rem]
   }
 }
 
@@ -97,8 +97,8 @@
   }
 } */
 
-/* 800 */
-/* @media (max-width: 50em) {
+/* 1024 */
+@media (max-width: 64em) {
   .list {
     @apply hidden;
   }
@@ -118,4 +118,4 @@
   .mobileLogo {
     @apply block;
   }
-} */
+}

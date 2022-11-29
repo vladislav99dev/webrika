@@ -74,8 +74,8 @@
   }
 }
 
-/* @media (max-width: 50em) {
-  .services {
+@media (max-width: 64em) {
+  .aside {
     @apply hidden;
   }
-} */
+}

@@ -134,6 +134,13 @@
   }
 }
 
+@media (max-width:67em){
+  .serviceCotainer{
+    @apply
+    w-[80%]
+  }
+}
+
 
 
 

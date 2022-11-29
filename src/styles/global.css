@@ -36,9 +36,9 @@
   } */
 
   /* 994px */
-  @media (max-width: 62em) {
+  /* @media (max-width: 62em) {
     html {
       @apply text-[42.5%];
     }
-  }
+  } */
 }
