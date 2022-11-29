@@ -32,9 +32,9 @@
   text-[#ffffff];
 }
 
-.serviceContainer {
-  @apply text-[#000000]
-    leading-[2.6rem]
+.serviceCotainer {
+  @apply
+    leading-8
     font-semibold;
 }
 .designContainer {
@@ -62,8 +62,6 @@
   @apply
   mx-12
   mt-16
-  font-semibold
-
 }
 
 
@@ -77,7 +75,6 @@
   @apply 
   mt-[2rem]
   text-[1.8rem]
-  leading-8
 } 
 
 @media (max-width: 50em) {
