@@ -19,21 +19,21 @@
   }
 
   /* 1440px */
-  @media (max-width: 90em) {
+  /* @media (max-width: 90em) {
     html {
       @apply text-[57.5%];
     }
-  }
+  } */
 
   /* 1150px */
-  @media (max-width: 72em) {
+  /* @media (max-width: 72em) {
     html {
       @apply text-[50%];
     }
     button{
         @apply px-4
     }
-  }
+  } */
 
   /* 994px */
   @media (max-width: 62em) {
