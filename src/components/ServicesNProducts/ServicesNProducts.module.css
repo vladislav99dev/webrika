@@ -86,7 +86,58 @@
   text-[1.8rem]
 } 
 
-@media (max-width: 50em) {
+@media(max-width:82em){
+  .heading{
+    @apply
+    text-[2.4rem]
+  }
+  .description{
+    @apply
+    text-[1.4rem]
+
+  }
+  .servicesContainer{
+    @apply grid-cols-1
+    justify-items-center
+    gap-[2rem]
+  }
+  .serviceCotainer{
+    @apply
+    w-[50%]
+  }
+  .contentContainer{
+    @apply
+    m-0
+    p-4
+    mb-10
+  }
+  .serviceHeading{
+    @apply
+    text-[2rem]
+  }
+  .serviceDescription{
+    @apply
+    text-[1.6rem]
+  }
+  .designContainer{
+    @apply
+    bg-[url("./designSmall.png")]
+  }
+  .developmentContainer {
+    @apply bg-[url("./developmentSmall.png")]
+  }
+  .eCommerceContainer {
+    @apply bg-[url("./eCommerceSmall.png")]
+  }
+  .socialContainer {
+    @apply bg-[url("./socialSmall.png")]
+  }
+}
+
+
+
+
+/* @media (max-width: 50em) {
   .servicesContainer {
     @apply grid-cols-2;
   }
@@ -97,4 +148,4 @@
   .designLogoContainer {
     @apply mt-[2rem];
   }
-}
+} */
