@@ -1,10 +1,9 @@
 import React from "react";
-import WeAreWebrikaVideo from "../../assets/video/WeAreWebrika.mp4"
 
-const Video = () => {
+const Video = ({video}) => {
   return (
-    <video src={WeAreWebrikaVideo}  autoplay="autoplay" muted loop>
-      <source  src={WeAreWebrikaVideo} type="video/mp4"/>
+    <video className="w-full h-full object-fill" autoplay="autoplay" muted loop>
+      <source  src={video} type="video/mp4"/>
     </video>
   );
 };
