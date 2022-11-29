@@ -1,8 +1,7 @@
 .container {
   @apply grid
-  grid-cols-[2fr,1fr]
-  relative
-  h-screen;
+  grid-cols-[66%,auto]
+  h-screen
 }
 
 /* .container {
@@ -34,8 +33,9 @@
     top-[50%]
     translate-y-[-50%]
     left-[15rem]
+    mr-2
     text-[#FFFFFF]
-    text-[4.2rem]
+    text-[clamp(1.8rem,3vw,4.2rem)]
     font-semibold
     leading-[4.4rem];
 }
@@ -48,6 +48,12 @@
   @apply mb-10
   leading-[5rem];
 }
+
+/* @media (max-width:82em){
+  .textContainer{
+    @apply text-[3.4rem]
+  }
+} */
 
 /*
 .textDescription {
