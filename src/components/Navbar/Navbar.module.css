@@ -1,18 +1,19 @@
 .navigation {
-  @apply px-10
-   py-10
+  @apply 
+  p-10
    flex
    justify-between
    items-center
    absolute
    z-10
    right-0
+   top-0
    w-full
   }
 
 .list {
   @apply flex
-   gap-24
+   gap-20
    text-[1.5rem]
    leading-[1.8rem]
    font-light
