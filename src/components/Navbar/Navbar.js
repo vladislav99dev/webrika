@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "gatsby";
 
 import Button from "../Button/Button";
@@ -9,10 +9,10 @@ import { WebrikaDesktopLogo } from "../../assets/images/logos/logos";
 
 import * as styles from "./Navbar.module.css";
 
-const Navbar = ({ toggleForm }) => {
+const Navbar = ({ toggleForm,bgColor,width,NavLogo }) => {
   const isBrowser = typeof window !== "undefined";
 
-  const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   const toggleNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
