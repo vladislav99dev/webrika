@@ -99,7 +99,7 @@
   }
 }*/
 
-@media (max-width: 67em) {
+@media (max-width: 64em) {
   .container {
     @apply grid-cols-2
     text-[2rem]
