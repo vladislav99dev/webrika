@@ -280,8 +280,7 @@ export const WebrikaTextSmall = () => {
 export const WebrikaTextBig = () => {
   return (
     <svg
-      width="289"
-      height="53"
+      width="50%"
       viewBox="0 0 289 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
