@@ -14,9 +14,10 @@
   @apply absolute
     top-0
     w-[42rem]
-    h-screen
+    h-full
     bg-white
     p-[4rem]
+    overflow-y-scroll
     transition-all duration-500 ease-in-out;
 }
 
@@ -113,6 +114,6 @@ textarea {
 
 @media (max-width: 50em) {
   .form {
-    @apply max-w-[60em];
+    @apply w-[35rem];
   }
 }
