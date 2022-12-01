@@ -9,7 +9,7 @@ const OurTeam = () => {
     allContentfulWebrikaTeam: { nodes: teamMembers },
   } = useStaticQuery(graphql`
   query {
-    allContentfulWebrikaTeam(sort: {createdAt: DESC}) {
+    allContentfulWebrikaTeam(sort: {position: ASC}) {
       nodes {
         description {
           description
@@ -20,8 +20,9 @@ const OurTeam = () => {
         image {
           gatsbyImageData(
             quality: 100
-            height: 250
-            width: 250
+            height:450
+            width:450
+            resizingBehavior: SCALE
             placeholder: BLURRED
             layout: FIXED
           )
@@ -37,7 +38,9 @@ const OurTeam = () => {
         const pathToImage = getImage(member.image);
         return (
           <div key={member.id} className={styles.cardContainer}>
+            <div className={styles.imageContainer}>
             <GatsbyImage image={pathToImage}  className={styles.image} alt="team member Image"/>
+            </div>
             <p className={styles.name}>{member.name}</p>
             <p className={styles.position}>{member.position}</p>
             <p className={styles.description}>{member.description.description}</p>
