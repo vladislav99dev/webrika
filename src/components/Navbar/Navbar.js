@@ -61,7 +61,7 @@ const Navbar = ({ toggleForm, backgroundColor, width, NavLogo }) => {
         <li onClick={toggleNav}>
           <Link to="#">Academy</Link>
         </li>
-        <li onClick={toggleNav}>
+        <li>
           <Button additionalStyles={styles.btn} toggleForm={toggleForm} />
         </li>
       </ul>
