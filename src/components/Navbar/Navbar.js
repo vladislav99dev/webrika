@@ -13,7 +13,7 @@ import * as styles from "./Navbar.module.css";
 const Navbar = ({ toggleForm, backgroundColor, width, NavLogo }) => {
   const isBrowser = typeof window !== "undefined";
 
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(true);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   const toggleNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
