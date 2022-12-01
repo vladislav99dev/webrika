@@ -22,9 +22,7 @@ const HowWeWork = ({ toggleForm }) => {
         })}
       </div>
       <Button
-        width={"30rem"}
-        height={"5rem"}
-        fontSize={"1.8rem"}
+        additionalStyles={styles.btn}
         toggleForm={toggleForm}
       />
     </section>
