@@ -1,0 +1,18 @@
+.container {
+  @apply absolute
+   top-[30%]
+    left-[50%]
+    translate-x-[-50%]
+    text-white
+    text-center
+}
+.heading{
+  @apply
+  text-[3.6rem]
+  font-bold
+  mb-2
+}
+.description{
+  @apply
+  text-[2rem]
+}
