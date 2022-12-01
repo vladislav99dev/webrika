@@ -21,24 +21,34 @@
 .contactsContainer {
   @apply grid
     grid-cols-2
-    gap-[10rem]
     text-[2.4rem]
     leading-[3rem]
     text-[#000000]
     mb-[6.5rem];
 }
 .labels {
-  @apply font-normal;
+  @apply font-normal
 }
 .information {
-  @apply font-medium;
+  @apply font-medium
+  mb-[1rem]
+}
+.btn{
+  @apply
+  w-[47.5rem]
+  h-[5rem]
+  text-[1.8rem]
 }
 
-@media (max-width: 67em) {
+@media (max-width: 64em) {
+  .contactsContainer{
+    @apply
+    grid-cols-1
+    text-center;
+  }
   .heading {
     @apply text-[2.4rem];
   }
-
   .labels{
     @apply
     text-[2rem]
@@ -46,8 +56,26 @@
   .information {
     @apply
     text-[1.8rem]
+    mb-[2rem]
+  }
+  .btn{
+    @apply
+    w-[30rem]
   }
 }
+
+/* @media(max-width:34em){
+
+  .labels{
+    @apply
+    text-[1.8rem]
+  }
+  .information{
+    @apply
+    text-[1.6rem]
+  }
+} */
+
 /* @media (max-width:50em){
     .labels, .information{
         @apply
