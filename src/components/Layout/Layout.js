@@ -12,7 +12,7 @@ const Layout = ({children}) => {
 
   return (
     <>
-    <Form isFormOpen={isFormOpen} toggleForm={toggleForm}/>
+    <Form isFormOpen={isFormOpen} toggleForm={toggleForm} />
     <Hero isFormOpen={isFormOpen} toggleForm={toggleForm}/>
     {children}
     <Footer/>
