@@ -1,6 +1,5 @@
 .navigation {
-  @apply 
-    p-4
+  @apply p-4
    flex
    justify-between
    items-center
@@ -11,137 +10,93 @@
    w-full
 }
 
-.showNav{
-  @apply
-  bg-white
-}
-
-
-.list {
+.links {
   @apply flex
    gap-[4rem]
    text-[1.5rem]
    leading-[1.8rem]
    font-light
    text-[#FFFFFF]
-   items-center;
+   items-center
 }
 
-.mobileList{
-  @apply flex
-  flex-col
-  absolute
-  top-[70px]
-  right-[51%]
-  translate-x-[50%]
-  w-full
-  items-center
-  bg-white
-  text-[3rem]
-  pb-10
-  gap-y-4
-  transition-all ease-in-out duration-1000
+.showMobileNavigation {
+  @apply bg-white
+  h-[50vh];
 }
+.mobileIcon {
+  @apply hidden
+  fixed
+  top-4;
+}
+.showLinks {
+  @apply bg-white
+  right-1
+  w-screen;
+}
+.hideLinks {
+  @apply hidden;
+}
+
 .list li {
-  @apply
-  border-b-2
+  @apply border-b-2
   border-transparent
-  transition ease-in duration-200
+  transition ease-in duration-200;
 }
 
-.list li:hover  {
+.list li:hover {
   @apply cursor-pointer
   border-[#FFDC60];
 }
 .list li:last-child:hover {
-  @apply
-  border-transparent
+  @apply border-transparent;
 }
 
-
-
-.mobileMenu {
-  @apply hidden
-  cursor-pointer
-  ;
-}
-
-.mobileLogo {
-  @apply hidden
-  mr-10;
-}
-
-.hide {
-  @apply hidden;
-}
-.show {
-  @apply block;
-}
-
-@media(max-width:82em){
-  .list {
-    @apply
-    text-[1.1rem]
-    gap-[2rem]
+@media (max-width: 82em) {
+  .links {
+    @apply text-[1.1rem]
+    gap-[2rem];
   }
-  .btn{
-    @apply
-    text-[1.2rem]
+  .btn {
+    @apply text-[1.2rem];
   }
 }
 
-@media(max-width:64em){
-  /* .mobileList{
-    @apply
-    text-[]
-  } */
-}
-
-/* 1440
-@media (max-width: 90em) {
-  .list {
-    @apply gap-12;
-  }
-} */
-
-/* 1150px */
-/* @media (max-width: 72em) {
-  .list {
-    @apply gap-10;
-  }
-} */
-
-/* 994px */
-/* @media (max-width: 62em) {
-  .list {
-    @apply gap-6;
-  }
-} */
-
-/* 1024 */
 @media (max-width: 64em) {
-  .list {
-    @apply hidden;
+  .navigation {
+    @apply fixed
+    ;
+  }
+  .links {
+    @apply flex-col
+    text-black
+    self-start
+    mt-32
+    py-4;
   }
   .desktopLogo {
     @apply hidden;
   }
-
-  /* .navigation {
-    @apply
-    flex-row-reverse;
-  } */
-
-  .mobileMenu {
+  .mobileIcon {
     @apply block
-    px-[1.75rem]
-    py-[2rem]
+    p-10
     rounded-[50%]
-    bg-[rgba(255,255,255,0.6)]
-    ;
+    bg-white
+    opacity-60
+    border-none;
   }
-
-  /* .mobileLogo {
-    @apply block;
+  .links {
+    @apply text-[2rem];
+  }
+  .btn {
+    @apply
+    w-[30rem]
+    h-[4rem]
+  }
+  /* .placeholder{
+    @apply
+    h-[50vh]
+    bg-white
+    opacity-50
   } */
 }
