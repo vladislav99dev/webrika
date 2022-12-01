@@ -103,7 +103,7 @@
   }
   .serviceCotainer{
     @apply
-    w-[50%]
+    w-[32rem]
   }
   .contentContainer{
     @apply
@@ -134,10 +134,14 @@
   }
 }
 
-@media (max-width:67em){
+@media (max-width:64em){
   .serviceCotainer{
     @apply
-    w-[80%]
+    w-[32rem]
+  }
+  .description{
+    @apply
+    w-full
   }
 }
 
