@@ -1,6 +1,4 @@
 import React from 'react'
-
-import Hero from '../Hero/Hero'
 import Footer from '../Footer/Footer'
 import Form from '../Form/Form'
 
@@ -13,7 +11,6 @@ const Layout = ({children}) => {
   return (
     <>
     <Form isFormOpen={isFormOpen} toggleForm={toggleForm} />
-    <Hero isFormOpen={isFormOpen} toggleForm={toggleForm}/>
     {children}
     <Footer/>
     </>
