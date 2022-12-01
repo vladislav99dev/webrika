@@ -20,7 +20,8 @@
     max-h-40;
 }
 .serviceContainer {
-  @apply mb-16;
+  @apply mb-4
+  mr-4;
 }
 
 .serviceHeading {
