@@ -29,14 +29,7 @@
   fixed
   top-4;
 }
-.showLinks {
-  @apply bg-white
-  right-1
-  w-screen;
-}
-.hideLinks {
-  @apply hidden;
-}
+
 
 .list li {
   @apply border-b-2
@@ -92,6 +85,15 @@
     @apply
     w-[30rem]
     h-[4rem]
+  }
+
+  .showLinks {
+    @apply bg-white
+    right-1
+    w-screen;
+  }
+  .hideLinks {
+    @apply hidden;
   }
   /* .placeholder{
     @apply
