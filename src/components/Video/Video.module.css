@@ -1,0 +1,14 @@
+.container {
+  @apply relative
+    h-full;
+}
+.video {
+  @apply w-full h-full object-fill;
+}
+
+@media(max-width:64em) {
+  .container{
+    @apply
+    h-[50vh]
+  }
+}
