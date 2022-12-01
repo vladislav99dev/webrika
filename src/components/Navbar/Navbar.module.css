@@ -1,6 +1,6 @@
 .navigation {
   @apply 
-  p-10
+    p-4
    flex
    justify-between
    items-center
@@ -9,7 +9,13 @@
    right-0
    top-0
    w-full
-  }
+}
+
+.showNav{
+  @apply
+  bg-white
+}
+
 
 .list {
   @apply flex
@@ -26,14 +32,15 @@
   flex-col
   absolute
   top-[70px]
-  right-[50%]
+  right-[51%]
   translate-x-[50%]
-  w-screen
+  w-full
   items-center
   bg-white
   text-[3rem]
   pb-10
   gap-y-4
+  transition-all ease-in-out duration-1000
 }
 .list li {
   @apply
@@ -51,9 +58,12 @@
   border-transparent
 }
 
+
+
 .mobileMenu {
   @apply hidden
-  cursor-pointer;
+  cursor-pointer
+  ;
 }
 
 .mobileLogo {
@@ -72,8 +82,19 @@
   .list {
     @apply
     text-[1.1rem]
-    gap-[1.5rem]
+    gap-[2rem]
   }
+  .btn{
+    @apply
+    text-[1.2rem]
+  }
+}
+
+@media(max-width:64em){
+  /* .mobileList{
+    @apply
+    text-[]
+  } */
 }
 
 /* 1440
@@ -106,16 +127,21 @@
     @apply hidden;
   }
 
-  .navigation {
-    @apply bg-white
+  /* .navigation {
+    @apply
     flex-row-reverse;
-  }
+  } */
 
   .mobileMenu {
-    @apply block;
+    @apply block
+    px-[1.75rem]
+    py-[2rem]
+    rounded-[50%]
+    bg-[rgba(255,255,255,0.6)]
+    ;
   }
 
-  .mobileLogo {
+  /* .mobileLogo {
     @apply block;
-  }
+  } */
 }

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 
 import Button from "../Button/Button";
@@ -9,7 +9,7 @@ import { WebrikaDesktopLogo } from "../../assets/images/logos/logos";
 
 import * as styles from "./Navbar.module.css";
 
-const Navbar = ({ toggleForm,bgColor,width,NavLogo }) => {
+const Navbar = ({ toggleForm, backgroundColor, width, NavLogo }) => {
   const isBrowser = typeof window !== "undefined";
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -20,42 +20,51 @@ const Navbar = ({ toggleForm,bgColor,width,NavLogo }) => {
 
   if (isBrowser) {
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 800) setIsMobileNavOpen(false);
+      if (window.innerWidth > 1024) setIsMobileNavOpen(false);
     });
   }
 
   return (
-    <nav className={styles.navigation}>
+    <nav
+      className={
+        isMobileNavOpen
+          ? `${styles.navigation} ${styles.showNav}`
+          : `${styles.navigation} ${styles.hideNav}`
+      }
+    >
       <div className={styles.desktopLogo}>
         <WebrikaDesktopLogo />
       </div>
 
-      <div className={styles.mobileLogo}>
+      {/* <div className={styles.mobileLogo}>
         <WebrikaMobileLogo />
-      </div>
+      </div> */}
 
       <ul
-        className={isMobileNavOpen ? `${styles.mobileList}` : `${styles.list}`}
+        className={isMobileNavOpen ? `${styles.mobileList} ${styles.showNavList}` : `${styles.list}`}
       >
         <li>
-          <Link  to="/">Home</Link>
+          <Link to="/">Home</Link>
         </li>
-        <li >
-          <Link  to="/about">About us </Link>
+        <li>
+          <Link to="/about">About us </Link>
         </li>
         <li onClick={toggleForm}>
-          <Link  to="#contact">Contact us</Link>
+          <Link to="#contact">Contact us</Link>
         </li>
         <li>
-          <Link  to="#">Academy</Link>
+          <Link to="#">Academy</Link>
         </li>
         <li>
-          <Button toggleForm={toggleForm} />
+          <Button additionalStyles={styles.btn} toggleForm={toggleForm} />
         </li>
       </ul>
       <div className={styles.mobileMenu} onClick={toggleNav}>
         <HamburgerIcon />
       </div>
+      {/* <div className={styles.mobileMenu} onClick={toggleNav}>
+        <HamburgerIcon />
+      </div> */}
     </nav>
   );
 };
