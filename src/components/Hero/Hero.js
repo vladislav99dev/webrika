@@ -14,23 +14,24 @@ import Video from "../Video/Video";
 const Hero = ({ toggleForm }) => {
   const HeroText = (
     <div className={styles.textContainer}>
-      <WebrikaTextBig />
+      <div className={styles.textLogo}>
+        <WebrikaTextBig />
+      </div>
+
       <h3 className={styles.textHeading}>Digital agency</h3>
       <p className={styles.textDescription}>
         Let's work together to make your <br /> business idea a reality
       </p>
-      <Button
-        width={"30rem"}
-        height={"5rem"}
-        fontSize={"1.8rem"}
-        toggleForm={toggleForm}
-      />
+      <Button additionalStyles={styles.btn} toggleForm={toggleForm} />
     </div>
   );
 
   return (
     <section className={styles.container}>
-      <Video video={HeroVideo}>{<Navbar/>}{HeroText}</Video>
+      <Video video={HeroVideo}>
+        {<Navbar backgroundColor="white" width="full" />}
+        {HeroText}
+      </Video>
       <Services />
     </section>
   );
