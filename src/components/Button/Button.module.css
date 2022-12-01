@@ -18,7 +18,11 @@
      inline-block;
   }
 
-  @media(max-width:30em){
+  /* @media(max-width:34em){
+    .btn
+  } */
+
+  /* @media(max-width:30em){
         .btn{
         @apply
         w-[32rem]
@@ -34,5 +38,5 @@
         w-[50rem]
         h-[6rem]
     }
-}
+} */
 

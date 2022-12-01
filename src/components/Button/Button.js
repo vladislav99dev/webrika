@@ -5,11 +5,10 @@ import { ArrowIcon } from "../../assets/images/btnsIcons/btnsIcons";
 import * as styles from "./Button.module.css";
 
 
-const Button = ({ width, height, fontSize, toggleForm }) => {
+const Button = ({ additionalStyles, toggleForm }) => {
   return (
     <button
-      style={{ width, height, fontSize }}
-      className={`${styles.btn}`}
+      className={`${styles.btn} ${additionalStyles}`}
       onClick={toggleForm}
     >
       Work with us
