@@ -6,6 +6,7 @@ import * as styles from "./Button.module.css";
 
 
 const Button = ({ additionalStyles, toggleForm }) => {
+
   return (
     <button
       className={`${styles.btn} ${additionalStyles}`}
