@@ -11,7 +11,7 @@ import * as styles from "./Hero.module.css";
 
 import Video from "../Video/Video";
 
-const Hero = ({ toggleForm }) => {
+const Hero = ({ toggleForm}) => {
   const HeroText = (
     <div className={styles.textContainer}>
       <div className={styles.textLogo}>
@@ -29,7 +29,7 @@ const Hero = ({ toggleForm }) => {
   return (
     <section className={styles.container}>
       <Video video={HeroVideo}>
-        {<Navbar backgroundColor="white" width="full" />}
+        {<Navbar backgroundColor="white" width="full" toggleForm={toggleForm} />}
         {HeroText}
       </Video>
       <Services />
