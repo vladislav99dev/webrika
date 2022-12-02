@@ -3,10 +3,10 @@ import React from "react";
 
 import * as styles from "./ServicesNProducts.module.css";
 
-import { DesignLogo } from "../../assets/images/servicesIcons/servicesIcons";
-import { DevelopmentLogo } from "../../assets/images/servicesIcons/servicesIcons";
-import { ECommerceLogo } from "../../assets/images/servicesIcons/servicesIcons";
-import { SocialLogo } from "../../assets/images/servicesIcons/servicesIcons";
+import { DesignLogo } from "../../assets/images/servicesLogos/servicesIcons";
+import { DevelopmentLogo } from "../../assets/images/servicesLogos/servicesIcons";
+import { ECommerceLogo } from "../../assets/images/servicesLogos/servicesIcons";
+import { SocialLogo } from "../../assets/images/servicesLogos/servicesIcons";
 
 const ServicesNProducts = () => {
   return (
@@ -66,26 +66,6 @@ const ServicesNProducts = () => {
             </p>
           </div>
         </div>
-
-        {/* {serviceData.services.map((service) => {
-          return (
-            <div key={service.id} className={styles.serviceContainer}>
-              <div className={styles.logoContainer}>
-                {service.title === "Design" ? (
-                  <DesignLogo />
-                ) : service.title === "Development" ? (
-                  <DevelopmentLogo />
-                ) : service.title === "E-commerce" ? (
-                  <ECommerceLogo />
-                ) : (
-                  <SocialLogo />
-                )}
-              </div>
-              <h3 className={styles.serviceHeading}>{service.title}</h3>
-            </div>
-          );
-        
-        })} */}
       </div>
     </section>
   );

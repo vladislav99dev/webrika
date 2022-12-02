@@ -4,10 +4,10 @@ import servicesData from "../../assets/data/services.json";
 
 import * as styles from "./Services.module.css";
 
-import { DesignBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
-import { DevelopmentBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
-import { ECommerceBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
-import { SocialMediaBtnIcon } from "../../assets/images/servicesIcons/servicesIcons";
+import { DesignBtnIcon } from "../../assets/images/servicesLogos/servicesIcons";
+import { DevelopmentBtnIcon } from "../../assets/images/servicesLogos/servicesIcons";
+import { ECommerceBtnIcon } from "../../assets/images/servicesLogos/servicesIcons";
+import { SocialMediaBtnIcon } from "../../assets/images/servicesLogos/servicesIcons";
 
 const Services = () => {
   return (
