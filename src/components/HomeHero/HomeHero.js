@@ -12,7 +12,7 @@ import * as styles from "./Hero.module.css";
 
 import Video from "../Video/Video";
 
-const Hero = ({ toggleForm}) => {
+const Hero = ({ toggleForm,NavLogo}) => {
   const HeroText = (
     <div className={styles.textContainer}>
       <div className={styles.textLogo}>
@@ -30,7 +30,7 @@ const Hero = ({ toggleForm}) => {
   return (
     <section className={styles.container}>
       <Video video={HeroVideo}>
-        {<Navbar NavLogo={WebrikaHomeLogo} backgroundColor="white" width="full" toggleForm={toggleForm} />}
+        {<Navbar NavLogo={NavLogo} toggleForm={toggleForm} />}
         {HeroText}
       </Video>
       <Services />
