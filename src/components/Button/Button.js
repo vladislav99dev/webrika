@@ -4,9 +4,7 @@ import { ArrowIcon } from "../../assets/images/btnsIcons/btnsIcons";
 
 import * as styles from "./Button.module.css";
 
-
-const Button = ({ additionalStyles, toggleForm }) => {
-
+const Button = ({ additionalStyles, toggleForm, arrowColor }) => {
   return (
     <button
       className={`${styles.btn} ${additionalStyles}`}
@@ -14,7 +12,7 @@ const Button = ({ additionalStyles, toggleForm }) => {
     >
       Work with us
       <div className={styles.icon}>
-        <ArrowIcon  />
+        <ArrowIcon arrowColor={arrowColor} />
       </div>
     </button>
   );
