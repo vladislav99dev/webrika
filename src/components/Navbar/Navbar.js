@@ -6,11 +6,10 @@ import Button from "../Button/Button";
 import { HamburgerIcon } from "../../assets/images/btnsIcons/btnsIcons";
 import { CloseIconNav } from "../../assets/images/btnsIcons/btnsIcons";
 import { WebrikaMobileLogo } from "../../assets/images/logos/logos";
-import { WebrikaDesktopLogo } from "../../assets/images/logos/logos";
 
 import * as styles from "./Navbar.module.css";
 
-const Navbar = ({ toggleForm, backgroundColor, width, NavLogo }) => {
+const Navbar = ({ toggleForm,additionalStyles, NavLogo }) => {
   const isBrowser = typeof window !== "undefined";
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -30,13 +29,13 @@ const Navbar = ({ toggleForm, backgroundColor, width, NavLogo }) => {
     <nav
       className={
         isMobileNavOpen
-        ? `${styles.navigation} ${styles.showMobileNavigation}`
-        : `${styles.navigation} ${styles.hideMobileNavigation}`
+        ? `${styles.navigation} ${additionalStyles} ${styles.showMobileNavigation}`
+        : `${styles.navigation} ${additionalStyles}`
       }
       >
-      <div className={styles.desktopLogo}>
-        <WebrikaDesktopLogo />
-      </div>
+      <Link to="/" className={styles.desktopLogo}>
+        <NavLogo />
+      </Link>
 
       <div className={styles.mobileIcon} onClick={toggleNav}>
         {isMobileNavOpen ? <CloseIconNav/> : <HamburgerIcon/>}
@@ -49,16 +48,16 @@ const Navbar = ({ toggleForm, backgroundColor, width, NavLogo }) => {
           : `${styles.links} ${styles.hideLinks}`
         }
         >
-        <li onClick={toggleNav}>
+        <li>
           <Link to="/">Home</Link>
         </li>
-        <li onClick={toggleNav}>
+        <li>
           <Link to="/about">About us </Link>
         </li>
         <li onClick={toggleForm}>
           <Link to="#contact">Contact us</Link>
         </li>
-        <li onClick={toggleNav}>
+        <li>
           <Link to="#">Academy</Link>
         </li>
         <li>
