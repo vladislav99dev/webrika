@@ -1,5 +1,5 @@
 .navigation {
-  @apply p-4
+  @apply p-8
    flex
    justify-between
    items-center
@@ -8,6 +8,7 @@
    right-0
    top-0
    w-full
+   text-[#FFFFFF]
 }
 
 .links {
@@ -16,13 +17,15 @@
    text-[1.5rem]
    leading-[1.8rem]
    font-light
-   text-[#FFFFFF]
    items-center
 }
 
 .showMobileNavigation {
   @apply bg-white
   h-[50vh];
+}
+.hideMobileNavigation{
+  @apply bg-transparent
 }
 .mobileIcon {
   @apply hidden
@@ -58,6 +61,7 @@
 @media (max-width: 64em) {
   .navigation {
     @apply fixed
+    py-20
     ;
   }
   .links {
