@@ -20,11 +20,8 @@ const OurTeam = () => {
         image {
           gatsbyImageData(
             quality: 100
-            height:450
-            width:450
-            resizingBehavior: SCALE
+            resizingBehavior: FILL
             placeholder: BLURRED
-            layout: FIXED
           )
         }
       }
@@ -39,7 +36,7 @@ const OurTeam = () => {
         return (
           <div key={member.id} className={styles.cardContainer}>
             <div className={styles.imageContainer}>
-            <GatsbyImage image={pathToImage}  className={styles.image} alt="team member Image"/>
+            <GatsbyImage fluid={"fluid"}  image={pathToImage}  className={styles.image} alt="team member Image"/>
             </div>
             <p className={styles.name}>{member.name}</p>
             <p className={styles.position}>{member.position}</p>
