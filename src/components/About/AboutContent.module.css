@@ -15,4 +15,17 @@
 .description{
   @apply
   text-[2rem]
+
+}
+
+@media(max-width:64em){
+  .container{
+    @apply
+    top-[25%]
+  }
+  .description{
+    @apply
+    w-screen
+    px-10
+  }
 }
