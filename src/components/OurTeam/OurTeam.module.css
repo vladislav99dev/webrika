@@ -4,7 +4,7 @@
     justify-items-center
     gap-y-[10rem]
     pb-[10rem]
-    translate-y-[-10.24%]
+    translate-y-[-9.7%];
 }
 
 .cardContainer {
@@ -13,6 +13,9 @@
     flex-col
     items-center
     z-10;
+}
+.imageContainer {
+  @apply max-w-[40rem];
 }
 .name {
   @apply text-center
@@ -44,8 +47,48 @@
     w-[180%];
 }
 
-@media (max-width: 50em) {
+@media (max-width: 98em) {
   .container {
-    @apply grid-cols-1;
+    @apply translate-y-[-8.3%];
+  }
+  .imageContainer {
+    @apply max-w-[30rem];
+  }
+  .description {
+    @apply w-[150%];
+  }
+}
+
+@media (max-width: 82em) {
+  .container {
+    @apply translate-y-[-7.12%];
+  }
+
+  .imageContainer {
+    @apply max-w-[25rem];
+  }
+  .description {
+    @apply w-[120%];
+  }
+}
+
+@media (max-width: 64em) {
+  .container {
+    @apply grid-cols-1
+    translate-y-20;
+  }
+  .imageContainer {
+    @apply max-w-[70%];
+  }
+  .name {
+    @apply w-full;
+  }
+  .cardContainer{
+    @apply
+    w-[80%]
+  }
+  .description{
+    @apply
+    text-[1.6rem]
   }
 }
