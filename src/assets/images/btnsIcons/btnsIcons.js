@@ -17,18 +17,18 @@ export const CloseIcon = () => {
   );
 };
 
-export const ArrowIcon = () => {
+export const ArrowIcon = ({arrowColor}) => {
   return (
     <svg
       width="19"
       height="15"
       viewBox="0 0 19 15"
-      fill="none"
+      fill="white"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M14.4445 8.65848L10.4097 12.7508L11.9988 14.3581L18.761 7.51857L11.9988 0.679077L10.4097 2.28636L14.4445 6.37865H0.728394V8.65848H14.4445Z"
-        fill="#3B485E"
+        fill={arrowColor ? arrowColor : "#3B485E"}
       />
     </svg>
   );
