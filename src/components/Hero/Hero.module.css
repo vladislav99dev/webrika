@@ -1,0 +1,13 @@
+.homeContainer {
+  @apply grid
+  grid-cols-[66%,auto]
+  h-screen;
+}
+
+@media(max-width:64em){
+    .homeContainer{
+        @apply
+        grid-cols-1
+        h-[50vh]
+    }
+}
