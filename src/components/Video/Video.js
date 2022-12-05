@@ -4,7 +4,7 @@ import * as styles from "./Video.module.css"
 const Video = ({video,children}) => {
   return (
     <div className={styles.container} >
-    <video className={styles.video} autoplay="autoplay" muted loop>
+    <video className={styles.video} autoPlay="autoplay" muted loop>
       <source  src={video} type="video/mp4"/>
     </video>
       {children}
