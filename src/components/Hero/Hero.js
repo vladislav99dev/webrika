@@ -40,7 +40,7 @@ const Hero = ({ path, toggleForm }) => {
         ) : (
           <>
             <StyledNavigation />
-            {path === "/about" ? (
+            {path === "/about/" ? (
               <AboutContent />
             ) : (
               <ServicesContent path={path} />
