@@ -1,0 +1,59 @@
+.textContainer {
+    @apply absolute
+      top-[50%]
+      translate-y-[-50%]
+      left-[13rem]
+      mr-2
+      text-[#FFFFFF]
+      text-[clamp(1.8rem,3vw,4.2rem)]
+      font-semibold
+      leading-[4.4rem];
+  }
+  .textLogo{
+    @apply
+    w-full
+    flex
+    justify-start
+  }
+  .textHeading {
+    @apply mt-6
+      mb-14;
+  }
+  .textDescription {
+    @apply mb-10
+    leading-[5rem];
+  }
+  .btn{
+    @apply
+    w-[30rem]
+    h-[5rem]
+    text-[1.8rem]
+  }
+
+  @media(max-width: 64em){
+    .textContainer{
+        @apply
+        left-[50%]
+        translate-x-[-50%]
+        flex
+        flex-col
+        items-center
+        justify-center
+        text-center
+        text-[2rem]
+        w-screen
+      }
+      .textDescription {
+        @apply
+        leading-[2.2rem]
+      }
+      .textLogo{
+        @apply
+        justify-center
+      }
+      .textHeading{
+        @apply
+        mb-6
+        mt-0
+      }
+  }
