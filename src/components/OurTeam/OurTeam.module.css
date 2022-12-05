@@ -3,7 +3,7 @@
     grid-cols-2
     justify-items-center
     gap-y-[10rem]
-    translate-y-[-9.7%]
+    translate-y-[-9.77%]
     pb-32
 }
 
@@ -49,7 +49,7 @@
 
 @media (max-width: 98em) {
   .container {
-    @apply translate-y-[-8.3%];
+    @apply translate-y-[-8.35%];
   }
   .imageContainer {
     @apply max-w-[30rem];
@@ -61,7 +61,7 @@
 
 @media (max-width: 82em) {
   .container {
-    @apply translate-y-[-7.12%];
+    @apply translate-y-[-7.17%];
   }
 
   .imageContainer {
