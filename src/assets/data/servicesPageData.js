@@ -1,5 +1,5 @@
 import React from "react";
-import ïmagex from "../images/servicesCardImages/designUIAndUX.webp"
+import ïmagex from "../images/servicesCardImages/designUIAndUx.webp"
 
 export const pageData = {
   design: {
