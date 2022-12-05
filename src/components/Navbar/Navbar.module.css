@@ -8,7 +8,7 @@
    right-0
    top-0
    w-full
-   text-[#FFFFFF]
+   text-[#FFFFFF];
 }
 
 .links {
@@ -17,22 +17,21 @@
    text-[1.5rem]
    leading-[1.8rem]
    font-light
-   items-center
+   items-center;
 }
 
 .showMobileNavigation {
   @apply bg-white
   h-[50vh];
 }
-.hideMobileNavigation{
-  @apply bg-transparent
+.hideMobileNavigation {
+  @apply bg-transparent;
 }
 .mobileIcon {
   @apply hidden
   fixed
   top-4;
 }
-
 
 .list li {
   @apply border-b-2
@@ -48,6 +47,39 @@
   @apply border-transparent;
 }
 
+.services {
+  @apply relative
+  text-center
+  cursor-pointer
+  ;
+}
+.servicesList {
+  @apply bg-white 
+  w-[20rem]
+  border-[1px]
+  mt-6
+  absolute
+  transition-all ease-in-out duration-300
+}
+.servicesList li {
+  @apply 
+  border-b-[1px]
+  py-6
+  px-4
+  flex
+  gap-x-4
+}
+.showServices {
+  @apply
+  z-10
+  opacity-100
+}
+.hideServices{
+  @apply
+  opacity-0
+  -z-10
+}
+
 @media (max-width: 82em) {
   .links {
     @apply text-[1.1rem]
@@ -61,8 +93,7 @@
 @media (max-width: 64em) {
   .navigation {
     @apply fixed
-    py-20
-    ;
+    py-20;
   }
   .links {
     @apply flex-col
@@ -86,9 +117,8 @@
     @apply text-[2rem];
   }
   .btn {
-    @apply
-    w-[30rem]
-    h-[4rem]
+    @apply w-[30rem]
+    h-[4rem];
   }
 
   .showLinks {

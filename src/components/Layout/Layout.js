@@ -10,13 +10,9 @@ import AboutContent from "../About/AboutContent";
 import Button from "../Button/Button";
 
 import { useFormToggleContext } from "../../context/toggleFormContext";
-import { WebrikaHomeLogo } from "../../assets/images/logos/logos";
-import { WebrikaNavWhiteLogo } from "../../assets/images/logos/logos";
+import { WebrikaHomeLogo,WebrikaNavWhiteLogo } from "../../assets/images/logos/logos";
 
-import {Design} from "../../assets/images/servicesLogos/servicesLogos"
-import { Development } from "../../assets/images/servicesLogos/servicesLogos";
-import { ECommerce } from "../../assets/images/servicesLogos/servicesLogos";
-import { Social } from "../../assets/images/servicesLogos/servicesLogos";
+import {Design , Development, ECommerce,Social} from "../../assets/images/servicesLogos/servicesLogos"
 
 const Layout = (props) => {
   const { isFormOpen, toggleForm } = useFormToggleContext();
@@ -36,6 +32,7 @@ const Layout = (props) => {
           {
             <>
               <Navbar
+                showServicesBtn="true"
                 NavLogo={WebrikaNavWhiteLogo}
                 toggleForm={toggleForm}
                 additionalStyles="lg:bg-white text-[#3b485e]"
@@ -44,11 +41,12 @@ const Layout = (props) => {
             </>
           }
         </Video>
-      ) : (
+      ) : props.path === "/design/" || props.path === "/development/" || props.path === "/eCommerce/" || props.path === "/socialMedia/" ? (
         <Video video={HeroVideo}>
           {
             <>
               <Navbar
+                showServicesBtn="true"
                 NavLogo={WebrikaNavWhiteLogo}
                 toggleForm={toggleForm}
                 additionalStyles="lg:bg-white text-[#3b485e]"
@@ -70,17 +68,18 @@ const Layout = (props) => {
               <ECommerce/>
               <Button arrowColor="white"  additionalStyles={`${btnStyles} bg-[#00cdff]`}/>
               </>
-              : 
+              : props.path === "/socialMedia/" ? 
               <>
               <Social/>
               <Button arrowColor="white" additionalStyles={`${btnStyles} bg-[#698adc]`}/>
               </>
+              : null
               }
               </div>
             </>
           }
         </Video>
-      )}
+      ) : null}
 
       {props.children}
       <Footer />
