@@ -4,12 +4,16 @@ import { CloseIcon } from "../../assets/images/btnsIcons/btnsIcons";
 
 import * as styles from "./Form.module.css";
 
-const Form = ({ toggleForm, isFormOpen }) => {
+const Form = ({isFormOpen,toggleForm}) => {
   return (
-    <section className={isFormOpen
-      ? `${styles.container} ${styles.showContainer}`
-      : `${styles.container} ${styles.hideContainer}`}>
-      <div className={styles.overlay} onClick={toggleForm} ></div>
+    <section
+      className={
+        isFormOpen
+          ? `${styles.container} ${styles.showContainer}`
+          : `${styles.container} ${styles.hideContainer}`
+      }
+    >
+      <div className={styles.overlay} onClick={toggleForm}></div>
       <form
         className={
           isFormOpen
@@ -19,7 +23,7 @@ const Form = ({ toggleForm, isFormOpen }) => {
       >
         <div className={styles.header}>
           <div className={styles.closeIcon} onClick={toggleForm}>
-          <CloseIcon   />
+            <CloseIcon />
           </div>
           <h2 className={styles.heading}>Submission</h2>
         </div>
@@ -50,10 +54,10 @@ const Form = ({ toggleForm, isFormOpen }) => {
           </div>
         </div>
         <div className={styles.btnContainer}>
-        <button className={styles.btn}>Submit</button>
+          <button className={styles.btn}>Submit</button>
         </div>
       </form>
-      </section>
+    </section>
   );
 };
 
