@@ -9,7 +9,7 @@ import {
   Social,
 } from "../../assets/images/servicesLogos/servicesLogos";
 
-const ServiceContent = ({ path }) => {
+const ServiceContent = ({ path,toggleForm }) => {
   const btnStyles = "w-[30rem] h-[6rem] mt-[10rem] text-white text-[2rem]";
 
   return (
@@ -17,22 +17,22 @@ const ServiceContent = ({ path }) => {
       {path === "/design/" ? (
         <>
           <Design />
-          <Button additionalStyles={`${btnStyles} bg-[#42e2b8]`} />
+          <Button toggleForm={toggleForm} additionalStyles={`${btnStyles} bg-[#42e2b8]`} arrowColor={'white'} />
         </>
       ) : path === "/development/" ? (
         <>
           <Development />
-          <Button additionalStyles={`${btnStyles} bg-[#755aba]`} />
+          <Button toggleForm={toggleForm} additionalStyles={`${btnStyles} bg-[#755aba]`} arrowColor={'white'} />
         </>
       ) : path === "/eCommerce/" ? (
         <>
           <ECommerce />
-          <Button additionalStyles={`${btnStyles} bg-[#00cdff]`} />
+          <Button  toggleForm={toggleForm} additionalStyles={`${btnStyles} bg-[#00cdff]`} arrowColor={'white'}/>
         </>
       ) : path === "/socialMedia/" ? (
         <>
           <Social />
-          <Button additionalStyles={`${btnStyles} bg-[#698adc]`} />
+          <Button toggleForm={toggleForm}  additionalStyles={`${btnStyles} bg-[#698adc]`} arrowColor={'white'}/>
         </>
       ) : null}
     </div>
