@@ -2,7 +2,7 @@ import React from "react";
 
 import servicesData from "../../assets/data/services.json";
 
-import * as styles from "./Services.module.css";
+import * as styles from "./HeroServices.module.css";
 
 import { DesignBtnIcon } from "../../assets/images/servicesLogos/servicesIcons";
 import { DevelopmentBtnIcon } from "../../assets/images/servicesLogos/servicesIcons";
