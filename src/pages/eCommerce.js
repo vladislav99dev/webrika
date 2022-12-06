@@ -5,7 +5,7 @@ import { dataSelector } from "../assets/data/servicesPageData";
 
 const eCommerce = ({ path }) => {
   let data = dataSelector(path);
-  if(!data) data = null;
+  if(!data) data = {};
   return (
     <>
       <ServicesTools data={data} path={path} />

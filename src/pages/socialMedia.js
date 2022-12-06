@@ -5,7 +5,7 @@ import { dataSelector } from "../assets/data/servicesPageData";
 
 const SocialMedia = ({path}) => {
   let data = dataSelector(path);
-  if(!data) data = null;
+  if(!data) data = {};
 
   return (
     <>
