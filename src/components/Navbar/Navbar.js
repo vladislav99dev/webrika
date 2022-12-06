@@ -113,7 +113,7 @@ const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn }) => {
             <Link to="#">Academy</Link>
           </li>
           <li>
-            <Button additionalStyles={styles.btn} toggleForm={toggleForm} />
+            <Button additionalStyles={styles.btn} toggleForm={toggleForm}/>
           </li>
         </ul>
       </nav>

@@ -19,6 +19,14 @@ import * as styles from "./Hero.module.css";
 
 const Hero = ({ path, toggleForm }) => {
   const isHomePage = path === "/";
+  const buttonColor =
+    path === "/design"
+      ? "#42e2b8"
+      : path === "/eCommerce"
+      ? "#00cdff"
+      : path === "/development"
+      ? "#755aba"
+      : path === "#698ADC";
 
   const StyledNavigation = () => (
     <Navbar
@@ -43,7 +51,7 @@ const Hero = ({ path, toggleForm }) => {
             {path === "/about/" ? (
               <AboutContent />
             ) : (
-              <ServicesContent path={path} toggleForm={toggleForm}/>
+              <ServicesContent path={path} toggleForm={toggleForm} />
             )}
           </>
         )}
