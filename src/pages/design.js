@@ -4,6 +4,7 @@ import ServicesTools from "../components/ServicesTools/ServicesTools";
 
 const Design = ({ path }) => {
   const data = dataSelector(path);
+  if(!data) data = null;
   return (
     <>
       <ServicesTools data={data} path={path}/>
