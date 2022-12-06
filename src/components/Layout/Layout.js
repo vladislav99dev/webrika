@@ -9,12 +9,12 @@ import Hero from "../Hero/Hero";
 
 const Layout = (props) => {
   const { isFormOpen, toggleForm } = useFormToggleContext();
-
+  const path = props.path.replaceAll("/","");
   return (
     <>
       <Form isFormOpen={isFormOpen} toggleForm={toggleForm} />
       <Hero path={props.path} toggleForm={toggleForm} />
-      {props.children}
+      {React.cloneElement(props.children, {path})}
       <Footer />
     </>
   );
