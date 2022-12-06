@@ -8,7 +8,7 @@ import ServicesContent from "../HeroContents/ServicesContent";
 
 import HeroVideo from "../../assets/video/heroVideo.mp4";
 import Navbar from "../Navbar/Navbar";
-import Services from "../Services/Services";
+import HeroServices from "../HeroContents/HeroServices";
 
 import {
   WebrikaHomeLogo,
@@ -43,12 +43,12 @@ const Hero = ({ path, toggleForm }) => {
             {path === "/about/" ? (
               <AboutContent />
             ) : (
-              <ServicesContent path={path} />
+              <ServicesContent path={path} toggleForm={toggleForm}/>
             )}
           </>
         )}
       </Video>
-      {isHomePage ? <Services/> : null}
+      {isHomePage ? <HeroServices /> : null}
     </section>
   );
 };
