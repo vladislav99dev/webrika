@@ -3,15 +3,10 @@ import React from "react";
 import ServicesTools from "../components/ServicesTools/ServicesTools";
 import { dataSelector } from "../assets/data/servicesPageData";
 
-const SocialMedia = ({path}) => {
-  let data = dataSelector(path);
-  if(!data) data = {};
+const SocialMedia = ({ path }) => {
+  const data = dataSelector(path);
 
-  return (
-    <>
-      <ServicesTools data={data} path={path} />
-    </>
-  );
+  return <>{data ? <ServicesTools data={data} path={path} /> : null}</>;
 };
 
 export default SocialMedia;

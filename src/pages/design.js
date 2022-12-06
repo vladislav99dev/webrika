@@ -1,19 +1,20 @@
+import { data } from "autoprefixer";
 import React,{useState,useEffect} from "react";
 import { dataSelector } from "../assets/data/servicesPageData";
 import ServicesTools from "../components/ServicesTools/ServicesTools";
 
 const Design = ({ path }) => {
-  const [someData,setData]= useState(null);
+  // const [someData,setData]= useState(null);
 
-  useEffect(()=> {
-    if(path) setData(dataSelector(path))
-  },[path])
-
+  // useEffect(()=> {
+  //   if(path) setData(dataSelector(path))
+  // },[path])
+  const data = dataSelector(path)
 
   return (
     <>
-    {someData ? 
-    <ServicesTools data={someData} path={path}/>
+    {data ? 
+    <ServicesTools data={data} path={path}/>
     :null  
     }
     </>

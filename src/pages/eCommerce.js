@@ -4,13 +4,9 @@ import ServicesTools from "../components/ServicesTools/ServicesTools";
 import { dataSelector } from "../assets/data/servicesPageData";
 
 const eCommerce = ({ path }) => {
-  let data = dataSelector(path);
-  if(!data) data = {};
-  return (
-    <>
-      <ServicesTools data={data} path={path} />
-    </>
-  );
+  const data = dataSelector(path);
+
+  return <>{data ? <ServicesTools data={data} path={path} /> : null}</>;
 };
 
 export default eCommerce;
