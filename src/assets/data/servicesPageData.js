@@ -16,7 +16,7 @@ import social1 from "../images/servicesCardImages/social1.webp";
 import social2 from "../images/servicesCardImages/social2.webp";
 import social3 from "../images/servicesCardImages/social3.webp";
 
-export const pageData = {
+ const pageData = {
   design: {
     heading: "Web design",
     secondaryHeading: "UI/UX",
@@ -337,8 +337,8 @@ export const pageData = {
     secondaryHeading: "for social media",
     headingIcons: [
       <svg
-        width="52"
-        height="52"
+        width="91"
+        height="91"
         viewBox="0 0 52 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -358,8 +358,8 @@ export const pageData = {
         />
       </svg>,
       <svg
-        width="52"
-        height="52"
+        width="91"
+        height="91"
         viewBox="0 0 52 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -385,8 +385,8 @@ export const pageData = {
         />
       </svg>,
       <svg
-        width="52"
-        height="52"
+        width="91"
+        height="91"
         viewBox="0 0 52 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -429,4 +429,6 @@ export const pageData = {
   },
 };
 
-// const dataSelector = (page) => {};
+export const dataSelector = (value) => {
+  if(["development","design","eCommerce","socialMedia"].includes(value)) return pageData[value];
+}
