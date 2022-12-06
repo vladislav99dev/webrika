@@ -44,6 +44,7 @@
   @apply grid
     gap-x-20
     grid-cols-3
+    justify-items-center
     mx-64
     text-left;
 }
@@ -53,11 +54,14 @@
   flex-col
   justify-between
   py-12
-  w-[42rem]
+  w-[40rem]
+  /* bg-gradient-to-b from yellow-500 to cyan-500 */
+  bg-[rgba(246,246,246,0.4)]
 }
 .cardHeading {
   @apply text-[2.2rem]
-    font-bold;
+    font-bold
+    mb-4;
 }
 .cardDescription {
   @apply text-[1.8rem]
