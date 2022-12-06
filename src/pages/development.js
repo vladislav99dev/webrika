@@ -1,11 +1,13 @@
 import React from "react";
+import { dataSelector } from "../assets/data/servicesPageData";
+import ServicesTools from "../components/ServicesTools/ServicesTools";
 
-
-const Development = () => {
+const Development = ({path}) => {
+    const data = dataSelector(path);
 
     return (
         <>
-        <h1>Hello</h1>
+        <ServicesTools data={data} path={path}/>
         </>
     );
   };

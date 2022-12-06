@@ -1,15 +1,16 @@
 import React from "react";
+import { dataSelector } from "../assets/data/servicesPageData";
+import ServicesTools from "../components/ServicesTools/ServicesTools";
 
+const Design = ({ path }) => {
+  const data = dataSelector(path);
+  return (
+    <>
+      <ServicesTools data={data} path={path}/>
+    </>
+  );
+};
 
-const Design = () => {
+export default Design;
 
-    return (
-        <>
-        <h1>Hello</h1>
-        </>
-    );
-  };
-  
-  export default Design;
-  
-  export const Head = () => <title>Design</title>;
+export const Head = () => <title>Design</title>;

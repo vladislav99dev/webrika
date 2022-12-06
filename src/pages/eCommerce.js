@@ -1,15 +1,17 @@
 import React from "react";
 
+import ServicesTools from "../components/ServicesTools/ServicesTools";
+import { dataSelector } from "../assets/data/servicesPageData";
 
-const eCommerce = () => {
+const eCommerce = ({ path }) => {
+  const data = dataSelector(path);
+  return (
+    <>
+      <ServicesTools data={data} path={path} />
+    </>
+  );
+};
 
-    return (
-        <>
-        <h1>Hello</h1>
-        </>
-    );
-  };
-  
-  export default eCommerce;
-  
-  export const Head = () => <title>E-Commerce</title>;
+export default eCommerce;
+
+export const Head = () => <title>E-Commerce</title>;
