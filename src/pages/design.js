@@ -3,7 +3,7 @@ import { dataSelector } from "../assets/data/servicesPageData";
 import ServicesTools from "../components/ServicesTools/ServicesTools";
 
 const Design = ({ path }) => {
-  const data = dataSelector(path);
+  let data = dataSelector(path);
   if(!data) data = null;
   return (
     <>
