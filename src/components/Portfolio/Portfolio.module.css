@@ -1,0 +1,21 @@
+.container{
+    @apply
+    py-20
+    w-screen
+    text-[#fff]
+    bg-gradient-to-b from-navy to-navy-100
+}
+.heading{
+    @apply
+    text-center
+    text-[4rem]
+    font-semibold
+    mb-16
+}
+.tagsContainer {
+    @apply
+    flex
+    justify-center
+    text-[1.8rem]
+    gap-x-28
+}
