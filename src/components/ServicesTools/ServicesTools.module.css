@@ -1,0 +1,75 @@
+.designBg {
+  @apply
+  py-20
+  bg-[url("./designBg.svg")];
+}
+.developmentBg {
+  @apply
+  py-20
+  bg-[url("./developmentBg.svg")];
+}
+.eCommerceBg {
+  @apply
+  py-20
+  bg-[url("./eCommerceBg.svg")];
+}
+.socialMediaBg {
+  @apply
+  py-20
+  bg-[url("./socialMediaBg.svg")];
+}
+.contentContainer {
+  @apply 
+    z-10
+    top-10
+    w-full
+    text-center
+    text-[3.5rem];
+}
+.heading {
+  @apply font-semibold;
+}
+.secondaryHeading {
+  @apply font-thin
+    mb-16;
+}
+.logosContainer {
+  @apply flex
+    flex-row-reverse
+    justify-center
+    gap-x-28
+    mb-48;
+}
+.cardsContainer {
+  @apply grid
+    gap-x-20
+    grid-cols-3
+    mx-64
+    text-left;
+}
+.cardContainer {
+  @apply px-12
+  flex
+  flex-col
+  justify-between
+  py-12
+  w-[42rem]
+}
+.cardHeading {
+  @apply text-[2.2rem]
+    font-bold;
+}
+.cardDescription {
+  @apply text-[1.8rem]
+    leading-8;
+}
+.imageContainer{
+    @apply
+    py-10
+    flex
+    justify-center
+}
+.image {
+  @apply w-[25rem]
+  self-center
+}
