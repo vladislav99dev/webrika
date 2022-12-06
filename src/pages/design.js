@@ -1,13 +1,21 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { dataSelector } from "../assets/data/servicesPageData";
 import ServicesTools from "../components/ServicesTools/ServicesTools";
 
 const Design = ({ path }) => {
-  let data = dataSelector(path);
-  if(!data) data = {};
+  const [someData,setData]= useState(null);
+
+  useEffect(()=> {
+    if(path) setData(dataSelector(path))
+  },[path])
+
+
   return (
     <>
-      <ServicesTools data={data} path={path}/>
+    {someData ? 
+    <ServicesTools data={someData} path={path}/>
+    :null  
+    }
     </>
   );
 };
