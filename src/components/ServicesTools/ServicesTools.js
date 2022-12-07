@@ -2,6 +2,16 @@ import React from "react";
 import * as styles from "./ServicesTools.module.css";
 
 const ServicesTools = ({ data, path }) => {
+  const accordeonToggler = (event) => {
+    const containerElement = event.currentTarget;
+    const [heading, content] = containerElement.children;
+    const classList = Array.from(content.classList);
+    if (!classList.includes("h-auto"))
+      content.classList.add("h-auto", "opacity-100", "z-10");
+    if (classList.includes("h-auto"))
+      content.classList.remove("h-auto", "opacity-100", "z-10");
+  };
+
   return (
     <section
       className={
@@ -27,13 +37,16 @@ const ServicesTools = ({ data, path }) => {
         <div className={styles.cardsContainer}>
           {data.cardsData.map((card) => {
             return (
-              <div className={styles.cardContainer}>
-                <div className={styles.textContainer}>
+              <div onClick={accordeonToggler} className={styles.cardContainer}>
+                <div className={styles.headingContainer}>
                   <h2 className={styles.cardHeading}>{card.heading}</h2>
-                  <p className={styles.cardDescription}>{card.description}</p>
                 </div>
-                <div className={styles.imageContainer}>
-                  <img className={styles.image} src={card.image} alt="" />
+
+                <div className={styles.cardContentContainer}>
+                  <p className={styles.cardDescription}>{card.description}</p>
+                  <div className={styles.imageContainer}>
+                    <img className={styles.image} src={card.image} alt="" />
+                  </div>
                 </div>
               </div>
             );
