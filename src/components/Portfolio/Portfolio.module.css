@@ -18,4 +18,10 @@
     justify-center
     text-[1.8rem]
     gap-x-28
+    mb-16
+}
+.componentConteiner{
+    @apply
+    flex
+    justify-center
 }
