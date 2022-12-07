@@ -109,27 +109,3 @@
     bg-[url("./background-image.svg")]
   }
 }
-
-/* @media (max-width:50em) {
-  .container{
-    @apply
-    mt-[-25rem]
-  }
-  .stepsContainer{
-    @apply
-    grid-cols-1
-  }
-  .stepContainer{
-    @apply
-    max-w-[50rem]
-    mb-[1.4rem]
-  }
-
-  .btn{
-    @apply
-    font-bold
-    w-[32rem]
-    h-[6rem]
-    text-[2.2rem]
-  }
-} */

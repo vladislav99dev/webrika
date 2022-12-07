@@ -18,25 +18,4 @@
      inline-block;
   }
 
-  /* @media(max-width:34em){
-    .btn
-  } */
-
-  /* @media(max-width:30em){
-        .btn{
-        @apply
-        w-[32rem]
-        h-[6rem]
-        text-[2.2rem]
-    }
-}
-
-@media(max-width:50em){
-    .btn:first-child{
-        @apply
-        text-[2.4rem]
-        w-[50rem]
-        h-[6rem]
-    }
-} */
 

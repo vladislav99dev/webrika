@@ -129,10 +129,4 @@
   .hideLinks {
     @apply hidden;
   }
-  /* .placeholder{
-    @apply
-    h-[50vh]
-    bg-white
-    opacity-50
-  } */
 }

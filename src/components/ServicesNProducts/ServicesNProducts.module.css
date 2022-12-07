@@ -148,15 +148,3 @@
 
 
 
-/* @media (max-width: 50em) {
-  .servicesContainer {
-    @apply grid-cols-2;
-  }
-
-  .serviceHeading {
-    @apply text-[2rem];
-  }
-  .designLogoContainer {
-    @apply mt-[2rem];
-  }
-} */

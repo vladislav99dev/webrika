@@ -64,38 +64,3 @@
   }
 }
 
-/* @media(max-width:34em){
-
-  .labels{
-    @apply
-    text-[1.8rem]
-  }
-  .information{
-    @apply
-    text-[1.6rem]
-  }
-} */
-
-/* @media (max-width:50em){
-    .labels, .information{
-        @apply
-        flex
-        flex-col
-        gap-y-[3rem]
-    }
-    .btn{
-        @apply
-        w-[32rem]
-        h-[6rem]
-        font-bold
-        text-[2.2rem]
-    }
-} */
-
-/* @media (max-width:30em){
-    .contactsContainer{
-        @apply
-        gap-0
-        text-[2rem]
-    }
-} */

@@ -46,59 +46,6 @@
   mt-[5.5rem];
 }
 
-/* @media(max-width:67em){
-  .container {
-    @apply grid-cols-2
-    text-[2.6rem]
-    font-normal
-    gap-y-[4.7rem];
-  }
-  .aboutUs {
-    @apply row-start-3
-    row-end-4
-    col-start-1
-    col-end-[-1]
-    justify-self-center
-  }
-  .copyRightContainer {
-    @apply row-start-4
-    row-end-5
-    col-start-1
-    col-end-[-1]
-    justify-self-center
-    mb-[2.2rem]
-  }
-  .departments {
-    @apply col-start-1
-    col-end-[-1]
-    row-start-1
-    row-end-2
-    justify-self-start
-    leading-[5.5rem]
-  }
-  .overviews {
-    @apply justify-self-start
-    self-start
-    leading-[5.5rem]
-    font-medium;
-  } */
-  /* .container{
-    @apply
-    text-[1.6rem]
-  } */
-  /* .aboutUsDesc{
-    @apply
-    text-[1.4rem]
-  } */
-/* } */
-
-/* @media(max-width:62em){
-  .container{
-    @apply
-    text-[1.8rem]
-  }
-}*/
-
 @media (max-width: 64em) {
   .container {
     @apply grid-cols-2

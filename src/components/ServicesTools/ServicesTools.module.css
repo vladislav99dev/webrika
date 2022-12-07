@@ -1,28 +1,22 @@
 .designBg {
-  @apply
-  py-20
+  @apply py-20
   bg-[url("./designBg.svg")];
 }
 .developmentBg {
-  @apply
-  py-20
+  @apply py-20
   bg-[url("./developmentBg.svg")];
 }
 .eCommerceBg {
-  @apply
-  py-20
+  @apply py-20
   bg-[url("./eCommerceBg.svg")];
 }
 .socialMediaBg {
-  @apply
-  py-20
+  @apply py-20
   bg-[url("./socialMediaBg.svg")];
 }
 .contentContainer {
-  @apply 
-    z-10
+  @apply z-10
     top-10
-    w-full
     text-center
     text-[3.5rem];
 }
@@ -41,11 +35,12 @@
     mb-48;
 }
 .cardsContainer {
-  @apply grid
+  @apply w-screen
+    w-[90%]
+    mx-auto
+    grid
     gap-x-20
     grid-cols-3
-    justify-items-center
-    mx-64
     text-left;
 }
 .cardContainer {
@@ -54,9 +49,8 @@
   flex-col
   justify-between
   py-12
-  w-[40rem]
-  /* bg-gradient-to-b from yellow-500 to cyan-500 */
-  bg-[rgba(246,246,246,0.4)]
+  w-[100%]
+  bg-[rgba(246,246,246,0.4)];
 }
 .cardHeading {
   @apply text-[2.2rem]
@@ -67,13 +61,36 @@
   @apply text-[1.8rem]
     leading-8;
 }
-.imageContainer{
-    @apply
-    py-10
-    flex
-    justify-center
+.cardContentContainer {
+  @apply flex
+    flex-col;
+}
+.imageContainer {
+  @apply py-10
+  flex
+  justify-center;
 }
 .image {
   @apply w-[25rem]
-  self-center
+  self-center;
+}
+.show{
+  @apply block
+}
+@media (max-width: 64em) {
+  .cardsContainer {
+    @apply grid-cols-1
+    gap-y-[4rem];
+  }
+  .cardContainer {
+    @apply w-full
+    py-6
+    bg-gradient-to-b from-gray-100 to-white
+  }
+  .cardContentContainer {
+    @apply h-0
+    opacity-0
+    -z-10
+    ;
+  }
 }
