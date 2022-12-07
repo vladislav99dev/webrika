@@ -1,0 +1,71 @@
+.container {
+  grid-template-areas:
+    "elevation pinc"
+    "salt      salt"
+    "amsalem      maistorimo"
+    "amsalem      magniflex"
+    "boa          skinfactor"
+    "watterbuffalo remiliahair"
+    "rathelwolf milamontessori"
+    "rathelwolf mobispa"
+    "lpbiulder  moerie"
+    "unlimited  unlimited";
+
+  @apply w-[65%]
+    grid
+    grid-cols-2
+    gap-4
+    justify-items-center;
+}
+.imageContainer {
+  @apply w-full;
+}
+.thesalt {
+  grid-area: salt;
+}
+.elevation {
+  grid-area: elevatione;
+}
+.pinc {
+  grid-area: pinc;
+}
+.amsalem {
+  grid-area: amsalem;
+}
+.maistorimo {
+  grid-area: maistorimo;
+}
+.boa {
+  grid-area: boa;
+}
+.skinfactor {
+  grid-area: skinfactor;
+}
+.watterbuffalo {
+  grid-area: watterbuffalo;
+}
+.emiliahair {
+  grid-area: remiliahair;
+}
+.rathelwolf {
+  grid-area: rathelwolf;
+}
+.milamontessori {
+  grid-area: milamontessori;
+}
+.lpbiulder {
+  grid-area: lpbiulder;
+}
+.moerie {
+  grid-area: moerie;
+}
+.unlimited {
+  grid-area: unlimited;
+}
+.magniflex {
+  grid-area: magniflex;
+}
+.mobispa {
+  grid-area: mobispa;
+}
+
