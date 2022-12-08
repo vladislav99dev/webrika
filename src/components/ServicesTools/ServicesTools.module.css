@@ -28,7 +28,8 @@
     mb-16;
 }
 .logosContainer {
-  @apply flex
+  @apply 
+  flex
     flex-row-reverse
     justify-center
     gap-x-28
@@ -63,7 +64,8 @@
 }
 .cardContentContainer {
   @apply flex
-    flex-col;
+    flex-col
+    ;
 }
 .imageContainer {
   @apply py-10
@@ -92,5 +94,9 @@
     opacity-0
     -z-10
     ;
+  }
+  .logosContainer{
+    @apply
+    gap-x-[6%]
   }
 }
