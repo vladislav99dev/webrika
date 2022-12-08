@@ -1,6 +1,6 @@
 .container {
   grid-template-areas:
-    "elevation pinc"
+    "elevatione pinc"
     "salt      salt"
     "amsalem      maistorimo"
     "amsalem      magniflex"
@@ -17,13 +17,54 @@
     gap-4
     justify-items-center;
 }
-.imageContainer {
-  @apply w-full;
+
+.cardContainer {
+  @apply relative w-full [&>div]:w-full;
+}
+
+.contentContainer {
+  @apply top-0
+  text-center
+  px-20
+  h-full
+  absolute
+  flex
+  justify-center
+  items-center
+  transition-all duration-300;
+}
+.contentContainer:hover {
+  @apply bg-[rgb(59,72,94,0.8)];
+}
+.textContainer {
+  @apply hidden
+  text-[1.8rem]
+  font-medium
+  ;
+}
+.contentContainer:hover .textContainer {
+  @apply block;
+}
+
+.siteTitle {
+  @apply text-[2.2rem]
+  mb-2;
+}
+.siteDescription {
+  @apply
+  mb-4;
+}
+.btn {
+  @apply py-[1.2rem]
+  px-[2.4rem]
+  rounded-[2.2rem]
+
+  border-[1px];
 }
 .thesalt {
   grid-area: salt;
 }
-.elevation {
+.elevatione {
   grid-area: elevatione;
 }
 .pinc {
@@ -44,7 +85,7 @@
 .watterbuffalo {
   grid-area: watterbuffalo;
 }
-.emiliahair {
+.remiliahair {
   grid-area: remiliahair;
 }
 .rathelwolf {
@@ -69,3 +110,57 @@
   grid-area: mobispa;
 }
 
+@media(max-width:98em){
+  .textContainer{
+    @apply text-[1.6rem]
+  }
+  .siteTitle{
+    @apply text-[2rem]
+  }
+}
+@media(max-width:82em){
+  .textContainer{
+    @apply text-[1.4rem]
+  }
+  .siteTitle{
+    @apply text-[1.8rem]
+  }
+}
+
+@media(max-width:64em){
+  .textContainer{
+    @apply text-[1.2rem]
+  }
+  .siteTitle{
+    @apply text-[1.6rem]
+  }
+}
+
+@media (max-width: 50em) {
+  .container {
+      @apply flex flex-col w-[70%]
+  }
+  .contentContainer{
+    @apply px-2
+  }
+  .textContainer{
+    @apply text-[90%]
+  }
+  .siteTitle{
+    @apply text-[140%]
+  }
+  .btn{
+    @apply
+    py-[0.6rem]
+    px-[1.2rem]
+  }
+  .siteTitle{
+    @apply
+    mb-0
+  }
+  .siteDescription{
+    @apply
+    mb-2
+  }
+
+}

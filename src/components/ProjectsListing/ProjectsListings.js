@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import * as styles from "./ProjectsListing.module.css";
@@ -16,7 +16,6 @@ const ProjectsListings = () => {
               quality: 100
               resizingBehavior: FILL
               placeholder: BLURRED
-              
             )
           }
           inSiteLink
@@ -24,6 +23,7 @@ const ProjectsListings = () => {
           smallDescription {
             smallDescription
           }
+          title
         }
       }
     }
@@ -32,18 +32,30 @@ const ProjectsListings = () => {
     <section className={styles.container}>
       {projects.map((project) => {
         const pathToImage = getImage(project.posterImage);
-        let projectName = project.inSiteLink.slice(10, [
-          project.inSiteLink.length,
-        ]);
+        let projectName = project.inSiteLink
         if (projectName.includes("-"))
           projectName = projectName.replace("-", "");
-          console.log(projectName);
+        console.log(projectName);
         let className = styles[`${projectName}`];
         if (className === "undefined") className = "";
 
         return (
-          <div className={`${className} w-full [&>div]:w-full`} key={project.id}>
+          <div
+            className={`${className} ${styles.cardContainer}`}
+            key={project.id}
+          >
             <GatsbyImage image={pathToImage} alt="someImage" />
+            <div className={styles.contentContainer}>
+              <div className={styles.textContainer}>
+              <h2 className={styles.siteTitle}>{project.title}</h2>
+              <p className={styles.siteDescription}>
+                {project.smallDescription.smallDescription}
+              </p>
+              <button className={styles.btn}>
+                <Link>View more</Link>
+              </button>
+              </div>
+            </div>
           </div>
         );
       })}
