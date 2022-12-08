@@ -2,6 +2,7 @@ import React from "react";
 
 import Footer from "../Footer/Footer";
 import Form from "../Form/Form";
+import Navbar from "../Navbar/Navbar";
 
 import { useFormToggleContext } from "../../context/toggleFormContext";
 
@@ -13,7 +14,7 @@ const Layout = (props) => {
   return (
     <>
       <Form isFormOpen={isFormOpen} toggleForm={toggleForm} />
-      <Hero path={props.path} toggleForm={toggleForm} />
+      {props.path.includes("/landing-pages/") ? null : <Hero path={props.path} toggleForm={toggleForm} /> }
       {React.cloneElement(props.children, {path})}
       <Footer />
     </>
