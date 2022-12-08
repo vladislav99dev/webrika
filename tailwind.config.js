@@ -14,7 +14,10 @@ module.exports = {
         'navy': '#3B485E',
         'navy-100':'#6E82A4',
         'white--underLine--1': 'rgba(255,255,255,1)',
-        'white--underLine--2': 'rgba(255,255,255,0)'
+        'white--underLine--2': 'rgba(255,255,255,0)',
+        'yellow':'#FFDC60',
+        'yellow-opacity':'rgba(255,221,96,0)'
+
       },
     },
   },
