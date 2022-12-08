@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import ProjectsListings from "../ProjectsListing/ProjectsListings";
+import LandingsListing from "../LandingsListing/LandingsListing";
 
 import * as styles from "./Portfolio.module.css";
 
@@ -11,19 +12,35 @@ const Portfolio = () => {
     setComponent(value);
   };
 
+  const listingStyles = `${
+    component === "siteListings" ? "border-yellow text-white" : "border-yellow-opacity text-[#D3D3D3]"
+  }`;
+  const landingStyles = `border-b-2 ${
+    component === "landingPages" ? "border-yellow text-white" : "border-yellow-opacity text-[#D3D3D3]"
+  }`;
+
   return (
     <section className={styles.container}>
       <h2 className={styles.heading}>Portfolio</h2>
       <div className={styles.tagsContainer}>
-        <p onClick={changeComponent.bind(null, "siteListings")}>Development</p>
-        <p onClick={changeComponent.bind(null, "landingPages")}>
+        <p
+          className={`border-b-2 cursor-pointer ${listingStyles} `}
+          onClick={changeComponent.bind(null, "siteListings")}
+        >
+          Development
+        </p>
+        <p
+          className={`border-b-2 cursor-pointer ${landingStyles} `}
+          onClick={changeComponent.bind(null, "landingPages")}
+        >
           Landing Pages
         </p>
       </div>
       <div className={styles.componentConteiner}>
-      <ProjectsListings/>
-      </div>
+        {component === "siteListings" ? <ProjectsListings/> : null}
+        {component === "landingPages" ? <LandingsListing/> : null}
 
+      </div>
     </section>
   );
 };

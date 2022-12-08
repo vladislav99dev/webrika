@@ -25,3 +25,8 @@
     flex
     justify-center
 }
+@media(max-width:50em){
+    .tagsContainer{
+        @apply gap-x-16
+    }
+}
