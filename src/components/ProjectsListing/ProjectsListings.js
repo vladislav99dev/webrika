@@ -32,7 +32,7 @@ const ProjectsListings = () => {
     <section className={styles.container}>
       {projects.map((project) => {
         const pathToImage = getImage(project.posterImage);
-        let projectName = project.inSiteLink
+        let projectName = project.inSiteLink;
         if (projectName.includes("-"))
           projectName = projectName.replace("-", "");
         console.log(projectName);
@@ -47,13 +47,13 @@ const ProjectsListings = () => {
             <GatsbyImage image={pathToImage} alt="someImage" />
             <div className={styles.contentContainer}>
               <div className={styles.textContainer}>
-              <h2 className={styles.siteTitle}>{project.title}</h2>
-              <p className={styles.siteDescription}>
-                {project.smallDescription.smallDescription}
-              </p>
-              <button className={styles.btn}>
-                <Link>View more</Link>
-              </button>
+                <h2 className={styles.siteTitle}>{project.title}</h2>
+                <p className={styles.siteDescription}>
+                  {project.smallDescription.smallDescription}
+                </p>
+                <Link to={`/projects/${project.inSiteLink}`}>
+                  <button className={styles.btn}>View more</button>
+                </Link>
               </div>
             </div>
           </div>
