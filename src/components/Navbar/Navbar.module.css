@@ -56,7 +56,7 @@
   @apply bg-white 
   w-[20rem]
   border-[1px]
-  mt-6
+  mt-12
   absolute
   transition-all ease-in-out duration-300;
 }
@@ -65,7 +65,8 @@
   py-6
   px-4
   flex
-  gap-x-4;
+  gap-x-4
+  ;
 }
 .showServices {
   @apply z-10
@@ -75,6 +76,16 @@
   @apply opacity-0
   -z-10
 hidden;
+}
+.servicesArrow{
+  @apply
+  border-b-[1px] border-r-[1px] border-black w-[1rem] h-[1rem] mt-2 transition-all duration-100
+}
+.arrowDown{
+  @apply -rotate-45
+}
+.arrowRight{
+  @apply rotate-45
 }
 
 @media (max-width: 82em) {

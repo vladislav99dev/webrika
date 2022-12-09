@@ -64,10 +64,17 @@ const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn }) => {
           </li>
           {showServicesBtn ? (
             <li
-              className={styles.services}
+              className={`${styles.services} flex gap-x-4`}
               onClick={toggler.bind(null, "services")}
             >
               Services
+              <div
+                className={
+                  isServicesOpen
+                  ? `${styles.servicesArrow} ${styles.arrowRight}`
+                    : `${styles.servicesArrow} ${styles.arrowDown}`
+                }
+              ></div>
               <ul
                 className={
                   isServicesOpen
@@ -106,14 +113,17 @@ const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn }) => {
           <li>
             <Link to="/about">About us </Link>
           </li>
+          {showServicesBtn ? null : (
+            <li>
+              <Link to="#contact">Contact us</Link>
+            </li>
+          )}
+
           <li>
-            <Link to="#contact">Contact us</Link>
+            <Link to="http://academy.webrika.bg/">Academy</Link>
           </li>
           <li>
-            <Link to="#">Academy</Link>
-          </li>
-          <li>
-            <Button additionalStyles={styles.btn} toggleForm={toggleForm}/>
+            <Button additionalStyles={styles.btn} toggleForm={toggleForm} />
           </li>
         </ul>
       </nav>
