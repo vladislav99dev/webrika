@@ -18,7 +18,7 @@ import {
 import * as styles from "./Hero.module.css";
 
 const Hero = ({ path, toggleForm }) => {
-  const [isHomePage,setIsHomePage] = useState(path === "/");
+  const isHomePage = path === "/";
 
   const StyledNavigation = () => (
     <Navbar
