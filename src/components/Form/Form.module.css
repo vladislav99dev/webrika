@@ -116,6 +116,6 @@ textarea {
 
 @media (max-width: 50em) {
   .form {
-    @apply w-[35rem];
+    @apply w-[35rem] h-[90vh];
   }
 }
