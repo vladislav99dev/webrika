@@ -8,7 +8,7 @@ const Development = ({ path }) => {
 
   return (
     <>
-      {data ? <ServicesTools data={data} path={path} /> : null} <Portfolio />
+      {data ? <ServicesTools data={data} path={path} /> : null} <Portfolio websiteListingName="Development" />
     </>
   );
 };
