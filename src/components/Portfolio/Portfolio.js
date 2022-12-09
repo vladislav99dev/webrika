@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 import ProjectsListings from "../ProjectsListing/ProjectsListings";
 import LandingsListing from "../LandingsListing/LandingsListing";
+import MotionDesign from "../MotionDesign/MotionDesign";
 
 import * as styles from "./Portfolio.module.css";
 
-const Portfolio = ({websiteListingName}) => {
+const Portfolio = ({ websiteListingName }) => {
   const [component, setComponent] = useState("siteListings");
 
   const changeComponent = (value) => {
@@ -13,10 +14,14 @@ const Portfolio = ({websiteListingName}) => {
   };
 
   const listingStyles = `${
-    component === "siteListings" ? "border-yellow text-white" : "border-yellow-opacity text-[#D3D3D3]"
+    component === "siteListings"
+      ? "border-yellow text-white"
+      : "border-yellow-opacity text-[#D3D3D3]"
   }`;
   const landingStyles = `border-b-2 ${
-    component === "landingPages" ? "border-yellow text-white" : "border-yellow-opacity text-[#D3D3D3]"
+    component === "landingPages"
+      ? "border-yellow text-white"
+      : "border-yellow-opacity text-[#D3D3D3]"
   }`;
 
   return (
@@ -37,10 +42,10 @@ const Portfolio = ({websiteListingName}) => {
         </p>
       </div>
       <div className={styles.componentConteiner}>
-        {component === "siteListings" ? <ProjectsListings/> : null}
-        {component === "landingPages" ? <LandingsListing/> : null}
-
+        {component === "siteListings" ? <ProjectsListings /> : null}
+        {component === "landingPages" ? <LandingsListing /> : null}
       </div>
+      <MotionDesign />
     </section>
   );
 };
