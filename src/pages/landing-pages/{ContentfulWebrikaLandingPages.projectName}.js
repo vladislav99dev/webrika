@@ -20,7 +20,7 @@ const ContentfulWebrikaLandingPages = ({
       />
       {project.images.map((image, index) => {
         const imagePath = getImage(image) 
-        if(index == 0 ) return <GatsbyImage image={image.gatsbyImageData} />;
+        if(index == 0 ) return <GatsbyImage image={imagePath} />;
         if(index != 0 ) return <div className="max-w-[144rem] mt-1 mb-2"> <GatsbyImage image={image.gatsbyImageData} /> </div>
       })}
     </div>
@@ -28,7 +28,7 @@ const ContentfulWebrikaLandingPages = ({
 };
 
 export const query = graphql`
-  query getSingleRecipe($projectName: String) {
+  query getSingleLandingPage($projectName: String) {
     contentfulWebrikaLandingPages(projectName: { eq: $projectName }) {
       projectName
       images {
