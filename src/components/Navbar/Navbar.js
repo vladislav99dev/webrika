@@ -71,7 +71,7 @@ const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn }) => {
               <div
                 className={
                   isServicesOpen
-                  ? `${styles.servicesArrow} ${styles.arrowRight}`
+                    ? `${styles.servicesArrow} ${styles.arrowRight}`
                     : `${styles.servicesArrow} ${styles.arrowDown}`
                 }
               ></div>
