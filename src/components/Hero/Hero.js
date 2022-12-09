@@ -56,7 +56,7 @@ const Hero = ({ path, toggleForm }) => {
           </>
         )}
       </Video>
-      <HeroServices /> 
+      {isHomePage ? <HeroServices /> : null}
     </section>
   );
 };
