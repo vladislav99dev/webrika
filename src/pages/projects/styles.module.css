@@ -68,4 +68,7 @@
         @apply
         w-[100%]
     }
+    .viewSiteBtn{
+        @apply w-[20rem]
+    }
 }
