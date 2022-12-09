@@ -10,12 +10,16 @@ import Hero from "../Hero/Hero";
 
 const Layout = (props) => {
   const { isFormOpen, toggleForm } = useFormToggleContext();
-  const path = props.path.replaceAll("/","");
+  const path = props.path.replaceAll("/", "");
+  const displayHero =
+    path.includes("landing-pages") || props.path.includes("projects")
+      ? false
+      : true;
   return (
     <>
       <Form isFormOpen={isFormOpen} toggleForm={toggleForm} />
-      {props.path.includes("/landing-pages/") ? null : <Hero path={props.path} toggleForm={toggleForm} /> }
-      {React.cloneElement(props.children, {path})}
+      {displayHero ? <Hero path={props.path} toggleForm={toggleForm} /> : null}
+      {React.cloneElement(props.children, { path })}
       <Footer />
     </>
   );
