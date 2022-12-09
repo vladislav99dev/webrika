@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 
 import Video from "../Video/Video";
 
@@ -16,9 +16,14 @@ import {
 } from "../../assets/images/logos/logos";
 
 import * as styles from "./Hero.module.css";
+import { useEffect } from "react";
 
 const Hero = ({ path, toggleForm }) => {
-  const isHomePage = path === "/";
+  const [isHomePage,setIsHomePage] = useState(false)
+  useEffect(() => {
+    path === "/" ? setIsHomePage(true) : setIsHomePage(false)
+  },[])
+
   const buttonColor =
     path === "/design"
       ? "#42e2b8"
