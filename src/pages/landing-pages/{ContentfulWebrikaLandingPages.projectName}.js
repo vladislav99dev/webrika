@@ -3,30 +3,27 @@ import { graphql } from "gatsby";
 import Navbar from "../../components/Navbar/Navbar";
 import { useFormToggleContext } from "../../context/toggleFormContext";
 import { WebrikaNavWhiteLogo } from "../../assets/images/logos/logos";
-import { GatsbyImage,getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import * as styles from "./styles.module.css";
 
 const ContentfulWebrikaLandingPages = ({
   data: { contentfulWebrikaLandingPages: project },
 }) => {
-
   const { toggleForm } = useFormToggleContext();
-  console.log(project.images[0]);
   return (
-    <>
+    <div className="flex flex-col items-center">
       <Navbar
         toggleForm={toggleForm}
-        additionalStyles={`bg-white text-[#3b485e] static`}
+        additionalStyles={`bg-white text-[#3b485e] fixed`}
         NavLogo={WebrikaNavWhiteLogo}
         showServicesBtn="true"
       />
-      {project.images.map((image) => {
-        return (
-            <GatsbyImage image={image.gatsbyImageData} />
-        )
+      {project.images.map((image, index) => {
+        const imagePath = getImage(image) 
+        if(index == 0 ) return <GatsbyImage image={image.gatsbyImageData} />;
+        if(index != 0 ) return <div className="max-w-[144rem] mt-1 mb-2"> <GatsbyImage image={image.gatsbyImageData} /> </div>
       })}
-    </>
+    </div>
   );
 };
 
@@ -42,3 +39,5 @@ export const query = graphql`
 `;
 
 export default ContentfulWebrikaLandingPages;
+
+export const Head = () => <title>Landing pages</title>;
