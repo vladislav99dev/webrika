@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React from "react";
 
 import Video from "../Video/Video";
 
@@ -16,14 +16,9 @@ import {
 } from "../../assets/images/logos/logos";
 
 import * as styles from "./Hero.module.css";
-import { useEffect } from "react";
 
 const Hero = ({ path, toggleForm }) => {
-  const [isHomePage,setIsHomePage] = useState(false)
-  useEffect(() => {
-    path === "/" ? setIsHomePage(true) : setIsHomePage(false)
-  },[])
-
+  const isHomePage = path === "/";
   const buttonColor =
     path === "/design"
       ? "#42e2b8"
@@ -61,7 +56,7 @@ const Hero = ({ path, toggleForm }) => {
           </>
         )}
       </Video>
-      {isHomePage ? <HeroServices /> : null}
+      <HeroServices /> 
     </section>
   );
 };
