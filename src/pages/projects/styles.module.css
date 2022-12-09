@@ -1,0 +1,71 @@
+.aboutProjectText{
+    @apply py-20
+    flex
+    flex-col
+    items-center
+    text-black
+}
+.title{
+    @apply
+    text-[3.6rem]
+    font-bold
+    text-center
+    my-20
+    w-[40%]
+}
+.description{
+    @apply
+    text-[2rem]
+    text-center
+    whitespace-pre-line
+    mb-20
+    w-[40%]
+}
+.technologies{
+    @apply
+    flex
+    flex-wrap
+    justify-center
+    items-center
+    gap-x-20
+    gap-y-10
+    w-[100%]
+    px-20
+}
+.btn{
+    @apply
+    w-[30rem]
+    h-[5rem]
+    text-[1.8rem]
+    mb-20
+}
+.viewSiteBtnContainer{
+    @apply w-screen flex justify-center py-20 mb-20
+}
+.viewSiteBtn{
+    @apply
+    w-[50rem] 
+    h-[5rem] 
+    rounded-[2.85rem]
+    text-[2rem]
+    border-[2px]
+    border-[#fff]
+    bg-white
+    font-bold
+}
+
+@media(max-width:82em){
+    .description {
+        @apply w-[50%]
+    }
+}
+
+@media(max-width:64em){
+    .description {
+        @apply w-[80%]
+    }
+    .title{
+        @apply
+        w-[100%]
+    }
+}
