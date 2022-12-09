@@ -5,7 +5,7 @@ import LandingsListing from "../LandingsListing/LandingsListing";
 
 import * as styles from "./Portfolio.module.css";
 
-const Portfolio = () => {
+const Portfolio = ({websiteListingName}) => {
   const [component, setComponent] = useState("siteListings");
 
   const changeComponent = (value) => {
@@ -27,7 +27,7 @@ const Portfolio = () => {
           className={`border-b-2 cursor-pointer ${listingStyles} `}
           onClick={changeComponent.bind(null, "siteListings")}
         >
-          Development
+          {websiteListingName}
         </p>
         <p
           className={`border-b-2 cursor-pointer ${landingStyles} `}
