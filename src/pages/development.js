@@ -8,7 +8,13 @@ const Development = ({ path }) => {
 
   return (
     <>
-      {data ? <ServicesTools data={data} path={path} /> : null} <Portfolio websiteListingName="Development" />
+      {data ? <ServicesTools data={data} path={path} /> : null}
+      <Portfolio
+        tags={[
+          { data: "projectsListings", text: "Development" },
+          { data: "landingPages", text: "Landing Pages" },
+        ]}
+      />
     </>
   );
 };

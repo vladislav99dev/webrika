@@ -12,7 +12,7 @@ const Design = ({ path }) => {
     <ServicesTools data={data} path={path}/>
     :null  
     }
-    <Portfolio websiteListingName="Design"/>
+    <Portfolio tags={[{data:"projectsListings",text:"Design"},{data:"landingPages",text:"Landing-Pages"},{data:"motionDesign",text:"Motion Design"}]}/>
     </>
   );
 };
