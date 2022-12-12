@@ -21,8 +21,6 @@ const LandingsListing = () => {
       }
     }
   `)
-
-  console.log(pages);
   return (
    <section className={styles.container}>
     {pages.map((page) => {
