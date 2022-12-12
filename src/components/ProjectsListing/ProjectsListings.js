@@ -28,6 +28,7 @@ const ProjectsListings = () => {
       }
     }
   `);
+  
   return (
     <section className={styles.container}>
       {projects.map((project) => {
@@ -35,7 +36,6 @@ const ProjectsListings = () => {
         let projectName = project.inSiteLink;
         if (projectName.includes("-"))
           projectName = projectName.replace("-", "");
-        console.log(projectName);
         let className = styles[`${projectName}`];
         if (className === "undefined") className = "";
 
