@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MotionVideo from "./Video/MotionVideo";
+import MotionCard from "./MotionCard";
 
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -33,7 +33,7 @@ const MotionDesign = () => {
   return (
     <div className={styles.container}>
       {videos.map((video) => {
-        return <MotionVideo
+        return <MotionCard
           key={video.id}
           videoUrl={video.video.url}
           videoUrlChanger={videoUrlChanger}
@@ -43,12 +43,5 @@ const MotionDesign = () => {
     </div>
   );
 };
-
-{/* <video className="h-[600px]" autoPlay="autoplay" muted loop>
-<source
-  src={videoUrl}
-  type="video/mp4"
-/>
-</video> */}
 
 export default MotionDesign;
