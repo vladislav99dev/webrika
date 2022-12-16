@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 
 import Video from "../Video/Video";
 
@@ -31,41 +31,27 @@ const Hero = ({ path, toggleForm }) => {
 
   return (
     <section className={isHomePage ? styles.homeContainer : null}>
-      {isHomePage ? (
-        <>
-          <Navbar NavLogo={WebrikaHomeLogo} toggleForm={toggleForm} />
-          <HomeContent toggleForm={toggleForm} />
-        </>
-      ) : (
-        <>
-          <StyledNavigation />
-          {path === "/about/" ? (
-            <AboutContent />
-          ) : (
-            <ServicesContent path={path} toggleForm={toggleForm} />
-          )}
-        </>
-      )}
+      <Video video={HeroVideo}>
+        {isHomePage ? (
+          <>
+            <Navbar NavLogo={WebrikaHomeLogo} toggleForm={toggleForm} />
+            <HomeContent toggleForm={toggleForm} />
+          </>
+        ) 
+        : (
+          <>
+            <StyledNavigation />
+            {path === "/about/" ? (
+              <AboutContent />
+            ) : (
+              <ServicesContent path={path} toggleForm={toggleForm} />
+            )}
+          </>
+        )}
+      </Video>
       {isHomePage ? <HeroServices /> : null}
     </section>
   );
 };
 
 export default Hero;
-
-// {isHomePage ? (
-//   <>
-//     <Navbar NavLogo={WebrikaHomeLogo} toggleForm={toggleForm} />
-//     <HomeContent toggleForm={toggleForm} />
-//   </>
-// )
-// : (
-//   <>
-//     <StyledNavigation />
-//     {path === "/about/" ? (
-//       <AboutContent />
-//     ) : (
-//       <ServicesContent path={path} toggleForm={toggleForm} />
-//     )}
-//   </>
-// )}
