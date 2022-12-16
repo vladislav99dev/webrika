@@ -10,3 +10,10 @@
 .imageContainer:hover {
   @apply scale-105 transition-all ease-in   duration-300;
 }
+@media(max-width:50em){
+  .container {
+    @apply grid-cols-1
+    w-3/4
+    gap-y-10
+  }
+}

@@ -1,6 +1,5 @@
 .container{
     @apply
-    py-20 
     mx-auto 
     grid 
     grid-cols-2 
