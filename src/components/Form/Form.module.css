@@ -78,13 +78,14 @@ textarea {
     ml-[5rem]
     bg-white
     mb-[-1rem]
-    z-10;
+    z-10
+    px-2;
 }
 .inputContainer label[id="name"] {
-  @apply w-[10rem];
+  @apply w-[11rem];
 }
 .inputContainer label[id="email"] {
-  @apply w-[16rem];
+  @apply w-[17rem];
 }
 
 .inputContainer label[id="phoneNumber"] {
@@ -92,7 +93,7 @@ textarea {
 }
 
 .inputContainer label[id="request"] {
-  @apply w-[10rem];
+  @apply w-[8rem] ;
 }
 
 .inputContainer textarea[id="request"] {
@@ -116,6 +117,10 @@ textarea {
 
 @media (max-width: 50em) {
   .form {
-    @apply w-[35rem] h-[90vh];
+    @apply w-[35rem];
+  }
+  .inputContainer label {
+    @apply 
+      ml-[3rem]
   }
 }
