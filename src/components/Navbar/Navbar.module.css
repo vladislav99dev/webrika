@@ -79,7 +79,7 @@ hidden;
 }
 .servicesArrow{
   @apply
-  border-b-[1px] border-r-[1px] border-black w-[1rem] h-[1rem] mt-2 transition-all duration-100
+  border-b-[1px] border-r-[1px] border-black w-[7px] h-[7px] mt-[0.6rem] transition-all duration-100
 }
 .arrowDown{
   @apply -rotate-45
