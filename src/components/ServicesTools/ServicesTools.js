@@ -30,14 +30,18 @@ const ServicesTools = ({ data, path }) => {
         <h2 className={styles.heading}>{data.heading}</h2>
         <p className={styles.secondaryHeading}>{data.secondaryHeading}</p>
         <div className={styles.logosContainer}>
-          {data.headingIcons.map((icon) => {
-            return icon;
+          {data.headingIcons.map((icon,index) => {
+            return <div key={index}>{icon}</div>;
           })}
         </div>
         <div className={styles.cardsContainer}>
           {data.cardsData.map((card) => {
             return (
-              <div onClick={accordeonToggler} className={styles.cardContainer}>
+              <div
+                key={card.id}
+                onClick={accordeonToggler}
+                className={styles.cardContainer}
+              >
                 <div className={styles.headingContainer}>
                   <h2 className={styles.cardHeading}>{card.heading}</h2>
                 </div>

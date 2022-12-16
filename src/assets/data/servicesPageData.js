@@ -83,18 +83,21 @@ import social3 from "../images/servicesCardImages/social3.webp";
     ],
     cardsData: [
       {
+        id:"1",
         heading: "UI and UX design",
         description:
           "Ease of use and storytelling makes brands and business stand out.",
         image: design1,
       },
       {
+        id:"2",
         heading: "Brand identity",
         description:
           "Indentity and consistency ensures your customers perceive your brand in the right way.",
         image: design2,
       },
       {
+        id:"3",
         heading: "Motion design",
         description:
           "Customers prefer consuming content as video and offering emersive video experience is crucial to convey your message.",
@@ -166,18 +169,21 @@ import social3 from "../images/servicesCardImages/social3.webp";
     ],
     cardsData: [
       {
+        id:"1",
         heading: "Custom development",
         description:
           "Your business is unique and so should be the softwares that help your business run and grow",
         image: development1,
       },
       {
+        id:"2",
         heading: "Integrations",
         description:
           "Having all data in one place allows for better business decision making",
         image: development2,
       },
       {
+        id:"3",
         heading: "Process automations",
         description:
           "Automating processes allows for easy and cost efficient scaling",
@@ -190,6 +196,7 @@ import social3 from "../images/servicesCardImages/social3.webp";
     secondaryHeading: "development",
     headingIcons: [
       <svg
+      id="1"
         width="91"
         height="91"
         viewBox="0 0 91 91"
@@ -313,18 +320,21 @@ import social3 from "../images/servicesCardImages/social3.webp";
     ],
     cardsData: [
       {
+        id:"1",
         heading: "eCommerce store development",
         description:
           "A well thought out and implemented web store is key in scaling your eCommerce sales channel and business",
         image: eCommerce1,
       },
       {
+        id:"2",
         heading: "Marketing integrations",
         description:
           "Once acquired the customer`s life time value could be multiplied by optimized marketing and sales process integrations",
         image: eCommerce2,
       },
       {
+        id:"3",
         heading: "Sales funnels",
         description:
           "Automating and optimizing your sales funnels lets your business scale with ease",
@@ -333,6 +343,7 @@ import social3 from "../images/servicesCardImages/social3.webp";
     ],
   },
   socialMedia: {
+    id:"4",
     heading: "Design and Advertising",
     secondaryHeading: "for social media",
     headingIcons: [
@@ -408,18 +419,21 @@ import social3 from "../images/servicesCardImages/social3.webp";
     ],
     cardsData: [
       {
+        id:"1",
         heading: "Video and static content",
         description:
           "Having engaging content allows your business to have a strong connection with your customer base",
         image: social1,
       },
       {
+        id:"2",
         heading: "Communication strategies",
         description:
           "Planning communications across platforms allows for consistency, high reach and better results",
         image: social2,
       },
       {
+        id:"3",
         heading: "Performance marketing",
         description:
           "360 degree view of all paid marketing efforts ensures all add spent is optimized to maximize results",
