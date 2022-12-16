@@ -24,6 +24,10 @@ const Hero = ({ path, toggleForm }) => {
     path !== "/" && setIsHomePage(false)
   } ,[])
 
+  useEffect(() =>{
+    path !== "/" && setIsHomePage(false)
+  } ,[path])
+
   const StyledNavigation = () => (
     <Navbar
       showServicesBtn="true"
