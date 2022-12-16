@@ -18,7 +18,7 @@ const Layout = (props) => {
   return (
     <>
       <Form isFormOpen={isFormOpen} toggleForm={toggleForm} />
-      {displayHero ? <Hero path={props.path} toggleForm={toggleForm} /> : null}
+      {displayHero && <Hero path={props.path} toggleForm={toggleForm} />}
       {React.cloneElement(props.children, { path })}
       <Footer />
     </>

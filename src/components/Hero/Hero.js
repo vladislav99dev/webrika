@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useState } from "react";
 
 import Video from "../Video/Video";
 
@@ -24,6 +24,7 @@ const reducerInitialValue = {
 };
 
 const reducerManager = (state, action) => {
+  console.log(action.type);
   switch (action.type) {
     case "/":
       return {
@@ -51,6 +52,15 @@ const reducerManager = (state, action) => {
 
 const Hero = ({ path, toggleForm }) => {
   const [state, dispatch] = useReducer(reducerManager, reducerInitialValue);
+  const [btnBackground, setBtnBackground] = useState("");
+
+  useEffect(() => {
+    if (path === "/development/") setBtnBackground("#755aba");
+    if (path === "/design/") setBtnBackground("#42e2b8");
+    if (path === "/eCommerce/") setBtnBackground("#00cdff");
+    if (path === "/socialMedia/") setBtnBackground("#698adc");
+    if (path === "/about/") setBtnBackground("");
+  }, [path]);
 
   useEffect(() => {
     dispatch({ type: path });
@@ -68,7 +78,7 @@ const Hero = ({ path, toggleForm }) => {
       additionalStyles="lg:bg-white text-[#3b485e]"
     />
   );
-  console.log(state);
+
   return (
     <section className={state.home ? styles.homeContainer : null}>
       <Video video={HeroVideo}>
@@ -78,17 +88,26 @@ const Hero = ({ path, toggleForm }) => {
             <HomeContent toggleForm={toggleForm} />
           </>
         )}
-
         {state.about && (
           <>
-            <StyledNavigation />
+            <Navbar
+              showServicesBtn="true"
+              NavLogo={WebrikaNavWhiteLogo}
+              toggleForm={toggleForm}
+              additionalStyles="lg:bg-white text-[#3b485e]"
+            />
             <AboutContent />
           </>
         )}
-
         {state.services && (
           <>
-            <StyledNavigation />
+            <Navbar
+              showServicesBtn="true"
+              NavLogo={WebrikaNavWhiteLogo}
+              toggleForm={toggleForm}
+              additionalStyles="lg:bg-white text-[#3b485e]"
+              btnStyling={{bgColor:btnBackground,arrowColor:"white",text:"white"}}
+            />
             <ServicesContent path={path} toggleForm={toggleForm} />
           </>
         )}
@@ -99,21 +118,3 @@ const Hero = ({ path, toggleForm }) => {
 };
 
 export default Hero;
-
-{
-  /* {isHomePage ? (
-          <>
-            <Navbar NavLogo={WebrikaHomeLogo} toggleForm={toggleForm} />
-            <HomeContent toggleForm={toggleForm} />
-          </>
-        ) : (
-          <>
-            <StyledNavigation />
-            {path === "/about/" ? (
-              <AboutContent />
-            ) : (
-              <ServicesContent path={path} toggleForm={toggleForm} />
-            )}
-          </>
-        )} */
-}

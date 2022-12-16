@@ -15,7 +15,7 @@ import {
 
 import * as styles from "./Navbar.module.css";
 
-const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn }) => {
+const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn,btnStyling }) => {
   const isBrowser = typeof window !== "undefined";
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -123,7 +123,7 @@ const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn }) => {
             <Link to="http://academy.webrika.bg/">Academy</Link>
           </li>
           <li>
-            <Button additionalStyles={styles.btn} toggleForm={toggleForm} />
+            <Button additionalStyles={styles.btn} toggleForm={toggleForm} btnStyling={btnStyling} />
           </li>
         </ul>
       </nav>
