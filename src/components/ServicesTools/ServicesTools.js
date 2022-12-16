@@ -1,7 +1,70 @@
-import React from "react";
+import React, { useRef, useEffect,useState } from "react";
 import * as styles from "./ServicesTools.module.css";
 
 const ServicesTools = ({ data, path }) => {
+  const sectionRef = useRef(null);
+  const [cutPath,setCutPath] = useState(path.replace("/",""));
+
+  // useEffect(()=> {
+    const initialGradient = "bg-gradient-to-b from-grey-100 to-grey-200"
+    const secondGradient = `bg-gradient-to-b from-grey-200 to-${cutPath}-200`
+    const thirdGradient = `bg-gradient-to-b from-${cutPath}-200 to-${cutPath}-300`
+    const forthGradient = `bg-gradient-to-b from-${cutPath}-300 to-${cutPath}-400`
+  // },[cutPath])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionPosition = sectionRef.current.offsetTop;
+      const scrollPosition = window.scrollY;
+      const toolsParent = [
+        ...sectionRef.current.children[0].children[3].children,
+      ];
+
+      if (scrollPosition > 800) {
+        toolsParent.map((tool) => {
+          return tool.classList.add(styles.growTools1);
+        });
+      }
+      if (scrollPosition > 900) {
+        toolsParent.map((tool) => {
+          return tool.classList.add(styles.growTools2);
+        });
+      }
+      if (scrollPosition > 1000) {
+        toolsParent.map((tool) => {
+          return tool.classList.add(styles.growTools3);
+        });
+      }
+      if (scrollPosition > 1100) {
+        toolsParent.map((tool) => {
+          return tool.classList.add(styles.growTools4);
+        });
+      }
+      if (scrollPosition < 1100) {
+        toolsParent.map((tool) => {
+          return tool.classList.remove(styles.growTools4);
+        });
+      }
+      if (scrollPosition < 1000) {
+        toolsParent.map((tool) => {
+          return tool.classList.remove(styles.growTools3);
+        });
+      }
+      if (scrollPosition < 900) {
+        toolsParent.map((tool) => {
+          return tool.classList.remove(styles.growTools2);
+        });
+      }
+      if (scrollPosition < 800) {
+        toolsParent.map((tool) => {
+          return tool.classList.remove(styles.growTools1);
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   const accordeonToggler = (event) => {
     const containerElement = event.currentTarget;
     const [heading, content] = containerElement.children;
@@ -12,8 +75,10 @@ const ServicesTools = ({ data, path }) => {
       content.classList.remove("h-auto", "opacity-100", "z-10");
   };
 
+
   return (
     <section
+      ref={sectionRef}
       className={
         path === "development"
           ? styles.developmentBg
@@ -30,7 +95,7 @@ const ServicesTools = ({ data, path }) => {
         <h2 className={styles.heading}>{data.heading}</h2>
         <p className={styles.secondaryHeading}>{data.secondaryHeading}</p>
         <div className={styles.logosContainer}>
-          {data.headingIcons.map((icon,index) => {
+          {data.headingIcons.map((icon, index) => {
             return <div key={index}>{icon}</div>;
           })}
         </div>
