@@ -13,7 +13,7 @@ const initialReducerValue = {
   slider: false,
 };
 
-const portfolioToggler = (state, action) => {
+const reducerToggler = (state, action) => {
   switch (action.type) {
     case "motionDesign":
       return {
@@ -47,7 +47,7 @@ const portfolioToggler = (state, action) => {
 };
 
 const Portfolio = ({ tags, portoflioInitialValue }) => {
-  const [state, dispatch] = useReducer(portfolioToggler, initialReducerValue);
+  const [state, dispatch] = useReducer(reducerToggler, initialReducerValue);
 
   useEffect(() => {
     dispatch({ type: portoflioInitialValue });
