@@ -10,3 +10,9 @@
     justify-self-start
     relative
 }
+@media(max-width:50em) {
+    .container {
+        @apply
+        grid-cols-1
+    }
+}
