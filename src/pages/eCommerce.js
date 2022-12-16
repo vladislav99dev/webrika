@@ -15,6 +15,7 @@ const ECommerce = ({ path }) => {
           { data: "projectsListings", text: "E-Commerce" },
           { data: "landingPages", text: "Landing-Pages" },
         ]}
+        portoflioInitialValue = {"projectsListings"}
       />
     </>
   );

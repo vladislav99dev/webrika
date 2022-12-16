@@ -14,6 +14,7 @@ const Development = ({ path }) => {
           { data: "projectsListings", text: "Development" },
           { data: "landingPages", text: "Landing Pages" },
         ]}
+        portoflioInitialValue = {"projectsListings"}
       />
     </>
   );
