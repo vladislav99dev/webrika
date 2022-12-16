@@ -1,0 +1,12 @@
+.container{
+    @apply
+    fixed
+    h-screen
+    w-screen
+    bg-[rgba(0,0,0,0.5)]
+    z-20
+    top-0
+    flex
+    justify-center
+    items-center
+}
