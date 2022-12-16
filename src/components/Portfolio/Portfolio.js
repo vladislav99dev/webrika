@@ -48,7 +48,6 @@ const portfolioToggler = (state, action) => {
 
 const Portfolio = ({ tags, portoflioInitialValue }) => {
   const [state, dispatch] = useReducer(portfolioToggler, initialReducerValue);
-  console.log(portoflioInitialValue);
 
   useEffect(() => {
     dispatch({ type: portoflioInitialValue });
@@ -56,7 +55,6 @@ const Portfolio = ({ tags, portoflioInitialValue }) => {
 
   const toggler = (data, event) => {
     dispatch({ type: data });
-    console.log(state[data]);
   };
 
   const activeTagStyles = "border-yellow text-white";
@@ -66,10 +64,10 @@ const Portfolio = ({ tags, portoflioInitialValue }) => {
     <section className={styles.container}>
       <h2 className={styles.heading}>Portfolio</h2>
       <div className={styles.tagsContainer}>
-        {tags.map((tag) => {
+        {tags.map((tag,index) => {
           const { data, text } = tag;
           return (
-            <p
+            <p key={index}
               className={`border-b-2 cursor-pointer ${
                 state[data] ? activeTagStyles : unActiveTagStyles
               }`}
