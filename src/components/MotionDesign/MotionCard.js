@@ -5,7 +5,7 @@ const MotionCard = ({ posterImage, videoUrl, videoUrlChanger }) => {
   const pathToImage = getImage(posterImage);
 
   return (
-    <div className="w-full">
+    <div onClick={()=> videoUrlChanger(videoUrl)} className="w-full cursor-pointer hover:scale-[1.015] transition-all duration-200">
       <GatsbyImage image={pathToImage} alt="someImage" />
     </div>
   );
