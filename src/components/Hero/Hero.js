@@ -25,6 +25,7 @@ const Hero = ({ path, toggleForm }) => {
   } ,[])
 
   useEffect(() =>{
+    path === "/" && setIsHomePage(true)
     path !== "/" && setIsHomePage(false)
   } ,[path])
 
