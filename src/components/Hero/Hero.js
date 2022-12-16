@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 
 import Video from "../Video/Video";
 
@@ -18,7 +18,11 @@ import {
 import * as styles from "./Hero.module.css";
 
 const Hero = ({ path, toggleForm }) => {
-  const isHomePage = path === "/";
+  const [isHomePage,setIsHomePage] = useState(true);
+
+  useEffect(() =>{
+    path !== "/" && setIsHomePage(false)
+  } ,[])
 
   const StyledNavigation = () => (
     <Navbar
