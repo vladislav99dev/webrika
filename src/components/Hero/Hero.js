@@ -31,12 +31,21 @@ const Hero = ({ path, toggleForm }) => {
 
   return (
     <section className={isHomePage ? styles.homeContainer : null}>
-      <Video video={HeroVideo}>
+      {isHomePage ? (
         <>
           <Navbar NavLogo={WebrikaHomeLogo} toggleForm={toggleForm} />
           <HomeContent toggleForm={toggleForm} />
         </>
-      </Video>
+      ) : (
+        <>
+          <StyledNavigation />
+          {path === "/about/" ? (
+            <AboutContent />
+          ) : (
+            <ServicesContent path={path} toggleForm={toggleForm} />
+          )}
+        </>
+      )}
       {isHomePage ? <HeroServices /> : null}
     </section>
   );
