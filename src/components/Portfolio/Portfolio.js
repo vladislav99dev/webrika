@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 
 import ProjectsListings from "../ProjectsListing/ProjectsListings";
 import LandingsListing from "../LandingsListing/LandingsListing";
@@ -46,28 +46,32 @@ const portfolioToggler = (state, action) => {
   }
 };
 
-const Portfolio = ({ tags }) => {
+const Portfolio = ({ tags, portoflioInitialValue }) => {
   const [state, dispatch] = useReducer(portfolioToggler, initialReducerValue);
+  console.log(portoflioInitialValue);
+
+  useEffect(() => {
+    dispatch({ type: portoflioInitialValue });
+  }, []);
 
   const toggler = (data, event) => {
     dispatch({ type: data });
     console.log(state[data]);
   };
-  const activeTagStyles = "border-yellow text-white"
-  const unActiveTagStyles = "border-yellow-opacity text-[#D3D3D3]"
+
+  const activeTagStyles = "border-yellow text-white";
+  const unActiveTagStyles = "border-yellow-opacity text-[#D3D3D3]";
 
   return (
     <section className={styles.container}>
       <h2 className={styles.heading}>Portfolio</h2>
       <div className={styles.tagsContainer}>
         {tags.map((tag) => {
-          const {data,text} = tag
+          const { data, text } = tag;
           return (
             <p
               className={`border-b-2 cursor-pointer ${
-                state[data]
-                  ? activeTagStyles
-                  : unActiveTagStyles
+                state[data] ? activeTagStyles : unActiveTagStyles
               }`}
               onClick={toggler.bind(null, data)}
             >
