@@ -3,6 +3,7 @@ import React, { useEffect, useReducer } from "react";
 import ProjectsListings from "../ProjectsListing/ProjectsListings";
 import LandingsListing from "../LandingsListing/LandingsListing";
 import MotionDesign from "../MotionDesign/MotionDesign";
+import Slider from "../Slider/Slider";
 
 import * as styles from "./Portfolio.module.css";
 
@@ -79,9 +80,10 @@ const Portfolio = ({ tags, portoflioInitialValue }) => {
         })}
       </div>
       <div className={styles.componentConteiner}>
-        {state.projectsListings ? <ProjectsListings /> : null}
-        {state.landingPages ? <LandingsListing /> : null}
-        {state.motionDesign ? <MotionDesign /> : null}
+        {state.projectsListings && <ProjectsListings />}
+        {state.landingPages && <LandingsListing />}
+        {state.motionDesign && <MotionDesign />}
+        {state.slider && <Slider />}
       </div>
     </section>
   );
