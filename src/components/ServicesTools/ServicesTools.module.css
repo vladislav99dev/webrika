@@ -67,7 +67,7 @@
   @apply flex
     flex-col;
 }
-.imageContainer {
+.imageContainer { 
   @apply py-10
   flex
   justify-center;

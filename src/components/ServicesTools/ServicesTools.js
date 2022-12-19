@@ -1,69 +1,69 @@
-import React, { useRef, useEffect,useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as styles from "./ServicesTools.module.css";
 
 const ServicesTools = ({ data, path }) => {
-  const sectionRef = useRef(null);
-  const [cutPath,setCutPath] = useState(path.replace("/",""));
-
-  // useEffect(()=> {
-    const initialGradient = "bg-gradient-to-b from-grey-100 to-grey-200"
-    const secondGradient = `bg-gradient-to-b from-grey-200 to-${cutPath}-200`
-    const thirdGradient = `bg-gradient-to-b from-${cutPath}-200 to-${cutPath}-300`
-    const forthGradient = `bg-gradient-to-b from-${cutPath}-300 to-${cutPath}-400`
-  // },[cutPath])
+  const cardsContainer = useRef(null);
+  const [cutPath, setCutPath] = useState(path.replace("/", ""));
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sectionPosition = sectionRef.current.offsetTop;
-      const scrollPosition = window.scrollY;
-      const toolsParent = [
-        ...sectionRef.current.children[0].children[3].children,
-      ];
+    const isBrowser = typeof window !== "undefined";
 
-      if (scrollPosition > 800) {
-        toolsParent.map((tool) => {
-          return tool.classList.add(styles.growTools1);
-        });
-      }
-      if (scrollPosition > 900) {
-        toolsParent.map((tool) => {
-          return tool.classList.add(styles.growTools2);
-        });
-      }
-      if (scrollPosition > 1000) {
-        toolsParent.map((tool) => {
-          return tool.classList.add(styles.growTools3);
-        });
-      }
-      if (scrollPosition > 1100) {
-        toolsParent.map((tool) => {
-          return tool.classList.add(styles.growTools4);
-        });
-      }
-      if (scrollPosition < 1100) {
-        toolsParent.map((tool) => {
-          return tool.classList.remove(styles.growTools4);
-        });
-      }
-      if (scrollPosition < 1000) {
-        toolsParent.map((tool) => {
-          return tool.classList.remove(styles.growTools3);
-        });
-      }
-      if (scrollPosition < 900) {
-        toolsParent.map((tool) => {
-          return tool.classList.remove(styles.growTools2);
-        });
-      }
-      if (scrollPosition < 800) {
-        toolsParent.map((tool) => {
-          return tool.classList.remove(styles.growTools1);
-        });
-      }
-    };
+    if (isBrowser) window.addEventListener("scroll", handleScroll);
 
-    window.addEventListener("scroll", handleScroll);
+    function handleScroll() {
+      const scrollPosition = window?.scrollY;
+      if (cardsContainer.current !== null) {
+        const cards = Array.from(cardsContainer?.current?.children);
+        if (scrollPosition > 800) {
+          cards.map((tool) => {
+            return tool.classList.add(styles.growTools1);
+          });
+        }
+        if (scrollPosition > 900) {
+          cards.map((tool) => {
+            return tool.classList.add(styles.growTools2);
+          });
+        }
+        if (scrollPosition > 1000) {
+          cards.map((tool) => {
+            return tool.classList.add(styles.growTools3);
+          });
+        }
+        if (scrollPosition > 1100) {
+          cards.map((tool) => {
+            return tool.classList.add(styles.growTools4);
+          });
+        }
+        if (scrollPosition < 1100) {
+          cards.map((tool) => {
+            return tool.classList.remove(styles.growTools4);
+          });
+        }
+        if (scrollPosition < 1000) {
+          cards.map((tool) => {
+            return tool.classList.remove(styles.growTools3);
+          });
+        }
+        if (scrollPosition < 900) {
+          cards.map((tool) => {
+            return tool.classList.remove(styles.growTools2);
+          });
+        }
+        if (scrollPosition < 800) {
+          cards.map((tool) => {
+            return tool.classList.remove(styles.growTools1);
+          });
+        }
+      }
+    }
   }, []);
+
+  // useEffect(()=> {
+  const initialGradient = "bg-gradient-to-b from-grey-100 to-grey-200";
+  const secondGradient = `bg-gradient-to-b from-grey-200 to-${cutPath}-200`;
+  const thirdGradient = `bg-gradient-to-b from-${cutPath}-200 to-${cutPath}-300`;
+  const forthGradient = `bg-gradient-to-b from-${cutPath}-300 to-${cutPath}-400`;
+  // },[cutPath])
 
   const accordeonToggler = (event) => {
     const containerElement = event.currentTarget;
@@ -75,10 +75,8 @@ const ServicesTools = ({ data, path }) => {
       content.classList.remove("h-auto", "opacity-100", "z-10");
   };
 
-
   return (
     <section
-      ref={sectionRef}
       className={
         path === "development"
           ? styles.developmentBg
@@ -99,7 +97,7 @@ const ServicesTools = ({ data, path }) => {
             return <div key={index}>{icon}</div>;
           })}
         </div>
-        <div className={styles.cardsContainer}>
+        <div ref={cardsContainer} className={styles.cardsContainer}>
           {data.cardsData.map((card) => {
             return (
               <div
