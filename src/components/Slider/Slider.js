@@ -149,22 +149,23 @@ const Slider = () => {
         onTouchEnd={touchHandlerMove}
         className={styles.slider}
       >
-        {sliderState.leftImage !== false ? (
+        <div className="hidden xl:block">
+
+        {sliderState.leftImage !== false && (
           <div className={styles.leftImage}>
             <GatsbyImage
               image={getImage(slidersData[sliderState.leftImage].poster)}
               alt="some image"
-            />
+              />
           </div>
-        ) : (
-          <Placeholder />
         )}
+        </div>
         <div className={styles.centerImage}>
           <GatsbyImage
             image={getImage(slidersData[sliderState.centerImage].poster)}
             alt="some image"
           />
-          <div className="text-[26px]">
+          <div className="text-[26px] mt-6">
             <div className="flex gap-x-2 ">
               <p>Client:</p>
               <p className="font-bold">
@@ -180,16 +181,16 @@ const Slider = () => {
             </div>
           </div>
         </div>
-        {sliderState.rightImage !== false ? (
+        <div className="hidden xl:block">
+        {sliderState.rightImage !== false && (
           <div className={styles.rightImage}>
             <GatsbyImage
               image={getImage(slidersData[sliderState.rightImage].poster)}
               alt="some image"
-            />
+              />
           </div>
-        ) : (
-          <Placeholder />
         )}
+        </div>
       </div>
 
       <div
