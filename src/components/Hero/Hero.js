@@ -80,40 +80,48 @@ const Hero = ({ path, toggleForm }) => {
   );
 
   return (
-    <section className={state.home ? styles.homeContainer : null}>
-      <Video video={HeroVideo}>
-        {state.home && (
-          <>
-            <Navbar NavLogo={WebrikaHomeLogo} toggleForm={toggleForm} />
-            <HomeContent toggleForm={toggleForm} />
-          </>
-        )}
-        {state.about && (
-          <>
-            <Navbar
-              showServicesBtn="true"
-              NavLogo={WebrikaNavWhiteLogo}
-              toggleForm={toggleForm}
-              additionalStyles="lg:bg-white text-[#3b485e]"
-            />
-            <AboutContent />
-          </>
-        )}
-        {state.services && (
-          <>
-            <Navbar
-              showServicesBtn="true"
-              NavLogo={WebrikaNavWhiteLogo}
-              toggleForm={toggleForm}
-              additionalStyles="lg:bg-white text-[#3b485e]"
-              btnStyling={{bgColor:btnBackground,arrowColor:"white",text:"white"}}
-            />
-            <ServicesContent path={path} toggleForm={toggleForm} />
-          </>
-        )}
-      </Video>
-      {state.home && <HeroServices />}
-    </section>
+    <>
+      {(state?.home || state?.about || state?.services) && (
+        <section className={state?.home ? styles.homeContainer : null}>
+          <Video video={HeroVideo}>
+            {state?.home && (
+              <>
+                <Navbar NavLogo={WebrikaHomeLogo} toggleForm={toggleForm} />
+                <HomeContent toggleForm={toggleForm} />
+              </>
+            )}
+            {state?.about && (
+              <>
+                <Navbar
+                  showServicesBtn="true"
+                  NavLogo={WebrikaNavWhiteLogo}
+                  toggleForm={toggleForm}
+                  additionalStyles="lg:bg-white text-[#3b485e]"
+                />
+                <AboutContent />
+              </>
+            )}
+            {state?.services && (
+              <>
+                <Navbar
+                  showServicesBtn="true"
+                  NavLogo={WebrikaNavWhiteLogo}
+                  toggleForm={toggleForm}
+                  additionalStyles="lg:bg-white text-[#3b485e]"
+                  btnStyling={{
+                    bgColor: btnBackground,
+                    arrowColor: "white",
+                    text: "white",
+                  }}
+                />
+                <ServicesContent path={path} toggleForm={toggleForm} />
+              </>
+            )}
+          </Video>
+          {state?.home && <HeroServices />}
+        </section>
+      )}
+    </>
   );
 };
 
