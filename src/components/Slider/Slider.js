@@ -98,10 +98,10 @@ const reducerSlider = (state, { type, slidesCount, dotClicked }) => {
           rightImage: false,
         };
       return {
-        leftImage: dotClicked -1,
+        leftImage: dotClicked - 1,
         centerImage: dotClicked,
-        rightImage: dotClicked + 1
-      }
+        rightImage: dotClicked + 1,
+      };
     default:
       break;
   }
@@ -158,11 +158,7 @@ const Slider = () => {
 
   return (
     <section className={styles.sliderContainer}>
-      <div
-        onTouchStart={touchHandlerStart}
-        onTouchEnd={touchHandlerMove}
-        className={styles.slider}
-      >
+      <div className={styles.slider}>
         <div className="hidden xl:block">
           {sliderState.leftImage !== false && (
             <div className={styles.leftImage}>
@@ -173,7 +169,11 @@ const Slider = () => {
             </div>
           )}
         </div>
-        <div className={styles.centerImage}>
+        <div
+          onTouchStart={touchHandlerStart}
+          onTouchEnd={touchHandlerMove}
+          className={styles.centerImage}
+        >
           <GatsbyImage
             image={getImage(slidersData[sliderState.centerImage].poster)}
             alt="some image"
@@ -216,7 +216,11 @@ const Slider = () => {
                 dotClicked: i,
               })
             }
-            className={sliderState.centerImage === i ? `${styles.dot} ${styles.activeDot}` : styles.dot}
+            className={
+              sliderState.centerImage === i
+                ? `${styles.dot} ${styles.activeDot}`
+                : styles.dot
+            }
           ></div>
         ))}
       </div>
