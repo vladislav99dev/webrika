@@ -14,56 +14,66 @@ const ServicesTools = ({ data, path }) => {
       const scrollPosition = window?.scrollY;
       if (cardsContainer.current !== null) {
         const cards = Array.from(cardsContainer?.current?.children);
+        let effect1 = styles[`${cutPath}First`];
+        let effect2 = styles[`${cutPath}Second`];
+        let effect3 = styles[`${cutPath}Third`];
+        let effect4 = styles[`${cutPath}Fourth`];
+
         if (scrollPosition > 800) {
+          cardsContainer.current.classList.add(styles.scaleContainer1);
           cards.map((tool) => {
-            return tool.classList.add(styles.growTools1);
+            tool.classList.add(effect1);
           });
         }
         if (scrollPosition > 900) {
+          cardsContainer.current.classList.add(styles.scaleContainer2);
           cards.map((tool) => {
-            return tool.classList.add(styles.growTools2);
+            return tool.classList.add(effect2);
           });
         }
         if (scrollPosition > 1000) {
+          cardsContainer.current.classList.add(styles.scaleContainer3);
+
           cards.map((tool) => {
-            return tool.classList.add(styles.growTools3);
+            return tool.classList.add(effect3);
           });
         }
         if (scrollPosition > 1100) {
+          cardsContainer.current.classList.add(styles.scaleContainer4);
           cards.map((tool) => {
-            return tool.classList.add(styles.growTools4);
+            return tool.classList.add(effect4);
           });
         }
         if (scrollPosition < 1100) {
+          cardsContainer.current.classList.remove(styles.scaleContainer4);
           cards.map((tool) => {
-            return tool.classList.remove(styles.growTools4);
+            return tool.classList.remove(effect4);
           });
         }
         if (scrollPosition < 1000) {
+          cardsContainer.current.classList.remove(styles.scaleContainer3);
+
           cards.map((tool) => {
-            return tool.classList.remove(styles.growTools3);
+            return tool.classList.remove(effect3);
           });
         }
         if (scrollPosition < 900) {
+          cardsContainer.current.classList.remove(styles.scaleContainer2);
+
           cards.map((tool) => {
-            return tool.classList.remove(styles.growTools2);
+            return tool.classList.remove(effect2);
           });
         }
-        if (scrollPosition < 800) {
+        if (scrollPosition < 800 && scrollPosition > 790) {
+          cardsContainer.current.classList.remove(styles.scaleContainer1);
+
           cards.map((tool) => {
-            return tool.classList.remove(styles.growTools1);
+            return tool.classList.remove(effect1);
           });
         }
       }
     }
   }, []);
-
-  // useEffect(()=> {
-  const initialGradient = "bg-gradient-to-b from-grey-100 to-grey-200";
-  const secondGradient = `bg-gradient-to-b from-grey-200 to-${cutPath}-200`;
-  const thirdGradient = `bg-gradient-to-b from-${cutPath}-200 to-${cutPath}-300`;
-  const forthGradient = `bg-gradient-to-b from-${cutPath}-300 to-${cutPath}-400`;
-  // },[cutPath])
 
   const accordeonToggler = (event) => {
     const containerElement = event.currentTarget;

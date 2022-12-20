@@ -35,13 +35,16 @@
     mb-48;
 }
 .cardsContainer {
-  @apply w-screen
-    w-[90%]
+  @apply w-[70%]
     mx-auto
     grid
-    gap-x-20
+    items-center
+    justify-items-center
+    gap-x-10
     grid-cols-3
-    text-left;
+    text-left
+    transition-all ease-in-out duration-1000;
+    ;
 }
 .cardContainer {
   @apply px-12
@@ -49,10 +52,9 @@
   flex-col
   justify-between
   py-12
-  w-[80%]
-  transition-all ease-in-out duration-1000
-  bg-gradient-to-b from-grey-100 to-grey-200
-  ;
+  w-full
+  h-full
+  transition-all ease-in-out duration-1000;
 }
 .cardHeading {
   @apply text-[2.2rem]
@@ -67,7 +69,7 @@
   @apply flex
     flex-col;
 }
-.imageContainer { 
+.imageContainer {
   @apply py-10
   flex
   justify-center;
@@ -79,28 +81,95 @@
 .show {
   @apply block;
 }
-.growTools1 {
-  @apply scale-[1.05]
-  bg-gradient-to-b from-grey-100 to-grey-200
-  
-  ;
+
+.scaleContainer1{
+  @apply
+  scale-110
 }
-.growTools2 {
-  @apply scale-[1.125]
-  bg-gradient-to-b from-grey-200 to-development-200
-  
-  ;
+.scaleContainer2{
+  @apply
+  scale-[1.15]
 }
-.growTools3 {
-  @apply scale-[1.175]
-  bg-gradient-to-b from-development-200 to-development-300
-  ;
+.scaleContainer3{
+  @apply
+  scale-[1.2]
 }
-.growTools4 {
-  @apply scale-[1.225]
-  bg-gradient-to-b from-development-300 to-development-400
-  ;
+.scaleContainer4{
+  @apply
+  scale-[1.25]
 }
+
+.designFirst {
+  @apply  
+  bg-gradient-to-b from-grey-100 to-grey-200;
+}
+.designSecond {
+  @apply 
+  bg-gradient-to-t from-grey-100 to-design-200;
+}
+.designThird {
+  @apply 
+  bg-gradient-to-r from-grey-200 to-design-300;
+}
+.designFourth {
+  @apply
+  bg-gradient-to-b from-grey-300 to-design-400;
+}
+
+.developmentFirst {
+  @apply  
+  bg-gradient-to-b from-grey-100 to-grey-200;
+}
+.developmentSecond {
+  @apply 
+  bg-gradient-to-b from-grey-100 to-development-200;
+}
+.developmentThird {
+  @apply 
+  bg-gradient-to-b from-grey-200 to-development-300;
+}
+.developmentFourth {
+  @apply
+  bg-gradient-to-b from-grey-300 to-development-400;
+}
+
+.eCommerceFirst {
+  @apply  
+  bg-gradient-to-b from-grey-100 to-grey-200;
+}
+.eCommerceSecond {
+  @apply 
+  bg-gradient-to-b from-grey-100 to-eCommerce-200;
+}
+.eCommerceThird {
+  @apply 
+  bg-gradient-to-b from-grey-200 to-eCommerce-300;
+}
+.eCommerceFourth {
+  @apply
+  bg-gradient-to-b from-grey-300 to-eCommerce-400;
+}
+
+.socialMediaFirst {
+  @apply  
+  bg-gradient-to-b from-grey-100 to-grey-200;
+}
+.socialMediaSecond {
+  @apply 
+  bg-gradient-to-t from-grey-100 to-socialMedia-200;
+}
+.socialMediaThird {
+  @apply 
+  bg-gradient-to-r from-grey-200 to-socialMedia-300;
+}
+.socialMediaFourth {
+  @apply
+  bg-gradient-to-br from-grey-300 to-socialMedia-400;
+}
+
+
+
+
 @media (max-width: 64em) {
   .cardsContainer {
     @apply grid-cols-1
@@ -120,4 +189,3 @@
     @apply gap-x-[6%];
   }
 }
-
