@@ -35,12 +35,13 @@
     mb-48;
 }
 .cardsContainer {
-  @apply w-[70%]
+  @apply w-[75%]
     mx-auto
     grid
     items-center
     justify-items-center
     gap-x-10
+    py-10
     grid-cols-3
     text-left
     transition-all ease-in-out duration-1000;
@@ -89,6 +90,7 @@
 .scaleContainer2{
   @apply
   scale-[1.15]
+
 }
 .scaleContainer3{
   @apply
