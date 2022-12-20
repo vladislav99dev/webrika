@@ -169,12 +169,10 @@ const Slider = () => {
             </div>
           )}
         </div>
-        <div
-          onTouchStart={touchHandlerStart}
-          onTouchEnd={touchHandlerMove}
-          className={styles.centerImage}
-        >
+        <div className={styles.centerImage}>
           <GatsbyImage
+            onTouchStart={touchHandlerStart}
+            onTouchEnd={touchHandlerMove}
             image={getImage(slidersData[sliderState.centerImage].poster)}
             alt="some image"
           />
