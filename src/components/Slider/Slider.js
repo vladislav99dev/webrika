@@ -170,12 +170,12 @@ const Slider = () => {
           )}
         </div>
         <div className={styles.centerImage}>
-          <GatsbyImage
-            onTouchStart={touchHandlerStart}
-            onTouchEnd={touchHandlerMove}
-            image={getImage(slidersData[sliderState.centerImage].poster)}
-            alt="some image"
-          />
+          <div onTouchStart={touchHandlerStart} onTouchEnd={touchHandlerMove}>
+            <GatsbyImage
+              image={getImage(slidersData[sliderState.centerImage].poster)}
+              alt="some image"
+            />
+          </div>
           <div className="text-[26px] mt-6">
             <div className="flex gap-x-2 ">
               <p>Client:</p>
