@@ -9,7 +9,7 @@ const SocialMedia = ({ path }) => {
 
   return (
     <>
-      {data ? <ServicesTools data={data} path={path} /> : null} 
+      {data && <ServicesTools data={data} path={path} />} 
       <Portfolio tags={[{data:"slider",text:"Slider"},{data:"motionDesign",text:"Motion Design"}]} portoflioInitialValue={"slider"}/>
     </>
   );
