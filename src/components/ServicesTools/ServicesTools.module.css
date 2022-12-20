@@ -115,7 +115,7 @@
 }
 .designFourth {
   @apply
-  bg-gradient-to-b from-grey-300 to-design-400;
+  bg-gradient-to-br from-grey-300 to-design-400;
 }
 
 .developmentFirst {
@@ -124,15 +124,15 @@
 }
 .developmentSecond {
   @apply 
-  bg-gradient-to-b from-grey-100 to-development-200;
+  bg-gradient-to-t from-grey-100 to-development-200;
 }
 .developmentThird {
   @apply 
-  bg-gradient-to-b from-grey-200 to-development-300;
+  bg-gradient-to-r from-grey-200 to-development-300;
 }
 .developmentFourth {
   @apply
-  bg-gradient-to-b from-grey-300 to-development-400;
+  bg-gradient-to-br from-grey-300 to-development-400;
 }
 
 .eCommerceFirst {
@@ -141,15 +141,15 @@
 }
 .eCommerceSecond {
   @apply 
-  bg-gradient-to-b from-grey-100 to-eCommerce-200;
+  bg-gradient-to-t from-grey-100 to-eCommerce-200;
 }
 .eCommerceThird {
   @apply 
-  bg-gradient-to-b from-grey-200 to-eCommerce-300;
+  bg-gradient-to-r from-grey-200 to-eCommerce-300;
 }
 .eCommerceFourth {
   @apply
-  bg-gradient-to-b from-grey-300 to-eCommerce-400;
+  bg-gradient-to-br from-grey-300 to-eCommerce-400;
 }
 
 .socialMediaFirst {
