@@ -68,6 +68,24 @@
     translate-y-[-50%]
     cursor-pointer;
 }
+.dotsContainer{
+  @apply flex
+  gap-x-6
+  py-10
+  justify-center
+}
+.activeDot{
+  background-color: #000000 !important; 
+}
+
+.dot {
+  @apply
+  w-[15px]
+  h-[15px]
+  bg-[#00000080]
+  rounded-xl
+  cursor-pointer
+}
 
 @media (max-width: 98em) {
   .leftImage,

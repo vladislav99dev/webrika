@@ -34,7 +34,7 @@ const reducerTouchState = (state, { type, payload }) => {
   }
 };
 
-const reducerSlider = (state, { type, slidesCount }) => {
+const reducerSlider = (state, { type, slidesCount, dotClicked }) => {
   switch (type) {
     case "rightArrow":
       if (state.leftImage === false) {
@@ -88,6 +88,20 @@ const reducerSlider = (state, { type, slidesCount }) => {
         };
       }
       break;
+
+    case "dotClicked":
+      if (dotClicked === 0) return initialSliderState;
+      if (dotClicked === slidesCount)
+        return {
+          leftImage: slidesCount - 1,
+          centerImage: slidesCount,
+          rightImage: false,
+        };
+      return {
+        leftImage: dotClicked -1,
+        centerImage: dotClicked,
+        rightImage: dotClicked + 1
+      }
     default:
       break;
   }
@@ -150,15 +164,14 @@ const Slider = () => {
         className={styles.slider}
       >
         <div className="hidden xl:block">
-
-        {sliderState.leftImage !== false && (
-          <div className={styles.leftImage}>
-            <GatsbyImage
-              image={getImage(slidersData[sliderState.leftImage].poster)}
-              alt="some image"
+          {sliderState.leftImage !== false && (
+            <div className={styles.leftImage}>
+              <GatsbyImage
+                image={getImage(slidersData[sliderState.leftImage].poster)}
+                alt="some image"
               />
-          </div>
-        )}
+            </div>
+          )}
         </div>
         <div className={styles.centerImage}>
           <GatsbyImage
@@ -182,15 +195,30 @@ const Slider = () => {
           </div>
         </div>
         <div className="hidden xl:block">
-        {sliderState.rightImage !== false && (
-          <div className={styles.rightImage}>
-            <GatsbyImage
-              image={getImage(slidersData[sliderState.rightImage].poster)}
-              alt="some image"
+          {sliderState.rightImage !== false && (
+            <div className={styles.rightImage}>
+              <GatsbyImage
+                image={getImage(slidersData[sliderState.rightImage].poster)}
+                alt="some image"
               />
-          </div>
-        )}
+            </div>
+          )}
         </div>
+      </div>
+
+      <div className={styles.dotsContainer}>
+        {slidersData.map((el, i) => (
+          <div
+            onClick={() =>
+              sliderDispatch({
+                type: "dotClicked",
+                slidesCount: slidersData.length - 1,
+                dotClicked: i,
+              })
+            }
+            className={sliderState.centerImage === i ? `${styles.dot} ${styles.activeDot}` : styles.dot}
+          ></div>
+        ))}
       </div>
 
       <div
