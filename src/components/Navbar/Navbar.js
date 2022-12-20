@@ -93,25 +93,25 @@ const Navbar = ({
                 }
               >
                 <Link to="/design">
-                  <li>
+                  <li onClick={()=> setIsMobileNavOpen(false)} >
                     <DesignBtnIcon />
                     <p>Design</p>
                   </li>
                 </Link>
                 <Link to="/eCommerce">
-                  <li>
+                  <li onClick={()=> setIsMobileNavOpen(false)}>
                     <ECommerceBtnIcon />
                     <p>E-commerce</p>
                   </li>
                 </Link>
                 <Link to="/development">
-                  <li>
+                  <li onClick={()=> setIsMobileNavOpen(false)}>
                     <DevelopmentBtnIcon />
                     <p>Development</p>
                   </li>
                 </Link>
                 <Link to="/socialMedia">
-                  <li>
+                  <li onClick={()=> setIsMobileNavOpen(false)}>
                     <SocialMediaBtnIcon />
                     <p>Social media</p>
                   </li>
