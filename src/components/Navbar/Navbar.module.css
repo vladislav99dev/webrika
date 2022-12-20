@@ -17,12 +17,14 @@
    text-[1.5rem]
    leading-[1.8rem]
    font-light
-   items-center;
+   items-center
+   ;
 }
 
 .showMobileNavigation {
-  @apply bg-white
-  h-[50vh];
+  background-color: rgba(255, 255, 255, 0.95);
+  @apply
+  h-[100vh];
 }
 .hideMobileNavigation {
   @apply bg-transparent;
@@ -101,14 +103,14 @@ hidden;
 @media (max-width: 64em) {
   .navigation {
     @apply fixed
-    py-20;
   }
   .links {
     @apply flex-col
     text-black
     self-start
-    mt-32
-    py-4;
+    mt-24
+    py-4
+    gap-[4rem];;
   }
   .desktopLogo {
     @apply hidden;
@@ -130,7 +132,7 @@ hidden;
   }
 
   .showLinks {
-    @apply bg-white
+    @apply
     right-1
     w-screen;
   }

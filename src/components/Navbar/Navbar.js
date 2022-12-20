@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 
 import { HamburgerIcon } from "../../assets/images/btnsIcons/btnsIcons";
 import { CloseIconNav } from "../../assets/images/btnsIcons/btnsIcons";
+import { MobileLogo } from "../../assets/images/logos/logos";
 
 import {
   ECommerceBtnIcon,
@@ -15,7 +16,13 @@ import {
 
 import * as styles from "./Navbar.module.css";
 
-const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn,btnStyling }) => {
+const Navbar = ({
+  toggleForm,
+  additionalStyles,
+  NavLogo,
+  showServicesBtn,
+  btnStyling,
+}) => {
   const isBrowser = typeof window !== "undefined";
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -59,6 +66,9 @@ const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn,btnStyl
               : `${styles.links} ${styles.hideLinks}`
           }
         >
+          {isMobileNavOpen && (
+            <MobileLogo />
+          )}
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -123,7 +133,11 @@ const Navbar = ({ toggleForm, additionalStyles, NavLogo, showServicesBtn,btnStyl
             <Link to="http://academy.webrika.bg/">Academy</Link>
           </li>
           <li>
-            <Button additionalStyles={styles.btn} toggleForm={toggleForm} btnStyling={btnStyling} />
+            <Button
+              additionalStyles={styles.btn}
+              toggleForm={toggleForm}
+              btnStyling={btnStyling}
+            />
           </li>
         </ul>
       </nav>
