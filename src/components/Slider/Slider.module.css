@@ -1,50 +1,45 @@
 .sliderContainer {
-    @apply
-    relative
+  @apply relative
     w-full
-    /* h-[70vh] */
+    /* h-[70vh] */;
 }
 
-.slider{
-    @apply
-    grid
+.slider {
+  @apply grid
     grid-cols-[20%,60%,20%]
-    justify-items-center
+    justify-items-center;
 }
 
-.centerImage{
-    @apply
-    w-[400px]
+.centerImage {
+  @apply w-[400px]
     flex
     flex-col
     lg:flex-row
     lg:w-[700px]
     gap-x-10
-    items-center
+    items-center;
 }
 
-
-.rightImage{
-    @apply
-    invisible
+.rightImage {
+  @apply invisible
     xl:visible
     w-[200px]
     self-center
     justify-self-start
-    opacity-40
+    opacity-40;
 }
-.leftImage{
-    @apply
-    invisible
+.leftImage {
+  @apply invisible
     xl:visible
     w-[200px]
     self-center
     justify-self-end
-    opacity-40
+    opacity-40;
 }
 
 .rightArrow {
-    @apply
+  @apply invisible
+    lg:visible
     absolute
     border-[10px]
     w-[60px]
@@ -55,11 +50,11 @@
     right-[70px]
     top-[50%]
     translate-y-[-50%]
-    cursor-pointer
-
+    cursor-pointer;
 }
 .leftArrow {
-    @apply
+  @apply invisible
+    lg:visible
     absolute
     border-[10px]
     w-[60px]
@@ -70,20 +65,18 @@
     left-[50px]
     top-[50%]
     translate-y-[-50%]
-    cursor-pointer
+    cursor-pointer;
 }
 
-@media(max-width:98em){
-    .leftImage,.rightImage{
-        @apply
-        w-[150px]
-    }
-    .leftArrow{
-        @apply
-        left-[30px]
-    }
-    .rightArrow{
-        @apply
-        right-[30px]
-    }
+@media (max-width: 98em) {
+  .leftImage,
+  .rightImage {
+    @apply w-[150px];
+  }
+  .leftArrow {
+    @apply left-[30px];
+  }
+  .rightArrow {
+    @apply right-[30px];
+  }
 }

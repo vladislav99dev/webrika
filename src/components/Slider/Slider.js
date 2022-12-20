@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import * as styles from "./Slider.module.css";
 import { GatsbyImage, getImage, Placeholder } from "gatsby-plugin-image";
@@ -8,10 +8,30 @@ import {
   InstagramSliderLogo,
 } from "../../assets/images/logos/logos";
 
-const initialReducerState = {
+const initialSliderState = {
   leftImage: false,
   centerImage: 0,
   rightImage: 1,
+};
+
+const initialTouchState = {
+  touchStart: 0,
+  touchEnd: 0,
+};
+
+const reducerTouchState = (state, { type, payload }) => {
+  switch (type) {
+    case "touchStart":
+      return {
+        touchStart: payload,
+        touchEnd: state.touchEnd,
+      };
+    case "touchEnd":
+      return {
+        touchStart: state.touchStart,
+        touchEnd: payload,
+      };
+  }
 };
 
 const reducerSlider = (state, { type, slidesCount }) => {
@@ -92,18 +112,47 @@ const Slider = () => {
     }
   `);
 
-  const [state, dispatch] = useReducer(reducerSlider, initialReducerState);
+  const [sliderState, sliderDispatch] = useReducer(
+    reducerSlider,
+    initialSliderState
+  );
+  const [touchState, touchDispatch] = useReducer(
+    reducerTouchState,
+    initialTouchState
+  );
+
+  useEffect(() => {
+    if (touchState.touchStart < touchState.touchEnd)
+      sliderDispatch({
+        type: "leftArrow",
+        slidesCount: slidersData.length - 1,
+      });
+    if (touchState.touchStart > touchState.touchEnd)
+      sliderDispatch({
+        type: "rightArrow",
+        slidesCount: slidersData.length - 1,
+      });
+  }, [touchState.touchEnd]);
+
+  const touchHandlerStart = (e) => {
+    touchDispatch({ type: "touchStart", payload: e.touches[0].clientX });
+  };
+
+  const touchHandlerMove = (e) => {
+    touchDispatch({ type: "touchEnd", payload: e.changedTouches[0].clientX });
+  };
 
   return (
     <section className={styles.sliderContainer}>
       <div
-        onTouchStart={(e) => console.log(e.touches)}
+        onTouchStart={touchHandlerStart}
+        onTouchEnd={touchHandlerMove}
         className={styles.slider}
       >
-        {state.leftImage !== false ? (
+        {sliderState.leftImage !== false ? (
           <div className={styles.leftImage}>
             <GatsbyImage
-              image={getImage(slidersData[state.leftImage].poster)}
+              image={getImage(slidersData[sliderState.leftImage].poster)}
               alt="some image"
             />
           </div>
@@ -112,14 +161,14 @@ const Slider = () => {
         )}
         <div className={styles.centerImage}>
           <GatsbyImage
-            image={getImage(slidersData[state.centerImage].poster)}
+            image={getImage(slidersData[sliderState.centerImage].poster)}
             alt="some image"
           />
           <div className="text-[26px]">
             <div className="flex gap-x-2 ">
               <p>Client:</p>
               <p className="font-bold">
-                {slidersData[state.centerImage].clientName}
+                {slidersData[sliderState.centerImage].clientName}
               </p>
             </div>
             <div className="flex gap-x-4">
@@ -131,10 +180,10 @@ const Slider = () => {
             </div>
           </div>
         </div>
-        {state.rightImage !== false ? (
+        {sliderState.rightImage !== false ? (
           <div className={styles.rightImage}>
             <GatsbyImage
-              image={getImage(slidersData[state.rightImage].poster)}
+              image={getImage(slidersData[sliderState.rightImage].poster)}
               alt="some image"
             />
           </div>
@@ -145,7 +194,7 @@ const Slider = () => {
 
       <div
         onClick={() =>
-          dispatch({
+          sliderDispatch({
             type: "rightArrow",
             slidesCount: slidersData.length - 1,
           })
@@ -154,7 +203,7 @@ const Slider = () => {
       ></div>
       <div
         onClick={() =>
-          dispatch({
+          sliderDispatch({
             type: "leftArrow",
             slidesCount: slidersData.length - 1,
           })
