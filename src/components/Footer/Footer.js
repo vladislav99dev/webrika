@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "gatsby";
 
 import { FooterWebrikaLogo } from "../../assets/images/logos/logos";
 import { LinkedInBig } from "../../assets/images/logos/logos";
@@ -9,7 +10,6 @@ import { ClutchBig } from "../../assets/images/logos/logos";
 import { LinkedInSmall } from "../../assets/images/logos/logos";
 import { UpWorkSmall } from "../../assets/images/logos/logos";
 import { ClutchSmall } from "../../assets/images/logos/logos";
-
 
 import * as styles from "./Footer.module.css";
 
@@ -31,25 +31,46 @@ const Footer = () => {
 
       <div className={styles.departments}>
         <h2 className={styles.columnHeaders}>Deparments</h2>
-        <p>Webrika Design</p>
-        <p>Webrika Development</p>
-        <p>Webrika E-commerce</p>
-        <p>Webrika Social media</p>
+        <p>
+          <Link to="/design"> Webrika Design</Link>
+        </p>
+        <p>
+          <Link to="/development">Webrika Development</Link>
+        </p>
+        <p>
+          <Link to="/eCommerce">Webrika E-commerce</Link>
+        </p>
+        <p>
+          <Link to="/socialMedia">Webrika Social media</Link>
+        </p>
       </div>
 
       <div className={styles.overviews}>
         <h2 className={styles.columnHeaders}>Overview</h2>
-        <p>Academy</p>
-        <p>Abouts us</p>
-        <p>Articles</p>
+        <p>
+          <a href="http://academy.webrika.bg/">Academy</a>
+        </p>
+        <p>
+          <Link to="/about">Abouts us</Link>
+        </p>
+        <p>
+          <Link>Articles</Link>
+        </p>
       </div>
 
       <div>
         <h2 className={styles.columnHeaders}>Officially in</h2>
         <div className={styles.officiallyInLogos}>
-          <LinkedInBig />
-          <UpWorkBig />
-          <ClutchBig />
+          <a href="https://www.linkedin.com/company/webrika/">
+            <LinkedInBig />
+          </a>
+
+          <a href="https://www.upwork.com/ag/webrika/">
+            <UpWorkBig />{" "}
+          </a>
+          <a href="https://clutch.co/profile/webrika#summary">
+            <ClutchBig />
+          </a>
         </div>
       </div>
 

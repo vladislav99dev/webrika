@@ -51,7 +51,7 @@
     @apply grid-cols-2
     text-[2rem]
     font-normal
-    gap-y-[4.7rem];
+    gap-[4.7rem];
   }
 
   .columnHeaders {
