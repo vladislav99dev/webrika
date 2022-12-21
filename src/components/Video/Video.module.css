@@ -1,6 +1,6 @@
 .container {
   @apply relative
-    h-full;
+    h-screen;
 }
 .video {
   @apply w-full h-full object-fill;
