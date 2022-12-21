@@ -106,6 +106,10 @@ hidden;
   @apply
   hover:text-socialMedia-500
 }
+.aboutServicesHover {
+  @apply
+  hover:text-[#FFDC60]
+}
 
 @media (max-width: 82em) {
   .links {

@@ -38,6 +38,7 @@ const Navbar = ({
       if(path === '/design/') return setServicesHover(styles.designServicesHover)
       if(path === '/eCommerce/') return setServicesHover(styles.eCommerceServicesHover)
       if(path === '/socialMedia/') return setServicesHover(styles.socialMediaServicesHover)
+      if(path === '/about/') return setServicesHover(styles.aboutServicesHover)
     }
 
   },[path])
