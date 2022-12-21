@@ -90,6 +90,23 @@ hidden;
   @apply rotate-45
 }
 
+.developmentServicesHover {
+  @apply
+  hover:text-development-500
+}
+.designServicesHover {
+  @apply
+  hover:text-design-500
+}
+.eCommerceServicesHover {
+  @apply
+  hover:text-eCommerce-500
+}
+.socialMediaServicesHover {
+  @apply
+  hover:text-socialMedia-500
+}
+
 @media (max-width: 82em) {
   .links {
     @apply text-[1.1rem]

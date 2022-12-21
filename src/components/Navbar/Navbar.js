@@ -15,6 +15,7 @@ import {
 } from "../../assets/images/servicesLogos/servicesIcons";
 
 import * as styles from "./Navbar.module.css";
+import { useEffect } from "react";
 
 const Navbar = ({
   toggleForm,
@@ -22,11 +23,24 @@ const Navbar = ({
   NavLogo,
   showServicesBtn,
   btnStyling,
+  path
 }) => {
   const isBrowser = typeof window !== "undefined";
-
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [servicesHover,setServicesHover] = useState('');
+
+
+  useEffect(()=>{
+
+    if(path) {
+      if(path === '/development/') return setServicesHover(styles.developmentServicesHover)
+      if(path === '/design/') return setServicesHover(styles.designServicesHover)
+      if(path === '/eCommerce/') return setServicesHover(styles.eCommerceServicesHover)
+      if(path === '/socialMedia/') return setServicesHover(styles.socialMediaServicesHover)
+    }
+
+  },[path])
 
   const toggler = (value) => {
     if (value === "navigation") setIsMobileNavOpen(!isMobileNavOpen);
@@ -38,6 +52,7 @@ const Navbar = ({
       if (window.innerWidth > 1024) setIsMobileNavOpen(false);
     });
   }
+  console.log(servicesHover);
 
   return (
     <>
@@ -66,9 +81,7 @@ const Navbar = ({
               : `${styles.links} ${styles.hideLinks}`
           }
         >
-          {isMobileNavOpen && (
-            <MobileLogo />
-          )}
+          {isMobileNavOpen && <MobileLogo />}
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -93,27 +106,38 @@ const Navbar = ({
                 }
               >
                 <Link to="/design">
-                  <li onClick={()=> setIsMobileNavOpen(false)} >
+                  <li
+                    className={servicesHover}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <DesignBtnIcon />
-                    <p>Design</p>
+                    <p >Design</p>
                   </li>
                 </Link>
                 <Link to="/eCommerce">
-                  <li onClick={()=> setIsMobileNavOpen(false)}>
+                  <li className={servicesHover}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <ECommerceBtnIcon />
                     <p>E-commerce</p>
                   </li>
                 </Link>
                 <Link to="/development">
-                  <li onClick={()=> setIsMobileNavOpen(false)}>
+                  <li
+                    className={servicesHover}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <DevelopmentBtnIcon />
                     <p>Development</p>
                   </li>
                 </Link>
                 <Link to="/socialMedia">
-                  <li onClick={()=> setIsMobileNavOpen(false)}>
+                  <li className={servicesHover}
+                     
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <SocialMediaBtnIcon />
-                    <p>Social media</p>
+                    <p >Social media</p>
                   </li>
                 </Link>
               </ul>
