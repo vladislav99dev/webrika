@@ -97,6 +97,7 @@ const Hero = ({ path, toggleForm }) => {
                   NavLogo={WebrikaNavWhiteLogo}
                   toggleForm={toggleForm}
                   additionalStyles="lg:bg-white text-[#3b485e]"
+                  path={path}
                 />
                 <AboutContent />
               </>

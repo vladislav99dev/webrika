@@ -108,7 +108,7 @@ hidden;
 }
 .aboutServicesHover {
   @apply
-  hover:text-[#FFDC60]
+  hover:text-yellow
 }
 
 @media (max-width: 82em) {

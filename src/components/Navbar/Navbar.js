@@ -53,7 +53,6 @@ const Navbar = ({
       if (window.innerWidth > 1024) setIsMobileNavOpen(false);
     });
   }
-  console.log(servicesHover);
 
   return (
     <>
