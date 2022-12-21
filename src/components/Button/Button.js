@@ -4,16 +4,19 @@ import { ArrowIcon } from "../../assets/images/btnsIcons/btnsIcons";
 
 import * as styles from "./Button.module.css";
 
-const Button = ({ additionalStyles, toggleForm, arrowColor,btnStyling }) => {
-
+const Button = ({ additionalStyles, toggleForm, arrowColor, btnStyling }) => {
   return (
     <button
-      className={`${styles.btn} ${additionalStyles} bg-[${btnStyling && btnStyling.bgColor}] text-${btnStyling && btnStyling.text}`}
+      className={`${styles.btn} ${additionalStyles} bg-[${
+        btnStyling && btnStyling.bgColor
+      }] text-${btnStyling && btnStyling.text}`}
       onClick={toggleForm}
     >
       Work with us
       <div className={styles.icon}>
-        <ArrowIcon arrowColor={arrowColor || (btnStyling && btnStyling.arrowColor)} />
+        <ArrowIcon
+          arrowColor={arrowColor || (btnStyling && btnStyling.arrowColor)}
+        />
       </div>
     </button>
   );
