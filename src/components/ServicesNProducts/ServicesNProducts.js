@@ -35,6 +35,7 @@ const ServicesNProducts = () => {
         <div
           className={`${styles.serviceCotainer} ${styles.developmentContainer}`}
         >
+          <Link to="/development">
           <div className={styles.contentContainer}>
             <DevelopmentLogo />
             <h3 className={styles.serviceHeading}>Development</h3>
@@ -43,11 +44,13 @@ const ServicesNProducts = () => {
               tailor fitted software solutions.
             </p>
           </div>
+          </Link>
         </div>
 
         <div
           className={`${styles.serviceCotainer} ${styles.eCommerceContainer}`}
         >
+          <Link to="/eCommerce">
           <div className={styles.contentContainer}>
             <ECommerceLogo />
             <h3 className={styles.serviceHeading}>E-commerce</h3>
@@ -56,9 +59,11 @@ const ServicesNProducts = () => {
               solutions.
             </p>
           </div>
+          </Link>
         </div>
 
         <div className={`${styles.serviceCotainer} ${styles.socialContainer}`}>
+          <Link to="/socialMedia">
           <div className={styles.contentContainer}>
             <SocialLogo />
             <h3 className={styles.serviceHeading}>Social</h3>
@@ -67,6 +72,7 @@ const ServicesNProducts = () => {
               loyal customer base.
             </p>
           </div>
+          </Link>
         </div>
       </div>
     </section>
