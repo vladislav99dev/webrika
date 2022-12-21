@@ -23,25 +23,27 @@ const Navbar = ({
   NavLogo,
   showServicesBtn,
   btnStyling,
-  path
+  path,
 }) => {
   const isBrowser = typeof window !== "undefined";
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [servicesHover,setServicesHover] = useState('');
+  const [servicesHover, setServicesHover] = useState("");
 
-
-  useEffect(()=>{
-
-    if(path) {
-      if(path === '/development/') return setServicesHover(styles.developmentServicesHover)
-      if(path === '/design/') return setServicesHover(styles.designServicesHover)
-      if(path === '/eCommerce/') return setServicesHover(styles.eCommerceServicesHover)
-      if(path === '/socialMedia/') return setServicesHover(styles.socialMediaServicesHover)
-      if(path === '/about/') return setServicesHover(styles.aboutServicesHover)
+  useEffect(() => {
+    if (path) {
+      if (path === "/development/")
+        return setServicesHover(styles.developmentServicesHover);
+      if (path === "/design/")
+        return setServicesHover(styles.designServicesHover);
+      if (path === "/eCommerce/")
+        return setServicesHover(styles.eCommerceServicesHover);
+      if (path === "/socialMedia/")
+        return setServicesHover(styles.socialMediaServicesHover);
+      if (path === "/about/")
+        return setServicesHover(styles.aboutServicesHover);
     }
-
-  },[path])
+  }, [path]);
 
   const toggler = (value) => {
     if (value === "navigation") setIsMobileNavOpen(!isMobileNavOpen);
@@ -106,38 +108,29 @@ const Navbar = ({
                 }
               >
                 <Link to="/design">
-                  <li
-                    className={servicesHover}
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
+                  <li className={servicesHover}>
                     <DesignBtnIcon />
-                    <p >Design</p>
+                    <p onClick={() => setIsMobileNavOpen(false)}>Design</p>
                   </li>
                 </Link>
                 <Link to="/eCommerce">
-                  <li className={servicesHover}
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
+                  <li className={servicesHover}>
                     <ECommerceBtnIcon />
-                    <p>E-commerce</p>
+                    <p onClick={() => setIsMobileNavOpen(false)}>E-commerce</p>
                   </li>
                 </Link>
                 <Link to="/development">
-                  <li
-                    className={servicesHover}
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
+                  <li className={servicesHover}>
                     <DevelopmentBtnIcon />
-                    <p>Development</p>
+                    <p onClick={() => setIsMobileNavOpen(false)}>Development</p>
                   </li>
                 </Link>
                 <Link to="/socialMedia">
-                  <li className={servicesHover}
-                     
-                    onClick={() => setIsMobileNavOpen(false)}
-                  >
+                  <li className={servicesHover}>
                     <SocialMediaBtnIcon />
-                    <p >Social media</p>
+                    <p onClick={() => setIsMobileNavOpen(false)}>
+                      Social media
+                    </p>
                   </li>
                 </Link>
               </ul>
@@ -148,7 +141,7 @@ const Navbar = ({
             <Link to="/about">About us </Link>
           </li>
           {showServicesBtn ? null : (
-            <li onClick={()=>setIsMobileNavOpen(false)}>
+            <li onClick={() => setIsMobileNavOpen(false)}>
               <Link to="#contact">Contact us</Link>
             </li>
           )}
