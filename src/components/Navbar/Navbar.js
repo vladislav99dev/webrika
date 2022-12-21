@@ -148,7 +148,7 @@ const Navbar = ({
             <Link to="/about">About us </Link>
           </li>
           {showServicesBtn ? null : (
-            <li>
+            <li onClick={()=>setIsMobileNavOpen(false)}>
               <Link to="#contact">Contact us</Link>
             </li>
           )}
