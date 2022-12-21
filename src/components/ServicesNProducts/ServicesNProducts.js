@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "gatsby";
 
 import * as styles from "./ServicesNProducts.module.css";
 
@@ -19,15 +19,17 @@ const ServicesNProducts = () => {
 
       <div className={styles.servicesContainer}>
         <div className={`${styles.serviceCotainer} ${styles.designContainer}`}>
-          <div className={styles.contentContainer}>
-            <DesignLogo />
+          <Link to="/design">
+            <div className={styles.contentContainer}>
+              <DesignLogo />
 
-            <h3 className={styles.serviceHeading}>Design</h3>
-            <p className={styles.serviceDescription}>
-              Design puts your foot in the door and is the first step acquiring
-              a customer.Treat it with the utmost importance.
-            </p>
-          </div>
+              <h3 className={styles.serviceHeading}>Design</h3>
+              <p className={styles.serviceDescription}>
+                Design puts your foot in the door and is the first step
+                acquiring a customer.Treat it with the utmost importance.
+              </p>
+            </div>
+          </Link>
         </div>
 
         <div

@@ -1,6 +1,7 @@
 .container {
   @apply relative
-    h-screen;
+  h-screen
+    first:h-[90vh]
 }
 .video {
   @apply w-full h-full object-fill;
@@ -10,5 +11,6 @@
   .container{
     @apply
     h-[50vh]
+    first:h-[50vh]
   }
 }

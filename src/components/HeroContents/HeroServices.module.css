@@ -1,7 +1,7 @@
 .aside {
   @apply bg-[#F6F6F6]
     text-[#3B485E]
-    h-screen
+    h-[90vh]
     grid;
 }
 
@@ -15,12 +15,11 @@
   @apply text-[3.2rem]
     font-semibold
     leading-[3.1rem]
-    mt-10
-    min-h-[8rem]
+    my-10
     max-h-40;
 }
 .serviceContainer {
-  @apply mb-4
+  @apply mb-14
   mr-4;
 }
 
@@ -28,14 +27,14 @@
   @apply text-[2.4rem]
     font-semibold
     leading-[2.6rem]
-    mb-4;
+    mb-[0.25rem];
 }
 .serviceDescription {
   @apply text-[2.1rem]
     font-normal
     leading-[2.2rem]
     text-[#707070]
-    mb-8;
+    mb-4;
 }
 .btn {
   @apply text-[1.6rem]
@@ -57,7 +56,12 @@
   @apply mr-6;
 }
 
-/* 1300px */
+.line-limit-1{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 @media (max-width: 82em) {
   .heading {
