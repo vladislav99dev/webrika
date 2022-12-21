@@ -108,29 +108,39 @@ const Navbar = ({
                 }
               >
                 <Link to="/design">
-                  <li className={servicesHover}>
+                  <li
+                    className={servicesHover}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <DesignBtnIcon />
-                    <p onClick={() => setIsMobileNavOpen(false)}>Design</p>
+                    <p>Design</p>
                   </li>
                 </Link>
                 <Link to="/eCommerce">
-                  <li className={servicesHover}>
+                  <li
+                    className={servicesHover}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <ECommerceBtnIcon />
-                    <p onClick={() => setIsMobileNavOpen(false)}>E-commerce</p>
+                    <p>E-commerce</p>
                   </li>
                 </Link>
                 <Link to="/development">
-                  <li className={servicesHover}>
+                  <li
+                    className={servicesHover}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <DevelopmentBtnIcon />
-                    <p onClick={() => setIsMobileNavOpen(false)}>Development</p>
+                    <p>Development</p>
                   </li>
                 </Link>
                 <Link to="/socialMedia">
-                  <li className={servicesHover}>
+                  <li
+                    className={servicesHover}
+                    onClick={() => setIsMobileNavOpen(false)}
+                  >
                     <SocialMediaBtnIcon />
-                    <p onClick={() => setIsMobileNavOpen(false)}>
-                      Social media
-                    </p>
+                    <p>Social media</p>
                   </li>
                 </Link>
               </ul>
