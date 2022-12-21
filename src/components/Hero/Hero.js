@@ -113,6 +113,7 @@ const Hero = ({ path, toggleForm }) => {
                     arrowColor: "white",
                     text: "white",
                   }}
+                  path={path}
                 />
                 <ServicesContent path={path} toggleForm={toggleForm} />
               </>
