@@ -18,7 +18,7 @@ import {
 import * as styles from "./Hero.module.css";
 
 const reducerInitialValue = {
-  home: false,
+  home: true,
   about: false,
   services: false,
 };
